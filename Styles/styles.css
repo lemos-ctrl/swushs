@@ -1,0 +1,65 @@
+:root {
+    --color-main: #5a0000;
+    --color-sub: #800000;
+    --color-body: #f4f3f4;
+    --font-heading1: #ffffff;
+    --font-heading2: #000000;
+    --font-heading3:#650008;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.loginbg {
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+.login-frame h1, .login-frame label, .login-frame  h2 {
+    color: black;
+}
+
+.login-frame h3 {
+    color: var(--font-heading3);
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.login-frame input {
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+.login-frame input[type=submit] {
+    background-color: var(--font-heading3);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-frame {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.logoswu {
+    height: 250px;
+}
+.login {
+    z-index: 1;
+    padding-top: 10%;
+}
+
+h1{
+    color: red;
+}
