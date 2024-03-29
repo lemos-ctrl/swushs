@@ -1,8 +1,11 @@
-document.getElementById('toggleSidebar').addEventListener('click', function() {
-    var sidebar = document.getElementById('sidebar');
-    if (sidebar.style.left === '-250px') {
-        sidebar.style.left = '0';
-    } else {
-        sidebar.style.left = '-250px';
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  const logo = document.getElementById("logo");
+  const nav = document.getElementById("myNav");
+  const main = document.getElementById("main");
+
+  logo.addEventListener("click", function () {
+    nav.classList.toggle("small-width");
+    main.classList.toggle("expanded-main");
+    main.classList.toggle("small-main");
+  });
 });
