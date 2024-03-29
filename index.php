@@ -29,7 +29,7 @@
         <div class="row d-flex justify-content-center text-align-center login">
           <div class="col-4">
             <div class="login-frame">
-              <form action="login.php" method="post">
+              <form action="./Admin/dashboard.php" method="post">
                 <div class="row flex-column text-center align-items-center">
                   <div class="col-4">
                     <img
@@ -38,7 +38,7 @@
                       alt="swulogo"
                     />
                   </div>
-                  <div class="col">
+                  <div class="col pt-3">
                     <h3>Login to your account</h3>
                   </div>
                   <div class="col">
@@ -58,7 +58,7 @@
                     />
                   </div>
                   <div class="col">
-                    <input type="submit" name="submit" value="Login" href="" />
+                    <input type="submit" name="submit" value="Login" href="./swushs/Admin/dashboard.php" />
                   </div>
                   <div class="p-3">
                     <a href=""> Forgot password?</a>

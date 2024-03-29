@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 :root {
   --color-main: #5a0000;
-  --color-sub: #800000;
+  --color-sub: #650008;
   --color-body: #f4f3f4;
   --font-heading1: #ffffff;
   --font-heading2: #000000;
   --font-heading3: #650008;
   --font-family1: "Poppins", sans-serif;
+  --font-family2: "Inter", sans-serif;
 }
 
 * {
@@ -56,8 +57,14 @@
 
 .login-frame input {
   border-radius: 5px;
-  width: 100%;
-  padding: 5px;
+  width: 99%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #808080; /* Border color */
+}
+
+.login-frame input:focus {
+  outline: 1px solid #000000; /* Border color */
 }
 
 .login-frame input[type="submit"] {
@@ -67,20 +74,19 @@
   font-weight: bold;
 }
 
+.login-frame input[type="submit"]:hover{
+  background-color: var(--font-heading3);
+  opacity: .9;
+}
+
 .login-frame input::placeholder {
   color: #808080; /* Placeholder text color */
   font-family: var(--font-family1);
 }
 
-.login-frame input {
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #808080; /* Border color */
-}
-
 .login-frame {
   background-color: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   z-index: 2;
   position: relative; /* Ensure stacking context */
@@ -92,6 +98,10 @@
   font-family: var(--font-family1);
   font-weight: 500;
   font-size: 13px;
+}
+
+.login-frame a:hover {
+  text-decoration: underline;
 }
 
 .logoswu {
@@ -115,3 +125,69 @@
   font-weight: light;
   font-family: var(--font-family1);
 }
+
+
+/* admin dashboard */
+
+header {
+  width: 100vw;
+  max-height: 70px;
+  height: 100vh;
+  background-color: var(--color-sub);
+  color: white;
+  position: absolute;
+}
+
+nav h1 {
+  color: white;
+}
+
+header p, header h1{
+  margin: 0;
+}
+
+header .container {
+  height: 70px;
+}
+
+.header-container {
+  height: 70px
+}
+
+.welcome-text .la-user-circle {
+  font-size: 45px; /* Adjust the size as needed */
+}
+
+.welcome-text p {
+  font-family: var(--font-family2);
+  font-weight: 400;
+  font-size: 13px;
+}
+
+
+/* sidebar */
+#sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background: #333;
+  transition: left 0.3s ease;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar li {
+  padding: 10px;
+}
+
+#toggleSidebar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
