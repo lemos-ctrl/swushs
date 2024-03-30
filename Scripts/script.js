@@ -1,11 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const logo = document.getElementById("logo");
-  const nav = document.getElementById("myNav");
-  const main = document.getElementById("main");
-
-  logo.addEventListener("click", function () {
-    nav.classList.toggle("small-width");
-    main.classList.toggle("expanded-main");
-    main.classList.toggle("small-main");
+  const sidebarToggle = document.querySelector("#sidebar-toggle");
+  sidebarToggle.addEventListener("click", function () {
+    document.querySelector("#sidebar").classList.toggle("collapsed");
   });
+
+  document.querySelector(".theme-toggle").addEventListener("click", () => {
+    toggleLocalStorage();
+    toggleRootClass();
+  });
+
+  function toggleRootClass() {
+    const current = document.documentElement.getAttribute("data-bs-theme");
+    const inverted = current == "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-bs-theme", inverted);
+  }
+
+  function toggleLocalStorage() {
+    if (isLight()) {
+      localStorage.removeItem("light");
+    } else {
+      localStorage.setItem("light", "set");
+    }
+  }
+
+  function isLight() {
+    return localStorage.getItem("light");
+  }
+
+  if (isLight()) {
+    toggleRootClass();
+  }
 });

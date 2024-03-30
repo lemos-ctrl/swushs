@@ -10,6 +10,7 @@ echo'
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../Styles/styles.css">
 
 
