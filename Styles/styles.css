@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 
-/* login screen */
+/* LOGIN SCREEN CSS */
 .loginbg {
   z-index: -1;
   position: absolute;
@@ -150,7 +150,7 @@ h4 {
   color: var(--bs-emphasis-color);
 }
 
-/* Layout for admin dashboard skeleton */
+/* ADMIN DASHBOARD RESPONSIVE WRAPPER*/
 
 .wrapper {
   align-items: stretch;
@@ -180,7 +180,7 @@ h4 {
   color: #000000;
 }
 
-/* Sidebar Elements Style */
+/* SIDEBAR CSS */
 
 .sidebar-logo {
   padding: 1.15rem;
@@ -207,11 +207,16 @@ h4 {
 }
 
 a.sidebar-link {
-  padding: 0.6725rem 1.025rem 0.6725rem 2.125rem;
+  padding: 0.6725rem 0.825rem 0.6725rem 2.325rem;
   color: #e9ecef;
   position: relative;
   display: block !important;
   font-size: 0.875rem;
+}
+
+a.sidebar-link.sidebar-link-child {
+  font-size: 0.775rem;
+  padding: 0.6725rem 0rem 0.6725rem 3.15rem;
 }
 
 .sidebar-item i {
@@ -226,6 +231,7 @@ a.sidebar-link {
   content: "";
   display: inline-block;
   padding: 2px;
+  margin-top: -4px;
   position: absolute;
   right: 1.5rem;
   top: 1.4rem;
@@ -367,3 +373,10 @@ html[data-bs-theme="dark"] .theme-toggle .fa-moon {
 html[data-bs-theme="light"] .theme-toggle .fa-sun {
   display: none;
 } */
+
+/* DATA TABLES CSS */
+/* Change pagination hover color */
+#myTable .page-item:hover {
+  background-color: #ff0000; /* Change this to your desired hover color */
+  color: #ffffff; /* Change this to your desired text color */
+}

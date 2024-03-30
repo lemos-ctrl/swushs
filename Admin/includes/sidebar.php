@@ -12,7 +12,7 @@ require_once '../includes/cdn.php';?>
                         Admin Elements
                     </li>
                     <li class="sidebar-item d-flex align-items-center">
-                        <a href="#" class="sidebar-link">
+                        <a href="./dashboard.php" class="sidebar-link">
                             <i class="fa-solid fa-list pe-2"></i>
                             Dashboard
                         </a>
@@ -24,49 +24,43 @@ require_once '../includes/cdn.php';?>
                         </a>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">School Years</a>
+                                <a href="./dashboard.php" class="sidebar-link sidebar-link-child">School Years</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Subject Budget</a>
+                                <a href="./dashboard.php" class="sidebar-link sidebar-link-child">Subject Budget</a>
                             </li>
                         </ul>
                     </li>
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
-                            Posts
+                            aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
+                            People
                         </a>
                         <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 2</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 3</a>
+                            <li class="sidebar-item ">
+                                <a href="#" class="sidebar-link sidebar-link-child">Faculty</a>
                             </li>
                         </ul>
                     </li>
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
-                            Auth
+                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
+                            Timetable Generation
                         </a>
                         <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Login</a>
+                                <a href="#" class="sidebar-link sidebar-link-child">Load Scheduling</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Register</a>
+                                <a href="#" class="sidebar-link sidebar-link-child">Faculty Loading</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Forgot Password</a>
+                                <a href="#" class="sidebar-link sidebar-link-child">Room Assignment</a>
                             </li>
                         </ul>
                     </li>
                     <li class="sidebar-header">
-                        Multi Level Menu
+                        Resources
                     </li>
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
