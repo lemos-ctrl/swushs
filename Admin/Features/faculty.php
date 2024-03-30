@@ -1,14 +1,22 @@
-<?php require_once './swushs/includes/cdn.php'?>
+<?php require_once('../../includes/cdn.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHS Faculty</title>
+
+    <link rel="stylesheet" href="../../Styles/styles.css">
+    <script src="../../Scripts/script.js"></script>
 </head>
+
 <body>
+
 <div class="wrapper">
-<?php include './swushs/Admin/includes/sidebar.php'?>
+<?php include('../includes/sidebar.php'); ?>
+
+    
 <div class="main">
         <nav class="navbar custom-toggler navbar-expand px-3 border-bottom">
             <button class="btn" id="sidebar-toggle" type="button">
@@ -62,111 +70,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Table Element -->
-                <div class="card border-0">
-                    <div class="card-header">
-                        <h5 class="card-title">
-                            Grade 11
-                        </h5>
-                        <h6 class="card-subtitle text-muted">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ducimus,
-                            necessitatibus reprehenderit itaque!
-                        </h6>
-                    </div>
-                    <div class="card-body">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Subject Code</th>
-                                    <th scope="col">Descriptive Title</th>
-                                    <th scope="col">Hours per week</th>
-                                    <th scope="col">Options</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">ITE-325</th>
-                                    <td>Capstone</td>
-                                    <td>20</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">ITE-325</th>
-                                    <td>Capstone</td>
-                                    <td>20</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">ITE-325</th>
-                                    <td>Capstone</td>
-                                    <td>20</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            <div class="card border-0">
-                <div class="card-header">
-                    <h5 class="card-title">
-                        Curriculum
-                    </h5>
-                </div>
-                <div class="card-body">
-                    <table id="myTable" class="table table-hover" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011-04-25</td>
-                                <td>$320,800</td>
-                            </tr>
-                            <tr>
-                                <td>Garrett Winters</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>2011-07-25</td>
-                                <td>$170,750</td>
-                            </tr>
-                            <tr>
-                                <td>Ashton Cox</td>
-                                <td>Junior Technical Author</td>
-                                <td>San Francisco</td>
-                                <td>66</td>
-                                <td>2009-01-12</td>
-                                <td>$86,000</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
             </div>
-        </div>
-    </body>
-    
         </main>
         <!-- <a href="#" class="theme-toggle">
             <i class="fa-regular fa-moon"></i>

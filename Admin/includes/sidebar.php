@@ -1,5 +1,6 @@
-<?php 
-require_once '../includes/cdn.php';?>
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+?>
 
 <aside id="sidebar" class="js-sidebar">
             <!-- Content For Sidebar -->
@@ -24,10 +25,10 @@ require_once '../includes/cdn.php';?>
                         </a>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="./Features/schoolyear.php" class="sidebar-link sidebar-link-child">School Years</a>
+                                <a href="../schoolyear.php" class="sidebar-link sidebar-link-child">School Years</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="./Features/subjectbudget.php" class="sidebar-link sidebar-link-child">Subject Budget</a>
+                                <a href="../subjectbudget.php" class="sidebar-link sidebar-link-child">Subject Budget</a>
                             </li>
                         </ul>
                     </li>
@@ -38,7 +39,7 @@ require_once '../includes/cdn.php';?>
                         </a>
                         <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item ">
-                                <a href="./Features/faculty.php" class="sidebar-link sidebar-link-child">Faculty</a>
+                                <a href="../Features/faculty.php" class="sidebar-link sidebar-link-child">Faculty</a>
                             </li>
                         </ul>
                     </li>

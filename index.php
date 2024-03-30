@@ -29,7 +29,7 @@
         <div class="row d-flex justify-content-center text-align-center login">
           <div class="col-4">
             <div class="login-frame">
-              <form action="./Admin/dashboard.php" method="post">
+              <form action="./Admin/Features/dashboard.php" method="post">
                 <div class="row flex-column text-center align-items-center">
                   <div class="col-4">
                     <img

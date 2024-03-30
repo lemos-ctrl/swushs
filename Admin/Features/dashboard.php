@@ -1,16 +1,19 @@
 <?php 
-include_once '../includes/cdn.php';?>
+include_once '../../includes/cdn.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    
+    <link rel="stylesheet" href="../../Styles/styles.css">
+    <script src="../../Scripts/script.js"></script>
 </head>
 <body>
     
 <div class="wrapper">
-    <?php include '../Admin/includes/sidebar.php';?>
+    <?php include '../../Admin/includes/sidebar.php';?>
     <div class="main">
             <nav class="navbar custom-toggler navbar-expand px-3 border-bottom">
                 <button class="btn" id="sidebar-toggle" type="button">
