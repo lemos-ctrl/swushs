@@ -1,14 +1,11 @@
 <?php 
-require_once '../includes/cdn.php';?>
-
+include_once '../includes/cdn.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-
-    </script>
 </head>
 <body>
     
@@ -35,12 +32,8 @@ require_once '../includes/cdn.php';?>
                                         <div class="col-6">
                                             <div class="p-3 m-1">
                                                 <h4>School Year</h4>
-                                                <p class="mb-0">Admin Dashboard, </p>
+                                                <p class="mb-0">Admin Dashboard </p>
                                             </div>
-                                        </div>
-                                        <div class="col-6 align-self-end text-end">
-                                            <img src=""
-                                                alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -59,10 +52,10 @@ require_once '../includes/cdn.php';?>
                                             </p>
                                             <div class="mb-0">
                                                 <span class="badge text-success me-2">
-                                                    
+                                                    <p>olah</p>
                                                 </span>
                                                 <span class="text-muted">
-                                                  
+                                                  <p>helo</p>
                                                 </span>
                                             </div>
                                         </div>

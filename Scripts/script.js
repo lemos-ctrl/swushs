@@ -39,3 +39,25 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function () {
   $("#myTable").DataTable();
 });
+
+// active link highlighting feature
+// Get the current URL
+// var url = window.location.href;
+
+// // Select all sidebar links
+// var links = document.querySelectorAll('.sidebar-link');
+
+// // Loop through each link
+// links.forEach(function(link) {
+//     // Check if the link's href matches the current URL
+//     if (link.href === url) {
+//         // Add 'active' class to the parent <li> element
+//         link.parentNode.classList.add('active');
+
+//         // If the link has a parent with class 'collapse', show it
+//         var collapseParent = link.closest('.collapse');
+//         if (collapseParent) {
+//             collapseParent.classList.add('show');
+//         }
+//     }
+// });

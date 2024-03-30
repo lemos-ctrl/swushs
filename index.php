@@ -61,7 +61,7 @@
                     <input type="submit" name="submit" value="Login" href="./swushs/Admin/dashboard.php" />
                   </div>
                   <div class="p-3">
-                    <a href=""> Forgot password?</a>
+                    <a href="#"> Forgot password?</a>
                   </div>
                 </div>
               </form>
