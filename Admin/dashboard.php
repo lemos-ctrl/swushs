@@ -7,102 +7,14 @@ require_once '../includes/cdn.php';?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    
+
+    </script>
 </head>
 <body>
     
 <div class="wrapper">
-        <aside id="sidebar" class="js-sidebar">
-            <!-- Content For Sidebar -->
-            <div class="h-100 sidebar-background">
-                <div class="sidebar-logo">
-                    <a href="#">Logo</a>
-                </div>
-                <ul class="sidebar-nav">
-                    <li class="sidebar-header">
-                        Admin Elements
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
-                            <i class="fa-solid fa-list pe-2"></i>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
-                            Curriculum
-                        </a>
-                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">School Years</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Subject Budget</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
-                            Posts
-                        </a>
-                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 2</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 3</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
-                            Auth
-                        </a>
-                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Login</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Register</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Forgot Password</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-header">
-                        Multi Level Menu
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>
-                            Multi Dropdown
-                        </a>
-                        <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
-                                    data-bs-toggle="collapse" aria-expanded="false">Level 1</a>
-                                <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Level 1.1</a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Level 1.2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-        <div class="main">
+    <?php include '../Admin/includes/sidebar.php';?>
+    <div class="main">
             <nav class="navbar custom-toggler navbar-expand px-3 border-bottom">
                 <button class="btn" id="sidebar-toggle" type="button">
                     <span class="navbar-toggler-icon "></span>
@@ -112,6 +24,7 @@ require_once '../includes/cdn.php';?>
                     <a href="#" class="las la-user-circle ps-2"></a>
                 </div>
             </nav>
+
             <main class="content px-3 py-2">
                 <div class="container-fluid">
                     <div class="row">
@@ -126,7 +39,7 @@ require_once '../includes/cdn.php';?>
                                             </div>
                                         </div>
                                         <div class="col-6 align-self-end text-end">
-                                            <img src="image/customer-support.jpg" class="img-fluid illustration-img"
+                                            <img src=""
                                                 alt="">
                                         </div>
                                     </div>
@@ -203,11 +116,71 @@ require_once '../includes/cdn.php';?>
                         </div>
                     </div>
                 </div>
+
+            <div class="card border-0">
+                <div class="card-header">
+                    <h5 class="card-title">
+                        Curriculum
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <table id="myTable" class="table table-hover" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td>2011-04-25</td>
+                                <td>$320,800</td>
+                            </tr>
+                            <tr>
+                                <td>Garrett Winters</td>
+                                <td>Accountant</td>
+                                <td>Tokyo</td>
+                                <td>63</td>
+                                <td>2011-07-25</td>
+                                <td>$170,750</td>
+                            </tr>
+                            <tr>
+                                <td>Ashton Cox</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009-01-12</td>
+                                <td>$86,000</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </body>
+        
             </main>
-            <a href="#" class="theme-toggle">
+            <!-- <a href="#" class="theme-toggle">
                 <i class="fa-regular fa-moon"></i>
                 <i class="fa-regular fa-sun"></i>
-            </a>
+            </a> -->
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row text-muted">

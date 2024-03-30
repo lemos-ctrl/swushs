@@ -1,7 +1,9 @@
+// responsive sidebar function
 document.addEventListener("DOMContentLoaded", function () {
   const sidebarToggle = document.querySelector("#sidebar-toggle");
   sidebarToggle.addEventListener("click", function () {
     document.querySelector("#sidebar").classList.toggle("collapsed");
+    document.querySelector("#sidebar1").classList.toggle("collapsed");
   });
 
   document.querySelector(".theme-toggle").addEventListener("click", () => {
@@ -30,4 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (isLight()) {
     toggleRootClass();
   }
+});
+
+// data tables dashboard init
+$(document).ready(function () {
+  $("#myTable").DataTable();
 });

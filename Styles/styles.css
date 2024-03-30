@@ -17,7 +17,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 /* login screen */
@@ -129,8 +128,6 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.875rem;
   opacity: 1;
   overflow-y: scroll;
   margin: 0;
@@ -166,6 +163,10 @@ h4 {
   min-width: 264px;
   background: var(--bs-dark);
   transition: all 0.35s ease-in-out;
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Set height to viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .main {
@@ -173,10 +174,10 @@ h4 {
   flex-direction: column;
   min-height: 100vh;
   min-width: 0;
-  overflow: hidden;
   transition: all 0.35s ease-in-out;
   width: 100%;
   background: var(--bs-dark-bg-subtle);
+  color: #000000;
 }
 
 /* Sidebar Elements Style */
@@ -206,11 +207,17 @@ h4 {
 }
 
 a.sidebar-link {
-  padding: 0.625rem 1.625rem;
+  padding: 0.6725rem 1.025rem 0.6725rem 2.125rem;
   color: #e9ecef;
   position: relative;
-  display: block;
+  display: block !important;
   font-size: 0.875rem;
+}
+
+.sidebar-item i {
+  padding-top: 2px;
+  margin-bottom: -3px;
+  width: 20px;
 }
 
 .sidebar-link[data-bs-toggle="collapse"]::after {
@@ -245,6 +252,8 @@ nav {
 
 .navbar span {
   color: white;
+  font-size: 12px;
+  font-weight: regular;
 }
 
 .navbar a {
@@ -267,11 +276,11 @@ nav {
 /* Setting the stroke to green using rgb values (0, 128, 0) */
 
 .custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M6 10h28M6 20h28M6 30h28'/%3E%3C/svg%3E");
 }
 
 .custom-toggler .navbar-toggler-icon:active {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M6 10h28M6 20h28M6 30h28'/%3E%3C/svg%3E");
 }
 
 .content {
@@ -296,14 +305,14 @@ nav {
   margin-bottom: 24px;
 }
 
-.illustration {
+/* .illustration {
   border: 1px solid var(--color-sub);
 }
 
 .illustration-img {
   max-width: 150px;
   width: 100%;
-}
+} */
 
 /* Sidebar Toggle */
 
@@ -328,7 +337,7 @@ nav {
   }
 }
 
-/* Theme Toggler */
+/* Theme Toggler
 
 .theme-toggle {
   position: fixed;
@@ -357,4 +366,4 @@ html[data-bs-theme="dark"] .theme-toggle .fa-moon {
 
 html[data-bs-theme="light"] .theme-toggle .fa-sun {
   display: none;
-}
+} */
