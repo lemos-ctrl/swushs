@@ -241,9 +241,17 @@ a.sidebar-link.sidebar-link-child {
 
 /* CSS for active link */
 .sidebar-item.active .sidebar-link {
-    font-weight: bold;
+  font-weight: bold;
 }
 
+#sidebar .active {
+  background: rgba(224, 150, 150, 0.4);
+  background: linear-gradient(
+    90deg,
+    rgba(224, 150, 150, 0.4) 0%,
+    rgba(122, 82, 82, 0.4) 100%
+  );
+}
 
 .navbar-expand .navbar-nav {
   margin-left: auto;
