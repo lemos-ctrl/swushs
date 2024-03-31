@@ -5,7 +5,7 @@
   --color-sub: #650008;
   --color-body: #f2f2f2;
   --font-heading1: #ffffff;
-  --font-heading2: #000000;
+  --font-heading2: #8e8e8e;
   --font-heading3: #650008;
   --font-family1: "Poppins", sans-serif;
   --font-family2: "Inter", sans-serif;
@@ -176,7 +176,7 @@ h4 {
   min-width: 0;
   transition: all 0.35s ease-in-out;
   width: 100%;
-  background: var(--bs-dark-bg-subtle);
+  background: var(--color-body);
   color: #000000;
 }
 
@@ -239,6 +239,10 @@ a.sidebar-link.sidebar-link-child {
   transition: all 0.2s ease-out;
 }
 
+.sidebar-link[data-bs-toggle="collapse"][aria-expanded="true"]::after {
+  transform: rotate(45deg);
+}
+
 /* CSS for active link */
 .sidebar-item.active .sidebar-link {
   font-weight: bold;
@@ -292,6 +296,10 @@ nav {
   color: rgb(226, 224, 224);
 }
 
+.table-color {
+  background-color: black;
+}
+
 /* Set the border color */
 
 .custom-toggler .navbar-toggler-icon {
@@ -331,6 +339,40 @@ nav {
 .card {
   box-shadow: 0 0 0.875rem 0 rgba(34, 46, 60, 0.05);
   margin-bottom: 24px;
+}
+
+.dashboard-card span {
+  color: var(--font-heading2);
+  font-size: 12px;
+  padding-left: -5px;
+}
+
+.dashboard-icons i {
+  display: block;
+  font-size: 12px;
+}
+
+.dashboard-icons .user-card:nth-child(1) {
+  background-color: #d2d2d2;
+  padding: 5px 10px;
+  color: #650008;
+  border-radius: 5px 0 0 5px;
+}
+
+.dashboard-icons .user-card:nth-child(2) {
+  background-color: #d3ebe5;
+  padding: 5px 10px;
+  color: #006550;
+  border-radius: 0 5px 5px 0;
+}
+.dashboard-icons p {
+  color: #650008;
+  font-size: 12px;
+}
+
+.dashboard-card h1,
+.dashboard-card p {
+  margin: 0;
 }
 
 /* .illustration {

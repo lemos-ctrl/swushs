@@ -40,24 +40,33 @@ $(document).ready(function () {
   $("#myTable").DataTable();
 });
 
-// active link highlighting feature
-// Get the current URL
-// var url = window.location.href;
+// link highlighting feature
+document.addEventListener("DOMContentLoaded", function () {
+  // Check if any dropdown contains the active class
+  const activeDropdown = document.querySelector(".sidebar-dropdown.show");
+  if (activeDropdown) {
+    // Expand the dropdown
+    const parentCollapse = activeDropdown
+      .closest(".sidebar-item")
+      .querySelector('[data-bs-toggle="collapse"]');
+    if (parentCollapse) {
+      parentCollapse.setAttribute("aria-expanded", "true");
+    }
+  }
 
-// // Select all sidebar links
-// var links = document.querySelectorAll('.sidebar-link');
-
-// // Loop through each link
-// links.forEach(function(link) {
-//     // Check if the link's href matches the current URL
-//     if (link.href === url) {
-//         // Add 'active' class to the parent <li> element
-//         link.parentNode.classList.add('active');
-
-//         // If the link has a parent with class 'collapse', show it
-//         var collapseParent = link.closest('.collapse');
-//         if (collapseParent) {
-//             collapseParent.classList.add('show');
-//         }
-//     }
-// });
+  // Save the state of the dropdown in local storage or cookie
+  const toggleButtons = document.querySelectorAll(
+    '[data-bs-toggle="collapse"]'
+  );
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const expanded = this.getAttribute("aria-expanded");
+      const parent = this.getAttribute("data-bs-target");
+      if (expanded === "true") {
+        localStorage.setItem(parent, "expanded");
+      } else {
+        localStorage.removeItem(parent);
+      }
+    });
+  });
+});

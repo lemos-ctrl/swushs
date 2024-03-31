@@ -25,24 +25,80 @@ include_once '../../includes/cdn.php';?>
                 </div>
             </nav>
 
-            <main class="content px-3 py-2">
+            <main class="content px-3 py-4">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 col-md-6 d-flex">
+                        <div class="col-12 col-md-10 d-flex">
                             <div class="card flex-fill border-0 illustration">
                                 <div class="card-body p-0 d-flex flex-fill">
-                                    <div class="row g-0 w-100">
-                                        <div class="col-6">
-                                            <div class="p-3 m-1">
-                                                <h4>School Year</h4>
-                                                <p class="mb-0">Admin Dashboard </p>
+                                    <div class="row g-0 w-100 dashboard-card">
+                                        <div class="col-2">
+                                            <div class="px-3 py-2 m-1">
+                                                <span>School Year</span>
+                                                <h6 class="mb-0">Mar 2024 - <br> Jan 2025</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="px-3 py-2 m-1">
+                                                <span>People</span>
+                                                <div class="d-flex flex-row dashboard-icons justify-content-start">
+                                                    <div class="d-flex align-items-center pe-2 user-card">
+                                                        <h1>20</h1>
+                                                        <div class="ms-1 mt-2">
+                                                            <i class="fa-solid fa-users"></i>
+                                                            <p>Users</p>
+                                                        </div>  
+                                                    </div>
+                                                    <div class="d-flex align-items-center user-card">
+                                                        <h1>20</h1>
+                                                        <div class="ms-1 mt-2">
+                                                            <i class="fa-solid fa-chalkboard-user"></i>
+                                                            <span>Teachers</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="px-3 py-2 m-1">
+                                                <span>Particulars</span>
+                                                <div class="d-flex flex-row dashboard-icons justify-content-start">
+                                                    <div class="d-flex align-items-center pe-2 user-card">
+                                                        <h1>20</h1>
+                                                        <div class="ms-1 mt-2">
+                                                            <i class="fa-solid fa-users"></i>
+                                                            <p>Users</p>
+                                                        </div>  
+                                                    </div>
+                                                    <div class="d-flex align-items-center user-card">
+                                                        <h1>20</h1>
+                                                        <div class="ms-1 mt-2">
+                                                            <i class="fa-solid fa-chalkboard-user"></i>
+                                                            <span>Teachers</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="px-3 py-2 m-1">
+                                                <span>Subjects</span>
+                                                <div class="d-flex flex-row dashboard-icons justify-content-start">
+                                                    <div class="d-flex align-items-center pe-2 user-card">
+                                                        <h1>20</h1>
+                                                        <div class="ms-1 mt-2">
+                                                            <i class="fa-solid fa-users"></i>
+                                                            <p>Users</p>
+                                                        </div>  
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 d-flex">
+                        <div class="col-12 col-md-2 d-flex">
                             <div class="card flex-fill border-0">
                                 <div class="card-body py-4">
                                     <div class="d-flex align-items-start">
@@ -58,7 +114,7 @@ include_once '../../includes/cdn.php';?>
                                                     <p>olah</p>
                                                 </span>
                                                 <span class="text-muted">
-                                                  <p>helo</p>
+                                          
                                                 </span>
                                             </div>
                                         </div>
@@ -67,51 +123,7 @@ include_once '../../includes/cdn.php';?>
                             </div>
                         </div>
                     </div>
-                    <!-- Table Element -->
-                    <div class="card border-0">
-                        <div class="card-header">
-                            <h5 class="card-title">
-                                Grade 11
-                            </h5>
-                            <h6 class="card-subtitle text-muted">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ducimus,
-                                necessitatibus reprehenderit itaque!
-                            </h6>
-                        </div>
-                        <div class="card-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Subject Code</th>
-                                        <th scope="col">Descriptive Title</th>
-                                        <th scope="col">Hours per week</th>
-                                        <th scope="col">Options</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">ITE-325</th>
-                                        <td>Capstone</td>
-                                        <td>20</td>
-                                        <td>Delete | Edit</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">ITE-325</th>
-                                        <td>Capstone</td>
-                                        <td>20</td>
-                                        <td>Delete | Edit</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">ITE-325</th>
-                                        <td>Capstone</td>
-                                        <td>20</td>
-                                        <td>Delete | Edit</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
+                    
                 <div class="card border-0">
                     <div class="card-header">
                         <h5 class="card-title">
@@ -177,35 +189,6 @@ include_once '../../includes/cdn.php';?>
                 <i class="fa-regular fa-moon"></i>
                 <i class="fa-regular fa-sun"></i>
             </a> -->
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row text-muted">
-                        <div class="col-6 text-start">
-                            <p class="mb-0">
-                                <a href="#" class="text-muted">
-                                    
-                                </a>
-                            </p>
-                        </div>
-                        <div class="col-6 text-end">
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <a href="#" class="text-muted">Contact</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="text-muted">About Us</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="text-muted">Terms</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="text-muted">Booking</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
     </div>
 </body>
