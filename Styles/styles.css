@@ -216,7 +216,7 @@ a.sidebar-link {
 
 a.sidebar-link.sidebar-link-child {
   font-size: 0.775rem;
-  padding: 0.6725rem 0rem 0.6725rem 3.15rem;
+  padding: 0.6725rem 0rem 0.6725rem 5.15rem;
 }
 
 .sidebar-item i {
@@ -296,10 +296,6 @@ nav {
   color: rgb(226, 224, 224);
 }
 
-.table-color {
-  background-color: black;
-}
-
 /* Set the border color */
 
 .custom-toggler .navbar-toggler-icon {
@@ -364,6 +360,27 @@ nav {
   padding: 5px 10px;
   color: #006550;
   border-radius: 0 5px 5px 0;
+}
+
+.dashboard-icons .user-card1:nth-child(1) {
+  background-color: #DEE6F2;
+  padding: 5px 10px;
+  color: #133353;
+  border-radius: 5px 0 0 5px;
+}
+
+.dashboard-icons .user-card1:nth-child(2) {
+  background-color: #F3E4F5;
+  padding: 5px 10px;
+  color: #755882;
+  border-radius: 0 5px 5px 0;
+}
+
+.dashboard-icons .user-card2:nth-child(1) {
+  background-color: #B9FFD1;
+  padding: 5px 10px;
+  color: #124A0D;
+  border-radius: 5px;
 }
 .dashboard-icons p {
   color: #650008;
@@ -443,4 +460,9 @@ html[data-bs-theme="light"] .theme-toggle .fa-sun {
 #myTable .page-item:hover {
   background-color: #ff0000; /* Change this to your desired hover color */
   color: #ffffff; /* Change this to your desired text color */
+}
+
+
+table td, table th {
+  text-align: left !important;
 }

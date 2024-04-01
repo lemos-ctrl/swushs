@@ -9,10 +9,6 @@
 
     <link rel="stylesheet" href="../../Styles/styles.css">
     <script src="../../Scripts/script.js"></script>
-
-    <style>
-        /* Explicitly set left alignment for table cells */
-    </style>
 </head>
 
 <body>
@@ -33,8 +29,8 @@
         <main class="content px-3 py-4">
             <div class="container-fluid">
             <?php include '../../Admin/includes/dashboardBanner.php';?>
-           
-            <!-- SAME ROW OF DASHBOARD BANNER BUT LIKE I JUST PUT IT HERE KAY FOR EVERY PAGE LAHE LAHE -->
+            
+                <!-- SAME ROW OF DASHBOARD BANNER BUT LIKE I JUST PUT IT HERE KAY FOR EVERY PAGE LAHE LAHE -->
                 <div class="col-12 col-md-2 d-flex">
                     <div class="card flex-fill border-0">
                         <div class="card-body py-4">
@@ -61,68 +57,58 @@
                 </div>
             </div>
             <!-- ENDS HERE -->
-
                 <div class="card border-0">
                     <div class="card-header">
                         <h5 class="card-title m-0">
-                            Schoolyears
+                            Strands
                         </h5>
                     </div>
                     <div class="card-body">
-
-                    <table id="myTable" class="table table-hover" style="width:100%">
+                        <table id="myTable" class="table table-hover" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Schoolyear ID</th>
-                                    <th>Schoolyear Duration</th>
-                                    <th># of Subjects</th>
-                                    <th># of Strands</th>
-                                    <th># of Faculty</th>
-                                    <th>Options</th>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011-04-25</td>
+                                    <td>$320,800</td>
                                 </tr>
                                 <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
+                                    <td>Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>63</td>
+                                    <td>2011-07-25</td>
+                                    <td>$170,750</td>
                                 </tr>
                                 <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>66</td>
+                                    <td>2009-01-12</td>
+                                    <td>$86,000</td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Schoolyear ID</th>
-                                    <th>Schoolyear Duration</th>
-                                    <th># of Subjects</th>
-                                    <th># of Strands</th>
-                                    <th># of Faculty</th>
-                                    <th>Options</th>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
                                 </tr>
                             </tfoot>
                         </table>

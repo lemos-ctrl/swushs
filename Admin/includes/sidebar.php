@@ -20,22 +20,25 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </li>
             <li class="sidebar-item">
                 <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
-                    aria-expanded="<?php if ($current_page == 'schoolyear.php' || $current_page == 'subjectbudget.php') echo 'true'; else echo 'false'; ?>"><i class="fa-solid fa-file-lines pe-2"></i>
+                    aria-expanded="<?php if ($current_page == 'schoolYear.php' || $current_page == 'subjectBudget.php') echo 'true'; else echo 'false'; ?>"><i class="fa-solid fa-file-lines pe-2"></i>
                     Curriculum
                 </a>
-                <ul id="pages" class="sidebar-dropdown list-unstyled <?php if ($current_page == 'schoolyear.php' || $current_page == 'subjectbudget.php') echo 'show'; ?>" data-bs-parent="#sidebar">
+                <ul id="pages" class="sidebar-dropdown list-unstyled <?php if ($current_page == 'schoolYear.php' || $current_page == 'subject.php' || $current_page == 'strand.php') echo 'show'; ?>" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a href="../Features/schoolyear.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'schoolyear.php') echo 'active'; ?>">School Years</a>
+                        <a href="../Features/schoolYear.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'schoolYear.php') echo 'active'; ?>">School Years</a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="../Features/subjectbudget.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'subjectbudget.php') echo 'active'; ?>">Subject Budget</a>
+                        <a href="../Features/subject.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'subject.php') echo 'active'; ?>">Subjects</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="../Features/strand.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'strand.php') echo 'active'; ?>">Strands</a>
                     </li>
                 </ul>
             </li>
             <li class="sidebar-item">
                 <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
                     aria-expanded="<?php if ($current_page == 'faculty.php') echo 'true'; else echo 'false'; ?>"><i class="fa-regular fa-user pe-2"></i>
-                    People
+                    Staff
                 </a>
                 <ul id="posts" class="sidebar-dropdown list-unstyled <?php if ($current_page == 'faculty.php') echo 'show'; ?>" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
@@ -45,18 +48,21 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </li>
             <li class="sidebar-item">
                 <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
-                    aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
+                    aria-expanded="<?php if ($current_page == 'subjectBudget.php') echo 'true'; else echo 'false'; ?>"><i class="fa-solid fa-sliders pe-2"></i>
                     Timetable Generation
                 </a>
-                <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                <ul id="auth" class="sidebar-dropdown list-unstyled <?php if ($current_page == 'subjectBudget.php') echo 'show'; ?>" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link sidebar-link-child">Load Scheduling</a>
+                        <a href="../Features/subjectBudget.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'subjectBudget.php') echo 'active'; ?>">Subject Budget</a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link sidebar-link-child">Faculty Loading</a>
+                        <a href="../Features/loadScheduling.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'loadScheduling.php') echo 'active'; ?>">Load Scheduling</a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link sidebar-link-child">Room Assignment</a>
+                        <a href="../Features/facultyLoading.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'facultyLoading.php') echo 'active'; ?>">Faculty Loading</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="../Features/roomAssignment.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'roomAssignment.php') echo 'active'; ?>">Room Assignment</a>
                     </li>
                 </ul>
             </li>
@@ -71,6 +77,4 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </a>
             </li>
         </ul>
-    </div>
 </aside>
-

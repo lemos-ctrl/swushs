@@ -37,27 +37,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // data tables dashboard init
 $(document).ready(function () {
-  $("#myTable").DataTable();
+    $('#myTable').DataTable({
+        "columnDefs": [
+          { className: 'dt-body-left', targets: '_all' },
+          { className: 'dt-head-left', targets: '_all' },
+        ]
+    });
 });
 
 // link highlighting feature
 document.addEventListener("DOMContentLoaded", function () {
-  // Check if any dropdown contains the active class
-  const activeDropdown = document.querySelector(".sidebar-dropdown.show");
-  if (activeDropdown) {
-    // Expand the dropdown
-    const parentCollapse = activeDropdown
-      .closest(".sidebar-item")
-      .querySelector('[data-bs-toggle="collapse"]');
-    if (parentCollapse) {
-      parentCollapse.setAttribute("aria-expanded", "true");
+  // Check local storage and expand/collapse dropdowns accordingly
+  const storedDropdowns = Object.keys(localStorage);
+  storedDropdowns.forEach((dropdown) => {
+    const element = document.querySelector(dropdown);
+    if (element) {
+      const state = localStorage.getItem(dropdown);
+      if (state === "expanded") {
+        element.classList.add("show");
+        // Expand the dropdown's parent category
+        const parentCollapse = element.closest(".sidebar-item").querySelector('[data-bs-toggle="collapse"]');
+        if (parentCollapse) {
+          parentCollapse.setAttribute("aria-expanded", "true");
+        }
+      }
     }
-  }
+  });
 
-  // Save the state of the dropdown in local storage or cookie
-  const toggleButtons = document.querySelectorAll(
-    '[data-bs-toggle="collapse"]'
-  );
+  // Save the state of the dropdown in local storage when clicked
+  const toggleButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
   toggleButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const expanded = this.getAttribute("aria-expanded");
@@ -70,3 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+
