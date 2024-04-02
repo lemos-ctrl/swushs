@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SWU-SHS AMS Admin Dashboard</title>
+    <title>SWU-SHS AMS Admin Attendance Page</title>
     <link rel="stylesheet" href="../Styles/dashboard.css" />
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
@@ -15,7 +15,7 @@
 
       <div class="menu-content">
         <ul class="menu-items">
-          <!--<div class="menu-title">Your menu title</div>--> <!-- basta tanawn lang ug magamit -->
+
           <li class="item">
             <a href="../Admin/dashboard.php">Dashboard</a>
           </li>
@@ -44,7 +44,7 @@
     </nav>
 
     <main class="main">
-      <h1>Admin Dashboard Content</h1>
+      <h1>Attendance Page Content</h1>
     </main>
 
     <script src="../Scripts/dashboard-main.js"></script>
