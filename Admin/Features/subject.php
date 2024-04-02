@@ -11,7 +11,7 @@
     <script src="../../Scripts/script.js"></script>
 </head>
 
-<body>
+<body> 
 
 <div class="wrapper">
     <?php include('../includes/sidebar.php'); ?> 
@@ -33,28 +33,34 @@
                 <div class="col-12 col-md-2 d-flex">
                     <div class="card flex-fill border-0">
                         <div class="card-body py-4">
-                            <div class="d-flex align-items-start">
-                                <div class="flex-grow-1">
-                                    <h4 class="mb-2">
-                                        class ni
-                                    </h4>
-                                    <p class="mb-2">
-                                        kani kay button ni
-                                    </p>
-                                    <div class="mb-0">
-                                        <span class="badge text-success me-2">
-                                            <p>olah</p>
-                                        </span>
-                                        <span class="text-muted">
-                                    
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal</button>
+
                         </div>
                     </div>
                 </div>
             </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                        
             <!-- ENDS HERE -->
                 <div class="card border-0">
                     <div class="card-header">
