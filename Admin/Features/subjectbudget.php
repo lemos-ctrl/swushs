@@ -11,13 +11,11 @@
     <script src="../../Scripts/script.js"></script>
 </head>
 
-<body>
+<body> 
 
 <div class="wrapper">
-<?php include('../includes/sidebar.php'); ?>
-
-    
-<div class="main">
+    <?php include('../includes/sidebar.php'); ?> 
+    <div class="main">
         <nav class="navbar custom-toggler navbar-expand px-3 border-bottom">
             <button class="btn" id="sidebar-toggle" type="button">
                 <span class="navbar-toggler-icon "></span>
@@ -28,85 +26,129 @@
             </div>
         </nav>
 
-        <main class="content px-3 py-2">
+        <main class="content px-3 py-4">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 col-md-6 d-flex">
-                        <div class="card flex-fill border-0 illustration">
-                            <div class="card-body p-0 d-flex flex-fill">
-                                <div class="row g-0 w-100">
-                                    <div class="col-6">
-                                        <div class="p-3 m-1">
-                                            <h4>School Year</h4>
-                                            <p class="mb-0">Admin Dashboard </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 d-flex">
-                        <div class="card flex-fill border-0">
-                            <div class="card-body py-4">
-                                <div class="d-flex align-items-start">
-                                    <div class="flex-grow-1">
-                                        <h4 class="mb-2">
-                                            
-                                        </h4>
-                                        <p class="mb-2">
-                                            
-                                        </p>
-                                        <div class="mb-0">
-                                            <span class="badge text-success me-2">
-                                                <p>olah</p>
-                                            </span>
-                                            <span class="text-muted">
-                                                <p>helo</p>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <?php include '../../Admin/includes/dashboardBanner.php';?>
+                <!-- SAME ROW OF DASHBOARD BANNER BUT LIKE I JUST PUT IT HERE KAY FOR EVERY PAGE LAHE LAHE -->
+                <div class="col-12 col-md-2 d-flex">
+                    <div class="card flex-fill border-0">
+                        <div class="card-body d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Add Subjects</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <!-- <a href="#" class="theme-toggle">
-            <i class="fa-regular fa-moon"></i>
-            <i class="fa-regular fa-sun"></i>
-        </a> -->
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row text-muted">
-                    <div class="col-6 text-start">
-                        <p class="mb-0">
-                            <a href="#" class="text-muted">
-                                
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-6 text-end">
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <a href="#" class="text-muted">Contact</a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#" class="text-muted">About Us</a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#" class="text-muted">Terms</a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#" class="text-muted">Booking</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-</div>
 
-</body>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Add Subject</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="addSubjectForm">
+                                    <div class="mb-3">
+                                        <label for="subjectName" class="form-label">Subject Name</label>
+                                        <input type="text" class="form-control" id="subjectName" name="subjectName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subjectCode" class="form-label">Subject Code</label>
+                                        <input type="text" class="form-control" id="subjectCode" name="subjectCode" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subjectDescription" class="form-label">Subject Description</label>
+                                        <input type="text" class="form-control" id="subjectDescription" name="subjectDescription">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="strand" class="form-label">Strand</label>
+                                        <select class="form-select" id="strand" name="strand">
+                                            <option value="">Select Strand</option>
+                                            <option value="Strand 1">Strand 1</option>
+                                            <option value="Strand 2">Strand 2</option>
+                                            <option value="Strand 3">Strand 3</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="creditedUnits" class="form-label">Credited Units</label>
+                                        <input type="text" class="form-control" id="creditedUnits" name="creditedUnits">
+                                    </div>
+                                    <!-- Add more fields as needed -->
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="addSubject()">Add Subject</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        
+            <!-- ENDS HERE -->
+                <div class="card border-0">
+                    <div class="card-header">
+                        <h5 class="card-title  m-0">
+                            Subjects
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <table id="myTable" class="table table-hover" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011-04-25</td>
+                                    <td>$320,800</td>
+                                </tr>
+                                <tr>
+                                    <td>Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>63</td>
+                                    <td>2011-07-25</td>
+                                    <td>$170,750</td>
+                                </tr>
+                                <tr>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>66</td>
+                                    <td>2009-01-12</td>
+                                    <td>$86,000</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                    </div>
+                </main>  
+            </div>
+        </div>
+    </body>
 </html>

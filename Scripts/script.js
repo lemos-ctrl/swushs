@@ -80,4 +80,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// modal
 
+document.addEventListener('DOMContentLoaded', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+  var schoolYearSpan = document.getElementById('schoolYearSpan');
+
+  document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', event => {
+      var schoolYear = event.target.getAttribute('data-school-year');
+      schoolYearSpan.textContent = schoolYear;
+      myModal.show();
+    });
+  });
+});
+
+//calendar component
+
+const fullCalendarElement = document.querySelector('full-calendar')
+
+fullCalendarElement.options = {
+  headerToolbar: {
+    left: 'prev,next today',
+    center: 'title',
+    right: 'dayGridMonth,dayGridWeek,dayGridDay'
+  }
+}

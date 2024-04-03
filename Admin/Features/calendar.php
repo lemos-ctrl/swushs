@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="../../Styles/styles.css">
     <script src="../../Scripts/script.js"></script>
 
-    <style>
-        /* Explicitly set left alignment for table cells */
-    </style>
 </head>
 
 <body>
@@ -50,15 +47,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-12 col-md-2 d-flex">
-                    <div class="card flex-fill border-0">
-                        <div class="card-body d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Add Subjects</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -112,69 +100,21 @@
                 <div class="card border-0">
                     <div class="card-header">
                         <h5 class="card-title m-0">
-                            Schoolyears
+                            Calendar
                         </h5>
                     </div>
                     <div class="card-body">
 
-                    <table id="myTable" class="table table-hover" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th>Schoolyear ID</th>
-                                    <th>Schoolyear Duration</th>
-                                    <th># of Subjects</th>
-                                    <th># of Strands</th>
-                                    <th># of Faculty</th>
-                                    <th>Options</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Schoolyear ID</th>
-                                    <th>Schoolyear Duration</th>
-                                    <th># of Subjects</th>
-                                    <th># of Strands</th>
-                                    <th># of Faculty</th>
-                                    <th>Options</th>
-                                </tr>
-                            </tfoot>
-                        </table>
+                    <full-calendar shadow options='{
+                        "headerToolbar": {
+                        "left": "prev,next today",
+                        "center": "title",
+                        "right": "dayGridMonth,dayGridWeek,dayGridDay"
+                        }
+                    }' />                   
                     </div>
                 </div>
+            </div>
                     </div>
                 </main>  
             </div>

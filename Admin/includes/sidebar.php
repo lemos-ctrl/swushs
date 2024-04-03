@@ -20,12 +20,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </li>
             <li class="sidebar-item">
                 <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
-                    aria-expanded="<?php if ($current_page == 'schoolYear.php' || $current_page == 'subjectBudget.php') echo 'true'; else echo 'false'; ?>"><i class="fa-solid fa-file-lines pe-2"></i>
+                    aria-expanded="<?php if ($current_page == 'rooms.php' || $current_page == 'subjectBudget.php') echo 'true'; else echo 'false'; ?>"><i class="fa-solid fa-file-lines pe-2"></i>
                     Curriculum
                 </a>
-                <ul id="pages" class="sidebar-dropdown list-unstyled <?php if ($current_page == 'schoolYear.php' || $current_page == 'subject.php' || $current_page == 'strand.php') echo 'show'; ?>" data-bs-parent="#sidebar">
+                <ul id="pages" class="sidebar-dropdown list-unstyled <?php if ($current_page == 'rooms.php' || $current_page == 'subject.php' || $current_page == 'strand.php') echo 'show'; ?>" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a href="../Features/schoolYear.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'schoolYear.php') echo 'active'; ?>">School Years</a>
+                        <a href="../Features/rooms.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'rooms.php') echo 'active'; ?>">Rooms</a>
                     </li>
                     <li class="sidebar-item">
                         <a href="../Features/subject.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'subject.php') echo 'active'; ?>">Subjects</a>

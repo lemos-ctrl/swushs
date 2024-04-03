@@ -32,9 +32,8 @@
                 <!-- SAME ROW OF DASHBOARD BANNER BUT LIKE I JUST PUT IT HERE KAY FOR EVERY PAGE LAHE LAHE -->
                 <div class="col-12 col-md-2 d-flex">
                     <div class="card flex-fill border-0">
-                        <div class="card-body py-4">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal</button>
-
+                        <div class="card-body d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Add Subjects</button>
                         </div>
                     </div>
                 </div>
@@ -42,23 +41,51 @@
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Add Subject</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"> </span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="addSubjectForm">
+                                    <div class="mb-3">
+                                        <label for="subjectName" class="form-label">Subject Name</label>
+                                        <input type="text" class="form-control" id="subjectName" name="subjectName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subjectCode" class="form-label">Subject Code</label>
+                                        <input type="text" class="form-control" id="subjectCode" name="subjectCode" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subjectDescription" class="form-label">Subject Description</label>
+                                        <input type="text" class="form-control" id="subjectDescription" name="subjectDescription">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="strand" class="form-label">Strand</label>
+                                        <select class="form-select" id="strand" name="strand">
+                                            <option value="">Select Strand</option>
+                                            <option value="Strand 1">Strand 1</option>
+                                            <option value="Strand 2">Strand 2</option>
+                                            <option value="Strand 3">Strand 3</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="creditedUnits" class="form-label">Credited Units</label>
+                                        <input type="text" class="form-control" id="creditedUnits" name="creditedUnits">
+                                    </div>
+                                    <!-- Add more fields as needed -->
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="addSubject()">Add Subject</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                    </div>
-                </div>
                 </div>
                         
             <!-- ENDS HERE -->

@@ -27,8 +27,8 @@
   height: 100%;
   width: 100%;
   opacity: 0.7;
-  bottom: 0; /* Align to the bottom */
-  left: 50%; /* Align to the center horizontally */
+  bottom: 0; 
+  left: 50%;
   transform: translateX(-50%); /* Adjust for center alignment */
 }
 
@@ -343,6 +343,11 @@ nav {
   padding-left: -5px;
 }
 
+.dashboard-dropdown h6 {
+  color: var(--font-heading2);
+  font-size: 12px;
+}
+
 .dashboard-icons i {
   display: block;
   font-size: 12px;
@@ -465,4 +470,41 @@ html[data-bs-theme="light"] .theme-toggle .fa-sun {
 
 table td, table th {
   text-align: left !important;
+}
+
+
+/* full calendar styling */
+
+/* Change background color of the calendar */
+full-calendar {
+  --fc-theme-standard-primary: #007bff; /* Primary color */
+  --fc-theme-standard-bg: #f8f9fa; /* Background color */
+}
+
+/* Change text color */
+full-calendar,
+full-calendar-header,
+full-calendar-header-button,
+full-calendar-event {
+  color: #333; /* Text color */
+}
+
+/* Change border color */
+full-calendar {
+  --fc-border-color: #ccc; /* Border color */
+}
+
+/* Change font size */
+full-calendar,
+full-calendar-header,
+full-calendar-header-button,
+full-calendar-event {
+  font-size: 14px; /* Font size */
+}
+
+/* Customize event appearance */
+full-calendar-event {
+  background-color: #28a745; /* Event background color */
+  border-color: #28a745; /* Event border color */
+  color: #fff; /* Event text color */
 }
