@@ -43,18 +43,19 @@
                       <i class="fa-solid fa-bars" id="sidebar-close"></i>
                     </nav>
 
-                      <main class="main">
+                      <div class="main">
                         <!--<h1>Admin Dashboard Content</h1>-->
                           <div class="grid-container">
-                          <div class="angry-grid">
-                                <div id="item-0">&nbsp;</div>
+                            <div class="angry-grid">
+                                <div id="item-0">
+                                  <canvas id="chartjs-bar"></canvas>
+                                </div>
                                 <div id="item-1">&nbsp;</div>
                                 <div id="item-2">&nbsp;</div>
                                 <div id="item-3">&nbsp;</div>
-                              </div>
-                          </div>
-                          
-                      </main>
+                            </div>
+                          </div>          
+                      </div>
 
                           <script src="../Scripts/dashboard-main.js"></script>
                             <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>

@@ -88,18 +88,45 @@
 .submenu .menu-title i {
   margin-right: 10px;
 }
+
+
 .navbar,
-.main {
+.main,
+.main.grid-container {
   left: 260px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
   z-index: 1000;
 }
+
+/*.grid-container {
+  position: fixed;
+  top: 68px;
+  left: 260px;
+  bottom: 0;
+  right: 0;
+  border: #11101d;
+  border-style: solid;
+  transition: all 0.5s ease;
+  z-index: 1000;
+}*/
+
 .sidebar.close ~ .navbar,
 .sidebar.close ~ .main {
   left: 0;
   width: 100%;
 }
+
+/*
+.sidebar.close ~ .grid-container {
+  left: 0;
+  width: calc(100% - 260px);
+}
+*/
+
+
+
+
 .navbar {
   position: fixed;
   color: #fff;
@@ -136,7 +163,19 @@
   right: 0;
   border: #11101d;
   border-style: solid;
+  transition: all 0.5s ease;
+  z-index: 1000;
 }
+
+/*.grid-container {
+  position: fixed;
+  top: 68px;
+  left: 260px;
+  bottom: 0;
+  right: 0;
+  border: #11101d;
+  border-style: solid;
+}*/
 
 
 .canvas {
@@ -156,8 +195,6 @@
 }
  
 #item-0 {
-
-  background-color: #5A589B; 
   grid-row-start: 1;
   grid-column-start: 1;
 

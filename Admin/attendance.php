@@ -44,9 +44,11 @@
     </nav>
 
     <main class="main">
-      <h1>Attendance Page Content</h1>
+      <canvas id="chartjs-bar"></canvas>
     </main>
 
     <script src="../Scripts/dashboard-main.js"></script>
+    <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
+    <script src="../Scripts/chart.js"></script>
   </body>
 </html>
