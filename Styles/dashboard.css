@@ -199,6 +199,7 @@
 
   grid-row-end: 6;
   grid-column-end: 7;
+  border: maroon;
   
 }
 #item-1 {
@@ -209,7 +210,7 @@
 
   grid-row-end: 6;
   grid-column-end: 9;
-  
+  border: maroon;
 }
 #item-2 {
 
@@ -219,7 +220,7 @@
 
   grid-row-end: 7;
   grid-column-end: 9;
-  
+  border: maroon;
 }
 #item-3 {
 
@@ -229,5 +230,5 @@
 
   grid-row-end: 8;
   grid-column-end: 9;
-  
+  border: maroon;
 }
