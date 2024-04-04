@@ -28,10 +28,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="../Features/rooms.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'rooms.php') echo 'active'; ?>">Rooms</a>
                     </li>
                     <li class="sidebar-item">
+                        <a href="../Features/strand.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'strand.php') echo 'active'; ?>">Strands</a>
+                    </li>
+                    <li class="sidebar-item">
                         <a href="../Features/subject.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'subject.php') echo 'active'; ?>">Subjects</a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="../Features/strand.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'strand.php') echo 'active'; ?>">Strands</a>
+                        <a href="../Features/calendar.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'calendar.php') echo 'active'; ?>">Calendar</a>
                     </li>
                 </ul>
             </li>
@@ -69,7 +72,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <li class="sidebar-header">
                 Resources
             </li>
-            
+        </ul>
+        <ul class="sidebar-nav mt-auto">
             <li class="sidebar-item">
                 <a href="../../index.php" class="sidebar-link">
                     <i class="fa-solid fa-list pe-2"></i>
@@ -77,4 +81,5 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </a>
             </li>
         </ul>
+
 </aside>

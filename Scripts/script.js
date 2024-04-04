@@ -38,6 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // data tables dashboard init
 $(document).ready(function () {
     $('#myTable').DataTable({
+        "scrollX": "100vw", 
+        "scrollCollapse": true, 
+        "fixedHeader": true, // Add this line
         "columnDefs": [
           { className: 'dt-body-left', targets: '_all' },
           { className: 'dt-head-left', targets: '_all' },
@@ -45,8 +48,21 @@ $(document).ready(function () {
     });
 });
 
-// link highlighting feature
 document.addEventListener("DOMContentLoaded", function () {
+  // Highlight current page link
+  const currentPage = "<?php echo $current_page; ?>";
+  const currentLink = document.querySelector(`.sidebar-link[href*='${currentPage}']`);
+  if (currentLink) {
+    currentLink.classList.add("active");
+    // Expand the parent category if it's collapsed
+    const parentCollapse = currentLink.closest(".sidebar-item").querySelector('[data-bs-toggle="collapse"]');
+    if (parentCollapse && !parentCollapse.getAttribute("aria-expanded")) {
+      parentCollapse.setAttribute("aria-expanded", "true");
+      const parentId = parentCollapse.getAttribute("data-bs-target");
+      localStorage.setItem(parentId, "expanded");
+    }
+  }
+
   // Check local storage and expand/collapse dropdowns accordingly
   const storedDropdowns = Object.keys(localStorage);
   storedDropdowns.forEach((dropdown) => {
@@ -60,6 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (parentCollapse) {
           parentCollapse.setAttribute("aria-expanded", "true");
         }
+      } else {
+        // Collapse dropdowns that are not expanded
+        element.classList.remove("show");
       }
     }
   });
@@ -77,7 +96,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Collapse all categories except the one containing the active link
+  const activeCategory = document.querySelector(".sidebar-item.active").closest(".sidebar-item");
+  const categories = document.querySelectorAll(".sidebar-item");
+  categories.forEach((category) => {
+    if (category !== activeCategory) {
+      const collapseButton = category.querySelector('[data-bs-toggle="collapse"]');
+      if (collapseButton && collapseButton.getAttribute("aria-expanded") === "true") {
+        collapseButton.click();
+      }
+    }
+  });
 });
+
 
 
 // modal
@@ -97,12 +129,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //calendar component
 
-const fullCalendarElement = document.querySelector('full-calendar')
 
-fullCalendarElement.options = {
-  headerToolbar: {
-    left: 'prev,next today',
-    center: 'title',
-    right: 'dayGridMonth,dayGridWeek,dayGridDay'
-  }
-}
+
