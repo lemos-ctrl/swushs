@@ -9,6 +9,7 @@
   --font-heading3: #650008;
   --font-family1: "Poppins", sans-serif;
   --font-family2: "Inter", sans-serif;
+
 }
 
 *,
@@ -473,37 +474,6 @@ table td, table th {
 
 
 /* full calendar styling */
-
-/* Change background color of the calendar */
-full-calendar {
-  --fc-theme-standard-primary: #007bff; /* Primary color */
-  --fc-theme-standard-bg: #f8f9fa; /* Background color */
-}
-
-/* Change text color */
-full-calendar,
-full-calendar-header,
-full-calendar-header-button,
-full-calendar-event {
-  color: #333; /* Text color */
-}
-
-/* Change border color */
-full-calendar {
-  --fc-border-color: #ccc; /* Border color */
-}
-
-/* Change font size */
-full-calendar,
-full-calendar-header,
-full-calendar-header-button,
-full-calendar-event {
-  font-size: 14px; /* Font size */
-}
-
-/* Customize event appearance */
-full-calendar-event {
-  background-color: #28a745; /* Event background color */
-  border-color: #28a745; /* Event border color */
-  color: #fff; /* Event text color */
+.fc-scroller {
+  overflow: hidden;
 }

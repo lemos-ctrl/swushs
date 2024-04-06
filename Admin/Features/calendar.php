@@ -9,10 +9,9 @@
 
     <link rel="stylesheet" href="../../Styles/styles.css">
     <script src="../../Scripts/script.js"></script>
-
 </head>
 
-<body>
+<body> 
 
 <div class="wrapper">
     <?php include('../includes/sidebar.php'); ?> 
@@ -32,21 +31,13 @@
             <?php include '../../Admin/includes/dashboardBanner.php';?>
                 <!-- SAME ROW OF DASHBOARD BANNER BUT LIKE I JUST PUT IT HERE KAY FOR EVERY PAGE LAHE LAHE -->
                 <div class="col-12 col-md-2 d-flex">
-                    <div class="card flex-fill border-0 dashboard-dropdown">
-                        <!-- dropdown button -->
-                        <h6 class="pt-2 ps-2">Select School Year</h6> <!-- Moved this line here -->
-                        <div class="btn-group dropdown-center mx-2">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                Select School Year
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#confirmationModal" data-school-year="2023">2023</a></li>
-                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#confirmationModal" data-school-year="2024">2024</a></li>
-                                <!-- Add more school years as needed -->
-                            </ul>
+                    <div class="card flex-fill border-0">
+                        <div class="card-body d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Add Subjects</button>
                         </div>
                     </div>
                 </div>
+            </div>
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -96,22 +87,12 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="card border-0">
-                    <div class="card-header">
-                        <h5 class="card-title m-0">
-                            Calendar
-                        </h5>
-                    </div>
-                    <div class="card-body">
-
-                    <full-calendar shadow options='{
-                        "headerToolbar": {
-                        "left": "prev,next today",
-                        "center": "title",
-                        "right": "dayGridMonth,dayGridWeek,dayGridDay"
-                        }
-                    }' />                   
+                        
+            <!-- ENDS HERE -->
+            <div class="card border-0">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <div id="calendar" class="table-responsive"></div>
                     </div>
                 </div>
             </div>
@@ -119,6 +100,5 @@
                 </main>  
             </div>
         </div>
-        <
     </body>
 </html>

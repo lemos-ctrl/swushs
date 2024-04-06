@@ -11,12 +11,9 @@
 <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
 
 <!-- database tables -->
-<link href="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.0.3/af-2.7.0/b-3.0.1/b-html5-3.0.1/cr-2.0.0/date-1.5.2/r-3.0.1/sc-2.4.1/sb-1.7.0/sp-2.3.0/datatables.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/v/bs5/dt-2.0.3/b-3.0.1/date-1.5.2/fh-4.0.1/r-3.0.1/sc-2.4.1/sp-2.3.0/sr-1.4.0/datatables.min.css" rel="stylesheet">
  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
-<script src="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.0.3/af-2.7.0/b-3.0.1/b-html5-3.0.1/cr-2.0.0/date-1.5.2/r-3.0.1/sc-2.4.1/sb-1.7.0/sp-2.3.0/datatables.min.js"></script>
-
+<script src="https://cdn.datatables.net/v/bs5/dt-2.0.3/b-3.0.1/date-1.5.2/fh-4.0.1/r-3.0.1/sc-2.4.1/sp-2.3.0/sr-1.4.0/datatables.min.js"></script>
 
 <!-- calendar library -->
 <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.11/index.global.min.js'></script>

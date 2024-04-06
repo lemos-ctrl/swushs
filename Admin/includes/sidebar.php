@@ -25,8 +25,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </a>
                 <ul id="pages" class="sidebar-dropdown list-unstyled <?php if ($current_page == 'rooms.php' || $current_page == 'subject.php' || $current_page == 'strand.php') echo 'show'; ?>" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
+                        <a href="../Features/schoolYear.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'schoolYear.php') echo 'active'; ?>">School Year</a>
+                    </li>
+                    <li class="sidebar-item">
                         <a href="../Features/rooms.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'rooms.php') echo 'active'; ?>">Rooms</a>
                     </li>
+                    
                     <li class="sidebar-item">
                         <a href="../Features/strand.php" class="sidebar-link sidebar-link-child <?php if ($current_page == 'strand.php') echo 'active'; ?>">Strands</a>
                     </li>

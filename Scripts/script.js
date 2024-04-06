@@ -37,15 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // data tables dashboard init
 $(document).ready(function () {
-    $('#myTable').DataTable({
-        "scrollX": "100vw", 
-        "scrollCollapse": true, 
-        "fixedHeader": true, // Add this line
-        "columnDefs": [
+  $('#myTable').DataTable({
+      "paging": false,
+      "responsive": true,
+      stateSave: true,
+      scrollX: "100vw",
+      "fixedHeader": true,
+      "dom": '<"row"<"col-lg-9 table-responsive"l><"col-lg-3"f>>rt<"row"<"col-lg-6"i><"col-lg-6"p>>',
+      "columnDefs": [
           { className: 'dt-body-left', targets: '_all' },
           { className: 'dt-head-left', targets: '_all' },
-        ]
-    });
+      ]
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -129,5 +132,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //calendar component
 
+document.addEventListener('DOMContentLoaded', function () {
+  var calendarEl = document.getElementById('calendar');
 
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    timeZone: 'UTC',
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+    },
+    weekNumbers: true,
+    dayMaxEvents: true, // allow "more" link when too many events,
+    eventDidMount: function (info) {
+      info.el.style.color = '#000'; // Change event text color to black
+    }
+  });
 
+  calendar.render();
+});

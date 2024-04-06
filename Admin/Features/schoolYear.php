@@ -37,11 +37,12 @@
                 <div class="col-12 col-md-2 d-flex">
                     <div class="card flex-fill border-0">
                         <div class="card-body d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Add Rooms</button>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Add School Years</button>
                         </div>
                     </div>
                 </div>
             </div>
+            
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -91,12 +92,11 @@
                         </div>
                     </div>
                 </div>
-            <!-- ENDS HERE -->
 
                 <div class="card border-0">
                     <div class="card-header">
                         <h5 class="card-title m-0">
-                            Rooms
+                            Schoolyears
                         </h5>
                     </div>
                     <div class="card-body">
