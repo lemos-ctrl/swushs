@@ -37,28 +37,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // data tables dashboard init
 $(document).ready(function () {
-  $('#myTable').DataTable({
-      "paging": false,
-      "responsive": true,
-      stateSave: true,
-      scrollX: "100vw",
-      "fixedHeader": true,
-      "dom": '<"row"<"col-lg-9 table-responsive"l><"col-lg-3"f>>rt<"row"<"col-lg-6"i><"col-lg-6"p>>',
-      "columnDefs": [
-          { className: 'dt-body-left', targets: '_all' },
-          { className: 'dt-head-left', targets: '_all' },
-      ]
+  $(".table").DataTable({
+    paging: false,
+    responsive: true,
+    stateSave: true,
+    // scrollX: "100vw",
+    fixedHeader: true,
+    columnDefs: [
+      { className: "dt-body-left", targets: "_all" },
+      { className: "dt-head-left", targets: "_all" },
+    ],
+    layout: {
+      topEnd: "search",
+      topStart: "info",
+      bottomStart: null,
+    },
   });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   // Highlight current page link
   const currentPage = "<?php echo $current_page; ?>";
-  const currentLink = document.querySelector(`.sidebar-link[href*='${currentPage}']`);
+  const currentLink = document.querySelector(
+    `.sidebar-link[href*='${currentPage}']`
+  );
   if (currentLink) {
     currentLink.classList.add("active");
     // Expand the parent category if it's collapsed
-    const parentCollapse = currentLink.closest(".sidebar-item").querySelector('[data-bs-toggle="collapse"]');
+    const parentCollapse = currentLink
+      .closest(".sidebar-item")
+      .querySelector('[data-bs-toggle="collapse"]');
     if (parentCollapse && !parentCollapse.getAttribute("aria-expanded")) {
       parentCollapse.setAttribute("aria-expanded", "true");
       const parentId = parentCollapse.getAttribute("data-bs-target");
@@ -75,7 +83,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (state === "expanded") {
         element.classList.add("show");
         // Expand the dropdown's parent category
-        const parentCollapse = element.closest(".sidebar-item").querySelector('[data-bs-toggle="collapse"]');
+        const parentCollapse = element
+          .closest(".sidebar-item")
+          .querySelector('[data-bs-toggle="collapse"]');
         if (parentCollapse) {
           parentCollapse.setAttribute("aria-expanded", "true");
         }
@@ -87,7 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Save the state of the dropdown in local storage when clicked
-  const toggleButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+  const toggleButtons = document.querySelectorAll(
+    '[data-bs-toggle="collapse"]'
+  );
   toggleButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const expanded = this.getAttribute("aria-expanded");
@@ -101,29 +113,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Collapse all categories except the one containing the active link
-  const activeCategory = document.querySelector(".sidebar-item.active").closest(".sidebar-item");
+  const activeCategory = document
+    .querySelector(".sidebar-item.active")
+    .closest(".sidebar-item");
   const categories = document.querySelectorAll(".sidebar-item");
   categories.forEach((category) => {
     if (category !== activeCategory) {
-      const collapseButton = category.querySelector('[data-bs-toggle="collapse"]');
-      if (collapseButton && collapseButton.getAttribute("aria-expanded") === "true") {
+      const collapseButton = category.querySelector(
+        '[data-bs-toggle="collapse"]'
+      );
+      if (
+        collapseButton &&
+        collapseButton.getAttribute("aria-expanded") === "true"
+      ) {
         collapseButton.click();
       }
     }
   });
 });
 
-
-
 // modal
 
-document.addEventListener('DOMContentLoaded', function () {
-  var myModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
-  var schoolYearSpan = document.getElementById('schoolYearSpan');
+document.addEventListener("DOMContentLoaded", function () {
+  var myModal = new bootstrap.Modal(
+    document.getElementById("confirmationModal")
+  );
+  var schoolYearSpan = document.getElementById("schoolYearSpan");
 
-  document.querySelectorAll('.dropdown-item').forEach(item => {
-    item.addEventListener('click', event => {
-      var schoolYear = event.target.getAttribute('data-school-year');
+  document.querySelectorAll(".dropdown-item").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      var schoolYear = event.target.getAttribute("data-school-year");
       schoolYearSpan.textContent = schoolYear;
       myModal.show();
     });
@@ -132,21 +151,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //calendar component
 
-document.addEventListener('DOMContentLoaded', function () {
-  var calendarEl = document.getElementById('calendar');
+document.addEventListener("DOMContentLoaded", function () {
+  var calendarEl = document.getElementById("calendar");
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    timeZone: 'UTC',
+    timeZone: "UTC",
     headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+      left: "prev,next today",
+      center: "title",
+      right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
     },
     weekNumbers: true,
     dayMaxEvents: true, // allow "more" link when too many events,
     eventDidMount: function (info) {
-      info.el.style.color = '#000'; // Change event text color to black
-    }
+      info.el.style.color = "#000"; // Change event text color to black
+    },
   });
 
   calendar.render();

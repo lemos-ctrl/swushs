@@ -9,7 +9,6 @@
   --font-heading3: #650008;
   --font-family1: "Poppins", sans-serif;
   --font-family2: "Inter", sans-serif;
-
 }
 
 *,
@@ -28,7 +27,7 @@
   height: 100%;
   width: 100%;
   opacity: 0.7;
-  bottom: 0; 
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%); /* Adjust for center alignment */
 }
@@ -212,11 +211,11 @@ a.sidebar-link {
   color: #e9ecef;
   position: relative;
   display: block !important;
-  font-size: 0.875rem;
+  font-size: 0.775rem;
 }
 
 a.sidebar-link.sidebar-link-child {
-  font-size: 0.775rem;
+  font-size: 0.675rem;
   padding: 0.6725rem 0rem 0.6725rem 5.15rem;
 }
 
@@ -246,6 +245,10 @@ a.sidebar-link.sidebar-link-child {
 
 /* CSS for active link */
 .sidebar-item.active .sidebar-link {
+  font-weight: bold;
+}
+
+.sidebar-item .sidebar-link .active {
   font-weight: bold;
 }
 
@@ -369,23 +372,23 @@ nav {
 }
 
 .dashboard-icons .user-card1:nth-child(1) {
-  background-color: #DEE6F2;
+  background-color: #dee6f2;
   padding: 5px 10px;
   color: #133353;
   border-radius: 5px 0 0 5px;
 }
 
 .dashboard-icons .user-card1:nth-child(2) {
-  background-color: #F3E4F5;
+  background-color: #f3e4f5;
   padding: 5px 10px;
   color: #755882;
   border-radius: 0 5px 5px 0;
 }
 
 .dashboard-icons .user-card2:nth-child(1) {
-  background-color: #B9FFD1;
+  background-color: #b9ffd1;
   padding: 5px 10px;
-  color: #124A0D;
+  color: #124a0d;
   border-radius: 5px;
 }
 .dashboard-icons p {
@@ -468,10 +471,10 @@ html[data-bs-theme="light"] .theme-toggle .fa-sun {
   color: #ffffff; /* Change this to your desired text color */
 }
 
-table td, table th {
+table td,
+table th {
   text-align: left !important;
 }
-
 
 /* full calendar styling */
 .fc-scroller {
