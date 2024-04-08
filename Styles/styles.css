@@ -401,15 +401,6 @@ nav {
   margin: 0;
 }
 
-/* .illustration {
-  border: 1px solid var(--color-sub);
-}
-
-.illustration-img {
-  max-width: 150px;
-  width: 100%;
-} */
-
 /* Sidebar Toggle */
 
 #sidebar.collapsed {
@@ -432,37 +423,6 @@ nav {
     width: 100vw;
   }
 }
-
-/* Theme Toggler
-
-.theme-toggle {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-65%);
-  text-align: center;
-  z-index: 10;
-  right: 0;
-  left: auto;
-  border: none;
-  background-color: var(--bs-body-color);
-}
-
-html[data-bs-theme="dark"] .theme-toggle .fa-sun,
-html[data-bs-theme="light"] .theme-toggle .fa-moon {
-  cursor: pointer;
-  padding: 10px;
-  display: block;
-  font-size: 1.25rem;
-  color: #fff;
-}
-
-html[data-bs-theme="dark"] .theme-toggle .fa-moon {
-  display: none;
-}
-
-html[data-bs-theme="light"] .theme-toggle .fa-sun {
-  display: none;
-} */
 
 /* DATA TABLES CSS */
 /* Change pagination hover color */

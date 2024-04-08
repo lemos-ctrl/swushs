@@ -1,6 +1,5 @@
-<?php 
-include_once '../../includes/cdn.php';?>
-
+<?php require_once('../../includes/cdn.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +9,6 @@ include_once '../../includes/cdn.php';?>
     <title>Admin Dashboard</title>
 
     <link rel="stylesheet" href="../../Styles/styles.css">
-    <script src="../../Scripts/script.js"></script>
 </head>
 
 <body>
@@ -31,30 +29,26 @@ include_once '../../includes/cdn.php';?>
             <main class="content px-3 py-4">
                 <div class="container-fluid">
                     <?php include '../../Admin/includes/dashboardBanner.php';?>
-                    <!-- SAME ROW OF DASHBOARD BANNER BUT LIKE I JUST PUT IT HERE KAY FOR EVERY PAGE LAHE LAHE -->
                     <div class="col-12 col-md-2 d-flex">
                         <div class="card flex-fill border-0 dashboard-dropdown">
                             <!-- dropdown button -->
-                            <h6 class="pt-2 ps-2 ">Select School Year</h6> <!-- Moved this line here -->
+                            <h6 class="pt-2 ps-2 ">Select School Year</h6>
                             <div class="btn-group dropdown-center px-2">
                                 <button type="button" class="btn btn-primary btn-sm dropdown-toggle"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    data-bs-toggle="dropdown" id="schoolyear-dropdown" aria-expanded="false">
                                     Select School Year
                                 </button>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu" aria-labelledby="schoolyear-dropdown">
                                     <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
                                             data-bs-target="#confirmationModal" data-school-year="2023">2023</a></li>
                                     <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
                                             data-bs-target="#confirmationModal" data-school-year="2024">2024</a></li>
-                                    <!-- Add more school years as needed -->
                                 </ul>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <!-- Modal -->
                 <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog"
                     aria-labelledby="confirmationModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -65,7 +59,8 @@ include_once '../../includes/cdn.php';?>
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                Are you sure you want to switch to the <span id="schoolYearSpan"></span> school year?
+                                Are you sure you want to switch to the <span id="schoolYearSpan"></span> school
+                                year?
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -74,13 +69,35 @@ include_once '../../includes/cdn.php';?>
                         </div>
                     </div>
                 </div>
-                <!-- ENDS HERE -->
+
                 <div class="card border-0">
                     <div class="card-header">
-                        <h5 class="card-title m-0">
-                            Curriculum
-                        </h5>
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title m-0">Curriculum</h5>
+                            </div>
+                            <div class="col-auto">
+                                <div class="btn-group dropdown-center px-2 text-end">
+                                    <button id="semester-dropdown" type="button"
+                                        class="btn btn-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <?php
+                                            // Assuming $selected_semester contains the selected semester value
+                                            echo isset($selected_semester) ? $selected_semester : "Select Semester";
+                                        ?>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal1"
+                                                onclick="changeSemester('Semester 1')">Semester 1</a></li>
+                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal1ß"
+                                                onclick="changeSemester('Semester 2')">Semester 2</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+
                     <div class="card-body">
                         <table id="myTable" class="table table-hover" style="width:100%">
                             <thead>
@@ -132,10 +149,10 @@ include_once '../../includes/cdn.php';?>
                         </table>
                     </div>
                 </div>
+            </main>
         </div>
-        </main>
-    </div>
     </div>
 </body>
+<script src="../../Scripts/script.js"></script>
 
 </html>

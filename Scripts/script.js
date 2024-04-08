@@ -170,3 +170,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   calendar.render();
 });
+
+
+//dashboard.php
+function changeSemester(semester) {
+    document.getElementById('semester-dropdown').innerText = semester;
+}
