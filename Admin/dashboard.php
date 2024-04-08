@@ -31,7 +31,7 @@ include_once '../includes/cdn.php';?>
 
 
                     <div class="col-md-4 col-lg-2">
-                        <div class="card">
+                        <div class="card2">
                             <h6 class="text-center my-3">ATTENDANCE TODAY</h6>
                             <ul class="list-unstyled news-list mt-3">
                                 <!-- Your list items -->
@@ -52,6 +52,60 @@ include_once '../includes/cdn.php';?>
                                         </div>
                                     </div>
                                 </li>
+                                
+                                <li class="row mx-0 mb-4">
+                                    <!-- Example list item -->
+                                    <a class="col-1">
+                                        <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                    </a>
+                                    <div class="col h-2">
+                                        <a href="#">
+                                            <h2 class="h6 mx-3">Alen </h2>
+                                        </a>
+                                        <div>
+                                            <a class="text-secondary d-flex justify-content-center">
+                                                <a class="lni lni-exit-down me-2"></a>7:00am
+                                                <a class="lni lni-exit-up ms-2 me-2"></a>4:00pm
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="row mx-0 mb-4">
+                                    <!-- Example list item -->
+                                    <a class="col-1">
+                                        <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                    </a>
+                                    <div class="col h-2">
+                                        <a href="#">
+                                            <h2 class="h6 mx-3">Alen </h2>
+                                        </a>
+                                        <div>
+                                            <a class="text-secondary d-flex justify-content-center">
+                                                <a class="lni lni-exit-down me-2"></a>7:00am
+                                                <a class="lni lni-exit-up ms-2 me-2"></a>4:00pm
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="row mx-0 mb-4">
+                                    <!-- Example list item -->
+                                    <a class="col-1">
+                                        <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                    </a>
+                                    <div class="col h-2">
+                                        <a href="#">
+                                            <h2 class="h6 mx-3">Alen </h2>
+                                        </a>
+                                        <div>
+                                            <a class="text-secondary d-flex justify-content-center">
+                                                <a class="lni lni-exit-down me-2"></a>7:00am
+                                                <a class="lni lni-exit-up ms-2 me-2"></a>4:00pm
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
                                 <!-- Repeat for other list items -->
                             </ul>
                         </div>
