@@ -1,63 +1,290 @@
+<?php 
+include_once '../includes/cdn.php';?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>SWU-SHS AMS Admin Dashboard</title>
-            <link rel="stylesheet" href="../Styles/dashboard.css" />
-              <!-- Fontawesome CDN Link -->
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-                </head>
-                  <body>
-                    <nav class="sidebar">
-                      <a href="#" class="logo">Admin Portal</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    
+<div class="wrapper">
+    <?php include '../Admin/includes/sidebar.php';?>
+    <div class="main">
+            <nav class="navbar custom-toggler navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class="navbar-collapse navbar p-0 d-flex justify-content-end align-items-center">
+                    <span>Welcome back <b>Lemuel</b>!</span>
+                    <a href="#" class="las la-user-circle ps-2"></a>
+                </div>
+            </nav>
 
-                          <div class="menu-content">
-                              <ul class="menu-items">
-                                <!--<div class="menu-title">Your menu title</div>--> <!-- basta tanawn lang ug magamit -->
-                                <li class="item">
-                                  <a href="../Admin/dashboard.php">Dashboard</a>
-                                </li>
-
-                                  <li class="item">
-                                    <a href="../Admin/attendance.php">Attendance</a>
-                                  </li>
-
-                                    <li class="item">
-                                      <a href="../Admin/leaves.php">Leave Management</a>
-                                    </li>
-
-                                      <li class="item">
-                                        <a href="../Admin/master-data.php">Master Data</a>
-                                      </li>
-
-                                        <li class="item">
-                                          <a href="../Admin/settings.php">Settings</a>
-                                        </li>
-                                </ul>
+            <main class="content px-3 py-2 ">
+                    <div class="container-fluid ">
+                        <div class="row">
+                            <div class="col-md-10  ">
+                                <canvas id="myChart" class="py-1 card"></canvas>
                             </div>
-                      </nav>
+                            
+                            <div class="col-md-2">
+                                <div class="col-md-1 card" style="width: 15rem;">
+                                        <h6 class="text-center my-3">ATTENDANCE TODAY</h6>
 
-                    <nav class="navbar">
-                      <i class="fa-solid fa-bars" id="sidebar-close"></i>
-                    </nav>
+                                    <ul class="list-unstyled news-list mt-3">
+                                        
+                                    
+                                        <li class="row mx-0 mb-4">
+                                            <a class="col-1">
+                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                            </a>
+                                                <div class="col h-2">
+                                                    <a href="#">
+                                                        <h2 class="h6 mx-3">Alen </h2>
+                                                    </a>
+                                                    <div>
+                                                        <a class="text-secondary d-flex justify-content-center">
+                                                            <span class="lni lni-exit-down me-2"></span>7:00am
+                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
+                                                        </a>
+                                                            
+                                                    </div>
+                                                </div>
+                                        </li> 
+                                        
+                                        <li class="row mx-0 mb-4">
+                                            <a class="col-1">
+                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                            </a>
+                                                <div class="col h-2">
+                                                    <a href="#">
+                                                        <h2 class="h6 mx-3">Jay  </h2>
+                                                    </a>
+                                                    <div>
+                                                        <a class="text-secondary d-flex justify-content-center">
+                                                            <span class="lni lni-exit-down me-2"></span>7:00am
+                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
+                                                        </a>
+                                                            
+                                                    </div>
+                                                </div>
+                                        </li> 
 
-                      <main class="main">
-                        <!--<h1>Admin Dashboard Content</h1>-->
-                          <div class="grid-container">
-                          <div class="angry-grid">
-                                <div id="item-0">&nbsp;</div>
-                                <div id="item-1">&nbsp;</div>
-                                <div id="item-2">&nbsp;</div>
-                                <div id="item-3">&nbsp;</div>
-                              </div>
-                          </div>
-                          
-                      </main>
+                                        <li class="row mx-0 mb-4">
+                                            <a class="col-1">
+                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                            </a>
+                                                <div class="col h-2">
+                                                    <a href="#">
+                                                        <h2 class="h6 mx-3">Jerick  </h2>
+                                                    </a>
+                                                    <div>
+                                                        <a class="text-secondary d-flex justify-content-center">
+                                                            <span class="lni lni-exit-down me-2"></span>7:00am
+                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
+                                                        </a>
+                                                            
+                                                    </div>
+                                                </div>
+                                        </li> 
+                                        
+                                        <li class="row mx-0 mb-4">
+                                            <a class="col-1">
+                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                            </a>
+                                                <div class="col h-2">
+                                                    <a href="#">
+                                                        <h2 class="h6 mx-3">Kurt  </h2>
+                                                    </a>
+                                                    <div>
+                                                        <a class="text-secondary d-flex justify-content-center">
+                                                            <span class="lni lni-exit-down me-2"></span>7:00am
+                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
+                                                        </a>
+                                                            
+                                                    </div>
+                                                </div>
+                                        </li>
 
-                          <script src="../Scripts/dashboard-main.js"></script>
-                            <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
-                              <script src="../Scripts/chart.js"></script>
-                  </body>
-  </html>
+                                        <li class="row mx-0 mb-4">
+                                            <a class="col-1">
+                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                            </a>
+                                                <div class="col h-2">
+                                                    <a href="#">
+                                                        <h2 class="h6 mx-3">Lemuel  </h2>
+                                                    </a>
+                                                    <div>
+                                                        <a class="text-secondary d-flex justify-content-center">
+                                                            <span class="lni lni-exit-down me-2"></span>7:00am
+                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
+                                                        </a>
+                                                            
+                                                    </div>
+                                                </div>
+                                        </li>
+
+                                        <li class="row mx-0 mb-4">
+                                            <a class="col-1">
+                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                            </a>
+                                                <div class="col h-2">
+                                                    <a href="#">
+                                                        <h2 class="h6 mx-3">Jeriru  </h2>
+                                                    </a>
+                                                    <div>
+                                                        <a class="text-secondary d-flex justify-content-center">
+                                                            <span class="lni lni-exit-down me-2"></span>7:00am
+                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
+                                                        </a>
+                                                            
+                                                    </div>
+                                                </div>
+                                        </li>
+
+                                        <li class="row mx-0 mb-4">
+                                            <a class="col-1">
+                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                            </a>
+                                                <div class="col h-2">
+                                                    <a href="#">
+                                                        <h2 class="h6 mx-3">Anthony  </h2>
+                                                    </a>
+                                                    <div>
+                                                        <a class="text-secondary d-flex justify-content-center">
+                                                            <span class="lni lni-exit-down me-2"></span>7:00am
+                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
+                                                        </a>
+                                                            
+                                                    </div>
+                                                </div>
+                                        </li>
+
+                                        
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+                        
+                        <div class="row ">
+                            <div class="col-md-2">
+                                <div>
+                                    <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
+                                        <img src="../Resources/widgetlogo/check.png" alt="">
+                                        <h3 class="mt-3 mb-3">Checked In</h3>
+                                        <p class="mb-0 ">
+                                            <span class="text-nowrap">36</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div>
+                                    <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
+                                        <img src="../Resources/widgetlogo/x.png" alt="">
+                                        <h3 class="mt-3 mb-3">Not Checked In</h3>
+                                        <p class="mb-0 ">
+                                            <span class="text-nowrap">36</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div>
+                                    <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
+                                        <img src="../Resources/widgetlogo/onleave.png" alt="">
+                                        <h3 class="mt-3 mb-3">On-Leave</h3>
+                                        <p class="mb-0 ">
+                                            <span class="text-nowrap">0</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div>
+                                    <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
+                                        <img src="../Resources/widgetlogo/weekoff.png" alt="">
+                                        <h3 class="mt-3 mb-3">Weekly Off</h3>
+                                        <p class="mb-0 ">
+                                            <span class="text-nowrap">0</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div>
+                                    <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
+                                        <img src="../Resources/widgetlogo/checkout.png" alt="">
+                                        <h3 class="mt-3 mb-3">Checked Out</h3>
+                                        <p class="mb-0 ">
+                                            <span class="text-nowrap">0</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div>
+                                    <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
+                                        <img src="../Resources/widgetlogo/holiday.png" alt="">
+                                        <h3 class="mt-3 mb-3">Holiday</h3>
+                                        <p class="mb-0 ">
+                                            <span class="text-nowrap">0</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        
+                        <div class="row d-flex ms-0">
+                            <div class="col-md-6 card">
+                                Exceptions
+                            </div>
+                            <div class="col-md-6 card">
+                                Pending Requests
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+            </main>          
+        </div>
+    </div>
+    <script src="../Scripts/barchart.js"></script>
+</body>
+</html>

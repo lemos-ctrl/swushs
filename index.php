@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SWU Scheduling System</title>
+    <title>SWU AMS</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
       integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
@@ -17,7 +17,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./Styles/styles.css" />
-    
   </head>
   <body>
     <section class="loginpage">
@@ -39,7 +38,7 @@
                       alt="swulogo"
                     />
                   </div>
-                  <div class="col">
+                  <div class="col pt-3">
                     <h3>Login to your account</h3>
                   </div>
                   <div class="col">
@@ -59,10 +58,10 @@
                     />
                   </div>
                   <div class="col">
-                    <input type="submit" name="submit" value="Login" href="" />
+                    <input type="submit" name="submit" value="Login" href="./swushs/Admin/dashboard.php" />
                   </div>
                   <div class="p-3">
-                    <a href=""> Forgot password?</a>
+                    <a href="#"> Forgot password?</a>
                   </div>
                 </div>
               </form>
