@@ -31,83 +31,63 @@ include_once '../includes/cdn.php';?>
 
 
                     <div class="col-md-4 col-lg-2">
-                        <div class="card2">
-                            <h6 class="text-center my-3">ATTENDANCE TODAY</h6>
-                            <ul class="list-unstyled news-list mt-3">
-                                <!-- Your list items -->
-                                <li class="row mx-0 mb-4">
-                                    <!-- Example list item -->
-                                    <a class="col-1">
-                                        <div class="mt-3 mx-2 fa-regular fa-user "></div>
-                                    </a>
-                                    <div class="col h-2">
-                                        <a href="#">
-                                            <h2 class="h6 mx-3">Alen </h2>
-                                        </a>
-                                        <div>
-                                            <a class="text-secondary d-flex justify-content-center">
-                                                <a class="lni lni-exit-down me-2"></a>7:00am
-                                                <a class="lni lni-exit-up ms-2 me-2"></a>4:00pm
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                                <li class="row mx-0 mb-4">
-                                    <!-- Example list item -->
-                                    <a class="col-1">
-                                        <div class="mt-3 mx-2 fa-regular fa-user "></div>
-                                    </a>
-                                    <div class="col h-2">
-                                        <a href="#">
-                                            <h2 class="h6 mx-3">Alen </h2>
-                                        </a>
-                                        <div>
-                                            <a class="text-secondary d-flex justify-content-center">
-                                                <a class="lni lni-exit-down me-2"></a>7:00am
-                                                <a class="lni lni-exit-up ms-2 me-2"></a>4:00pm
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="row mx-0 mb-4">
-                                    <!-- Example list item -->
-                                    <a class="col-1">
-                                        <div class="mt-3 mx-2 fa-regular fa-user "></div>
-                                    </a>
-                                    <div class="col h-2">
-                                        <a href="#">
-                                            <h2 class="h6 mx-3">Alen </h2>
-                                        </a>
-                                        <div>
-                                            <a class="text-secondary d-flex justify-content-center">
-                                                <a class="lni lni-exit-down me-2"></a>7:00am
-                                                <a class="lni lni-exit-up ms-2 me-2"></a>4:00pm
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
+                        <div class="list list-row block">
+                            <h6 class="text-center mt-2">ATTENDANCE TODAY</h6>
+                            <div class="list-item" data-id="19">
+                                <div><a href="#" data-abc="true"><span class="w-48 avatar gd-warning">S</span></a></div>
+                                <div class="flex">
+                                    <a href="#" class="item-author text-color" data-abc="true">Sam Kuran</a>
+                                    <div class="item-except text-muted text-sm h-1x">7:00am</div>
+                                </div>
+                                <div class="no-wrap">
+                                    <div class="item-date text-muted text-sm d-none d-md-block">13/12 18</div>
+                                </div>
+                            </div>
 
-                                <li class="row mx-0 mb-4">
-                                    <!-- Example list item -->
-                                    <a class="col-1">
-                                        <div class="mt-3 mx-2 fa-regular fa-user "></div>
-                                    </a>
-                                    <div class="col h-2">
-                                        <a href="#">
-                                            <h2 class="h6 mx-3">Alen </h2>
-                                        </a>
-                                        <div>
-                                            <a class="text-secondary d-flex justify-content-center">
-                                                <a class="lni lni-exit-down me-2"></a>7:00am
-                                                <a class="lni lni-exit-up ms-2 me-2"></a>4:00pm
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
+                            <div class="list-item" data-id="7">
+                                <div><a href="#" data-abc="true"><span class="w-48 avatar gd-primary"><img src="https://img.icons8.com/color/48/000000/administrator-male.png" alt="."></span></a></div>
+                                <div class="flex">
+                                    <a href="#" class="item-author text-color" data-abc="true">Kinley Adolf</a>
+                                    <div class="item-except text-muted text-sm h-1x">7:00am</div>
+                                </div>
+                                <div class="no-wrap">
+                                    <div class="item-date text-muted text-sm d-none d-md-block">21 July</div>
+                                </div>
+                            </div>
 
-                                <!-- Repeat for other list items -->
-                            </ul>
+                            <div class="list-item" data-id="17">
+                                <div><a href="#" data-abc="true"><span class="w-48 avatar gd-warning">H</span></a></div>
+                                <div class="flex">
+                                    <a href="#" class="item-author text-color" data-abc="true">Velden Kamut</a>
+                                    <div class="item-except text-muted text-sm h-1x">7:00am</div>
+                                </div>
+                                <div class="no-wrap">
+                                    <div class="item-date text-muted text-sm d-none d-md-block">13/3/19</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item" data-id="16">
+                                <div><a href="#" data-abc="true"><span class="w-48 avatar gd-info">F</span></a></div>
+                                <div class="flex">
+                                    <a href="#" class="item-author text-color" data-abc="true">Stuart Kim</a>
+                                    <div class="item-except text-muted text-sm h-1x">7:00am</div>
+                                </div>
+                                <div class="no-wrap">
+                                    <div class="item-date text-muted text-sm d-none d-md-block">03/1/19</div>
+                                </div>
+                            </div>
+
+                            <div class="list-item" data-id="4">
+                                <div><a href="#" data-abc="true"><span class="w-48 avatar gd-success"><img src="https://img.icons8.com/color/48/000000/guest-male.png" alt="."></span></a></div>
+                                <div class="flex">
+                                    <a href="#" class="item-author text-color" data-abc="true">Simply Fry</a>
+                                    <div class="item-except text-muted text-sm h-1x">7:00am</div>
+                                </div>
+                                <div class="no-wrap">
+                                    <div class="item-date text-muted text-sm d-none d-md-block">2 hours ago</div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
