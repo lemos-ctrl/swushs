@@ -31,7 +31,7 @@ include_once '../includes/cdn.php';?>
 
 
                     <div class="col-md-4 col-lg-2">
-                        <div class="list list-row block">
+                        <div class="list list-row block card2">
                             <h6 class="text-center mt-2">ATTENDANCE TODAY</h6>
                             <div class="list-item" data-id="19">
                                 <div><a href="#" data-abc="true"><span class="w-48 avatar gd-warning">S</span></a></div>
