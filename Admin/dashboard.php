@@ -28,140 +28,35 @@ include_once '../includes/cdn.php';?>
                     <div class="col-md-8 col-lg-10">
                         <canvas id="myChart" class="py-1 card"></canvas>
                     </div>
+
+
                     <div class="col-md-4 col-lg-2">
                         <div class="card">
                             <h6 class="text-center my-3">ATTENDANCE TODAY</h6>
                             <ul class="list-unstyled news-list mt-3">
                                 <!-- Your list items -->
                                 <li class="row mx-0 mb-4">
-                                            <a class="col-1">
-                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                    <!-- Example list item -->
+                                    <a class="col-1">
+                                        <div class="mt-3 mx-2 fa-regular fa-user "></div>
+                                    </a>
+                                    <div class="col h-2">
+                                        <a href="#">
+                                            <h2 class="h6 mx-3">Alen </h2>
+                                        </a>
+                                        <div>
+                                            <a class="text-secondary d-flex justify-content-center">
+                                                <a class="lni lni-exit-down me-2"></a>7:00am
+                                                <a class="lni lni-exit-up ms-2 me-2"></a>4:00pm
                                             </a>
-                                                <div class="col h-2">
-                                                    <a href="#">
-                                                        <h2 class="h6 mx-3">Alen </h2>
-                                                    </a>
-                                                    <div>
-                                                        <a class="text-secondary d-flex justify-content-center">
-                                                            <span class="lni lni-exit-down me-2"></span>7:00am
-                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
-                                                        </a>
-                                                            
-                                                    </div>
-                                                </div>
-                                        </li> 
-                                        
-                                        <li class="row mx-0 mb-4">
-                                            <a class="col-1">
-                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
-                                            </a>
-                                                <div class="col h-2">
-                                                    <a href="#">
-                                                        <h2 class="h6 mx-3">Jay  </h2>
-                                                    </a>
-                                                    <div>
-                                                        <a class="text-secondary d-flex justify-content-center">
-                                                            <span class="lni lni-exit-down me-2"></span>7:00am
-                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
-                                                        </a>
-                                                            
-                                                    </div>
-                                                </div>
-                                        </li> 
-
-                                        <li class="row mx-0 mb-4">
-                                            <a class="col-1">
-                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
-                                            </a>
-                                                <div class="col h-2">
-                                                    <a href="#">
-                                                        <h2 class="h6 mx-3">Jerick  </h2>
-                                                    </a>
-                                                    <div>
-                                                        <a class="text-secondary d-flex justify-content-center">
-                                                            <span class="lni lni-exit-down me-2"></span>7:00am
-                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
-                                                        </a>
-                                                            
-                                                    </div>
-                                                </div>
-                                        </li> 
-                                        
-                                        <li class="row mx-0 mb-4">
-                                            <a class="col-1">
-                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
-                                            </a>
-                                                <div class="col h-2">
-                                                    <a href="#">
-                                                        <h2 class="h6 mx-3">Kurt  </h2>
-                                                    </a>
-                                                    <div>
-                                                        <a class="text-secondary d-flex justify-content-center">
-                                                            <span class="lni lni-exit-down me-2"></span>7:00am
-                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
-                                                        </a>
-                                                            
-                                                    </div>
-                                                </div>
-                                        </li>
-
-                                        <li class="row mx-0 mb-4">
-                                            <a class="col-1">
-                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
-                                            </a>
-                                                <div class="col h-2">
-                                                    <a href="#">
-                                                        <h2 class="h6 mx-3">Lemuel  </h2>
-                                                    </a>
-                                                    <div>
-                                                        <a class="text-secondary d-flex justify-content-center">
-                                                            <span class="lni lni-exit-down me-2"></span>7:00am
-                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
-                                                        </a>
-                                                            
-                                                    </div>
-                                                </div>
-                                        </li>
-
-                                        <li class="row mx-0 mb-4">
-                                            <a class="col-1">
-                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
-                                            </a>
-                                                <div class="col h-2">
-                                                    <a href="#">
-                                                        <h2 class="h6 mx-3">Jeriru  </h2>
-                                                    </a>
-                                                    <div>
-                                                        <a class="text-secondary d-flex justify-content-center">
-                                                            <span class="lni lni-exit-down me-2"></span>7:00am
-                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
-                                                        </a>
-                                                            
-                                                    </div>
-                                                </div>
-                                        </li>
-
-                                        <li class="row mx-0 mb-4">
-                                            <a class="col-1">
-                                                <div class="mt-3 mx-2 fa-regular fa-user "></div>
-                                            </a>
-                                                <div class="col h-2">
-                                                    <a href="#">
-                                                        <h2 class="h6 mx-3">Anthony  </h2>
-                                                    </a>
-                                                    <div>
-                                                        <a class="text-secondary d-flex justify-content-center">
-                                                            <span class="lni lni-exit-down me-2"></span>7:00am
-                                                            <span class="lni lni-exit-up ms-2 me-2"></span>4:00pm
-                                                        </a>
-                                                            
-                                                    </div>
-                                                </div>
-                                        </li>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Repeat for other list items -->
                             </ul>
                         </div>
                     </div>
-                </div>
+
 
                 <div class="row">
 
