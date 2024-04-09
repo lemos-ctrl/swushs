@@ -1,52 +1,33 @@
+<?php 
+include_once '../includes/cdn.php';?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SWU-SHS AMS Settings</title>
-    <link rel="stylesheet" href="../Styles/dashboard.css" />
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-  </head>
-  <body>
-    <nav class="sidebar">
-      <a href="#" class="logo">Admin Portal</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+  <body>      
+    <div class="wrapper">
+              <?php include '../Admin/includes/sidebar.php';?>
+              <div class="main">
+                  <nav class="navbar custom-toggler navbar-expand-lg px-3 border-bottom">
+                      <button class="btn" id="sidebar-toggle" type="button">
+                          <span class="navbar-toggler-icon "></span>
+                      </button>
+                      <div class="navbar-collapse navbar p-0 d-flex justify-content-end align-items-center">
+                          <span>Welcome back <b>Lemuel</b>!</span>
+                          <a href="#" class="las la-user-circle ps-2"></a>
+                      </div>
+                  </nav>
 
-      <div class="menu-content">
-        <ul class="menu-items">
-
-          <li class="item">
-            <a href="../Admin/dashboard.php">Dashboard</a>
-          </li>
-
-          <li class="item">
-            <a href="../Admin/attendance.php">Attendance</a>
-          </li>
-
-          <li class="item">
-            <a href="../Admin/leaves.php">Leave Management</a>
-          </li>
-
-          <li class="item">
-            <a href="../Admin/master-data.php">Master Data</a>
-          </li>
-
-          <li class="item">
-            <a href="../Admin/settings.php">Settings</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <nav class="navbar">
-      <i class="fa-solid fa-bars" id="sidebar-close"></i>
-    </nav>
-
-    <main class="main">
-      <h1>Settings Content</h1>
-    </main>
-
-    <script src="../Scripts/dashboard-main.js"></script>
+              <main class="content px-3 py-2 ">
+                <div class="container-fluid ">
+                          
+                </div>
+            </main>
+        </div>
+    </div>
+            <script src="../Scripts/barchart.js"></script>
   </body>
 </html>

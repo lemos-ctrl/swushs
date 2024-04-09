@@ -18,25 +18,25 @@ require_once '../includes/cdn.php';?>
                         </a>
                     </li>
                     <li class="sidebar-item d-flex align-items-center">
-                        <a href="./dashboard.php" class="sidebar-link">
+                        <a href="./attendance.php" class="sidebar-link">
                             <i class="fa-solid fa-person-running"></i>
                             Attendance
                         </a>
                     </li>
                     <li class="sidebar-item d-flex align-items-center">
-                        <a href="./dashboard.php" class="sidebar-link">
+                        <a href="./leaves.php" class="sidebar-link">
                             <i class="fa-solid fa-list pe-2"></i>
                             Leave Management
                         </a>
                     </li>
                     <li class="sidebar-item d-flex align-items-center">
-                        <a href="./dashboard.php" class="sidebar-link">
+                        <a href="./master-data.php" class="sidebar-link">
                             <i class="fa-solid fa-list pe-2"></i>
                             Master Data
                         </a>
                     </li>
                     <li class="sidebar-item d-flex align-items-center">
-                        <a href="./dashboard.php" class="sidebar-link">
+                        <a href="./settings.php" class="sidebar-link">
                             <i class="fa-solid fa-list pe-2"></i>
                             Settings
                         </a>
