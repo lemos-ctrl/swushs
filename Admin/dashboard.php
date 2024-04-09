@@ -29,6 +29,8 @@ include_once '../includes/cdn.php';?>
                         <canvas id="myChart" class="py-1 card"></canvas>
                     </div>
 
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
 
                     <div class="col-md-4 col-lg-2">
                         <div class="list list-row block card2">
@@ -92,82 +94,88 @@ include_once '../includes/cdn.php';?>
                     </div>
 
 
-                <div class="row">
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                
 
-                    <div class="col-md-4 col-lg-2">
-                        <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
-                            <img src="../Resources/widgetlogo/check.png" alt="">
-                                <h3 class="mt-3 mb-3">Checked In</h3>
-                                    <p class="mb-0 ">
-                                <span class="text-nowrap">36</span>
-                            </p>
+
+                    <div class="container bootstrap snippets bootdey">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-2 col-xs-12">
+                                <div class="panel panel-dark panel-colorful">
+                                    <div class="panel-body text-center">
+                                        <p class="text-uppercase mar-btm text-sm">Checked In</p>
+                                        <i class="fa fa-check-square fa-5x"></i>
+                                        <hr>
+                                        <p class="h2 text-thin">30</p>
+                                        <small><span class="text-semibold">7%</span> was late</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-2 col-xs-12">
+                                <div class="panel panel-danger panel-colorful">
+                                    <div class="panel-body text-center">
+                                        <p class="text-uppercase mar-btm text-sm">Not Checked In</p>
+                                        <i class="fa fa-times-circle fa-5x"></i>
+                                        <hr>
+                                        <p class="h2 text-thin">0</p>
+                                        <small><span class="text-semibold"></span>Nice :D</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-2 col-xs-12">
+                                <div class="panel panel-primary panel-colorful">
+                                    <div class="panel-body text-center">
+                                        <p class="text-uppercase mar-btm text-sm">On-Leave</p>
+                                        <i class="fa fa-sign-out fa-5x"></i>
+                                        <hr>
+                                        <p class="h2 text-thin">2</p>
+                                        <small><span class="text-semibold"></span>Sure they would have valid reasons</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-2 col-xs-12">
+                                <div class="panel panel-info panel-colorful">
+                                    <div class="panel-body text-center">
+                                        <p class="text-uppercase mar-btm text-sm">Weekly Off</p>
+                                        <i class="fa fa-calendar-minus-o fa-5x"></i>
+                                        <hr>
+                                        <p class="h2 text-thin">3</p>
+                                        <small><span class="text-semibold"></span>Lucky Duck!</small>
+                                    </div>
+                                </div>
+                            </div>  
+                            
+                            
+                            <div class="col-md-3 col-sm-2 col-xs-12">
+                                <div class="panel panel-dark panel-colorful">
+                                    <div class="panel-body text-center">
+                                        <p class="text-uppercase mar-btm text-sm">Checked Out</p>
+                                        <i class="fa fa-check-square-o fa-5x"></i>
+                                        <hr>
+                                        <p class="h2 text-thin">1</p>
+                                        <small><span class="text-semibold"></span>Goodbye :)</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-2 col-xs-12">
+                                <div class="panel panel-primary panel-colorful">
+                                    <div class="panel-body text-center">
+                                        <p class="text-uppercase mar-btm text-sm">Holiday</p>
+                                        <i class="fa fa-umbrella-beach fa-5x"></i>
+                                        <hr>
+                                        <p class="h2 text-thin">0</p>
+                                        <small><span class="text-semibold"></span>No one is on holiday? Cmon..</small>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-lg-2">
-                        <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
-                            <img src="../Resources/widgetlogo/check.png" alt="">
-                                <h3 class="mt-3 mb-3">Checked In</h3>
-                                    <p class="mb-0 ">
-                                <span class="text-nowrap">36</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-lg-2">
-                        <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
-                            <img src="../Resources/widgetlogo/check.png" alt="">
-                                <h3 class="mt-3 mb-3">Checked In</h3>
-                                    <p class="mb-0 ">
-                                <span class="text-nowrap">36</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-lg-2">
-                        <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
-                            <img src="../Resources/widgetlogo/check.png" alt="">
-                                <h3 class="mt-3 mb-3">Checked In</h3>
-                                    <p class="mb-0 ">
-                                <span class="text-nowrap">36</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-lg-2">
-                        <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
-                            <img src="../Resources/widgetlogo/check.png" alt="">
-                                <h3 class="mt-3 mb-3">Checked In</h3>
-                                    <p class="mb-0 ">
-                                <span class="text-nowrap">36</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-lg-2">
-                        <div class="px-3 py-3 bg-white d-flex flex-column justify-content-center align-items-center mb-3 card">
-                            <img src="../Resources/widgetlogo/check.png" alt="">
-                                <h3 class="mt-3 mb-3">Checked In</h3>
-                                    <p class="mb-0 ">
-                                <span class="text-nowrap">36</span>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            Exceptions
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            Pending Requests
-                        </div>
-                    </div>
-                </div>
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                
             </div>
         </main>
     </div>

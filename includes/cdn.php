@@ -10,6 +10,7 @@
 <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
 <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 <!-- css and js files -->
 <link rel="stylesheet" href="../Styles/styles.css">
@@ -24,3 +25,4 @@
 
 <!-- barchart by chartjs.org & coreui.io -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
