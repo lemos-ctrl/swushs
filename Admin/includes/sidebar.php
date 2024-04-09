@@ -20,14 +20,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </a>
             </li>
             <li class="sidebar-item">
-                <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
-                    aria-expanded="<?php if ($current_page == 'rooms.php' || $current_page == 'subjectBudget.php') echo 'true'; else echo 'false'; ?>"><i
-                        class="fa-solid fa-file-lines pe-2"></i>
+                <a href="#" class="sidebar-link " data-bs-toggle="collapse" data-bs-target="#pages"
+                    aria-expanded="<?php if ($current_page == 'rooms.php' || $current_page == 'subject.php' || $current_page == 'strand.php' || $current_page == 'calendar.php') echo 'true'; else echo 'false'; ?>">
+                    <i class="fa-solid fa-file-lines pe-2"></i>
                     Curriculum
                 </a>
                 <ul id="pages"
-                    class="sidebar-dropdown list-unstyled <?php if ($current_page == 'rooms.php' || $current_page == 'subject.php' || $current_page == 'strand.php') echo 'show'; ?>"
-                    data-bs-parent="#sidebar">
+                    class="sidebar-dropdown list-unstyled collapse <?php if ($current_page == 'rooms.php' || $current_page == 'subject.php' || $current_page == 'strand.php' || $current_page == 'calendar.php') echo 'show'; ?>">
                     <li class="sidebar-item">
                         <a href="../Features/schoolYear.php"
                             class="sidebar-link sidebar-link-child <?php if ($current_page == 'schoolYear.php') echo 'active'; ?>">School
@@ -37,7 +36,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="../Features/rooms.php"
                             class="sidebar-link sidebar-link-child <?php if ($current_page == 'rooms.php') echo 'active'; ?>">Rooms</a>
                     </li>
-
                     <li class="sidebar-item">
                         <a href="../Features/strand.php"
                             class="sidebar-link sidebar-link-child <?php if ($current_page == 'strand.php') echo 'active'; ?>">Strands</a>
@@ -53,14 +51,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </ul>
             </li>
             <li class="sidebar-item">
-                <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
-                    aria-expanded="<?php if ($current_page == 'faculty.php') echo 'true'; else echo 'false'; ?>"><i
-                        class="fa-regular fa-user pe-2"></i>
+                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#posts"
+                    aria-expanded="<?php if ($current_page == 'faculty.php') echo 'true'; else echo 'false'; ?>">
+                    <i class="fa-regular fa-user pe-2"></i>
                     Staff
                 </a>
                 <ul id="posts"
-                    class="sidebar-dropdown list-unstyled <?php if ($current_page == 'faculty.php') echo 'show'; ?>"
-                    data-bs-parent="#sidebar">
+                    class="sidebar-dropdown list-unstyled collapse <?php if ($current_page == 'faculty.php') echo 'show'; ?>">
                     <li class="sidebar-item">
                         <a href="../Features/faculty.php"
                             class="sidebar-link sidebar-link-child <?php if ($current_page == 'faculty.php') echo 'active'; ?>">Faculty</a>
@@ -68,14 +65,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </ul>
             </li>
             <li class="sidebar-item">
-                <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
-                    aria-expanded="<?php if ($current_page == 'subjectBudget.php') echo 'true'; else echo 'false'; ?>"><i
-                        class="fa-solid fa-sliders pe-2"></i>
+                <a href="#" class="sidebar-link " data-bs-toggle="collapse" data-bs-target="#auth"
+                    aria-expanded="<?php if ($current_page == 'subjectBudget.php' || $current_page == 'loadScheduling.php' || $current_page == 'facultyLoading.php' || $current_page == 'roomAssignment.php') echo 'true'; else echo 'false'; ?>">
+                    <i class="fa-solid fa-sliders pe-2"></i>
                     Timetable Generation
                 </a>
                 <ul id="auth"
-                    class="sidebar-dropdown list-unstyled <?php if ($current_page == 'subjectBudget.php') echo 'show'; ?>"
-                    data-bs-parent="#sidebar">
+                    class="sidebar-dropdown list-unstyled collapse <?php if ($current_page == 'subjectBudget.php' || $current_page == 'loadScheduling.php' || $current_page == 'facultyLoading.php' || $current_page == 'roomAssignment.php') echo 'show'; ?>">
                     <li class="sidebar-item">
                         <a href="../Features/subjectBudget.php"
                             class="sidebar-link sidebar-link-child <?php if ($current_page == 'subjectBudget.php') echo 'active'; ?>">Subject
@@ -110,5 +106,18 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </a>
             </li>
         </ul>
-
+    </div>
 </aside>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var activeLinks = document.querySelectorAll('.sidebar-link.active');
+
+    activeLinks.forEach(function(link) {
+        var parentCollapse = link.closest('.collapse');
+        if (parentCollapse) {
+            parentCollapse.classList.add('show');
+        }
+    });
+});
+</script>

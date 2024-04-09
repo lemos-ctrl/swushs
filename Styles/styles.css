@@ -252,7 +252,7 @@ a.sidebar-link.sidebar-link-child {
   font-weight: bold;
 }
 
-#sidebar .active {
+#sidebar .sidebar-item .active {
   background: rgba(224, 150, 150, 0.4);
   background: linear-gradient(
     90deg,

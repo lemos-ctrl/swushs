@@ -40,9 +40,11 @@
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="schoolyear-dropdown">
                                     <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#confirmationModal" data-school-year="2023">2023</a></li>
+                                            data-bs-target="#confirmationModal"
+                                            data-school-year="2023-2024">2023-2024</a></li>
                                     <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#confirmationModal" data-school-year="2024">2024</a></li>
+                                            data-bs-target="#confirmationModal"
+                                            data-school-year="2024-2025">2024-2025</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -77,23 +79,11 @@
                                 <h5 class="card-title m-0">Curriculum</h5>
                             </div>
                             <div class="col-auto">
-                                <div class="btn-group dropdown-center px-2 text-end">
-                                    <button id="semester-dropdown" type="button"
-                                        class="btn btn-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <?php
-                                            // Assuming $selected_semester contains the selected semester value
-                                            echo isset($selected_semester) ? $selected_semester : "Select Semester";
-                                        ?>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal1"
-                                                onclick="changeSemester('Semester 1')">Semester 1</a></li>
-                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal1ß"
-                                                onclick="changeSemester('Semester 2')">Semester 2</a></li>
-                                    </ul>
-                                </div>
-
+                                <select name="semester-dropdown" id="semester-dropdown"
+                                    class="form-select form-select-sm">
+                                    <option value="Semester 1">Semester 1</option>
+                                    <option value="Semester 2">Semester 2</option>
+                                </select>
                             </div>
                         </div>
                     </div>

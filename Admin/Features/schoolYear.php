@@ -9,8 +9,6 @@
     <title>SHS Faculty</title>
 
     <link rel="stylesheet" href="../../Styles/styles.css">
-    <script src="../../Scripts/script.js"></script>
-
 </head>
 
 <body>
@@ -36,52 +34,78 @@
                         <div class="card flex-fill border-0">
                             <div class="card-body d-flex justify-content-center align-items-center">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModalCenter">Add School Years</button>
+                                    data-bs-target="#addSchoolYear">Add School Years</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal fade" id="addSchoolYear" tabindex="-1" role="dialog"
+                    aria-labelledby="addSchoolYearTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Add School Years</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true"> </span>
-                                </button>
+                                <h5 class="modal-title" id="addSchoolYearTitle">Add School Years</h5>
                             </div>
                             <div class="modal-body">
-                                <form id="addSubjectForm">
+                                <form id="addSchoolYearForm">
                                     <div class="mb-3">
-                                        <label for="subjectName" class="form-label">School Year Name:</label>
-                                        <input type="text" class="form-control" id="schoolYearName" name="subjectName"
-                                            required>
+                                        <label for="schoolYearName" class="form-label">School Year Name:</label>
+                                        <input type="text" class="form-control" id="schoolYearName"
+                                            name="schoolYearName" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="subjectCode" class="form-label">School Year Duration:</label>
-                                        <input type="text" class="form-control" id="subjectCode" name="subjectCode"
-                                            required>
+                                    <div class="mb-1">
+                                        <h5>School Year Duration</h5>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="subjectDescription" class="form-label">Subject Description</label>
-                                        <input type="text" class="form-control" id="subjectDescription"
-                                            name="subjectDescription">
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <label for="startDate" class="form-label">Start Date:</label>
+                                            <input type="date" class="form-control" id="schoolYearStartDate"
+                                                name="schoolYearStartDate">
+                                        </div>
+                                        <div class="col">
+                                            <label for="endDate" class="form-label">End Date:</label>
+                                            <input type="date" class="form-control" id="schoolYearSndDate"
+                                                name="schoolYearEndDate">
+                                        </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="creditedUnits" class="form-label">Credited Units</label>
-                                        <input type="text" class="form-control" id="creditedUnits" name="creditedUnits">
+                                    <div class="mb-1">
+                                        <h6>1st Semester</h6>
                                     </div>
-                                    <!-- Add more fields as needed -->
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <label for="startDate" class="form-label">Start Date:</label>
+                                            <input type="date" class="form-control" id="1stSemStartDate"
+                                                name="1stSemStartDate">
+                                        </div>
+                                        <div class="col">
+                                            <label for="endDate" class="form-label">End Date:</label>
+                                            <input type="date" class="form-control" id="1stSemEndDate"
+                                                name="1stSemEndDate">
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <h6>2nd Semester</h6>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <label for="startDate" class="form-label">Start Date:</label>
+                                            <input type="date" class="form-control" id="2ndSemStartDate"
+                                                name="2ndSemStartDate">
+                                        </div>
+                                        <div class="col">
+                                            <label for="endDate" class="form-label">End Date:</label>
+                                            <input type="date" class="form-control" id="2ndSemEndDate"
+                                                name="2ndSemEndDate">
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary" onclick="addSubject()">Add
-                                    Subject</button>
+                                    School Year</button>
                             </div>
                         </div>
                     </div>
@@ -94,7 +118,6 @@
                         </h5>
                     </div>
                     <div class="card-body">
-
                         <table id="myTable" class="table table-hover" style="width:100%">
                             <thead>
                                 <tr>
@@ -113,7 +136,9 @@
                                     <td>45</td>
                                     <td>10</td>
                                     <td>89</td>
-                                    <td>Delete | Edit</td>
+                                    <td class="text-center"><a class="fa-solid fa-trash"></a> | <a
+                                            class="fa-solid fa-pen-to-square"></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2223</td>
@@ -140,16 +165,7 @@
                                     <td>Delete | Edit</td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Schoolyear ID</th>
-                                    <th>Schoolyear Duration</th>
-                                    <th># of Subjects</th>
-                                    <th># of Strands</th>
-                                    <th># of Faculty</th>
-                                    <th>Options</th>
-                                </tr>
-                            </tfoot>
+
                         </table>
                     </div>
                 </div>
@@ -158,5 +174,6 @@
     </div>
     </div>
 </body>
+<script src="../../Scripts/script.js"></script>
 
 </html>

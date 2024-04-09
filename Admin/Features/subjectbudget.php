@@ -9,7 +9,6 @@
     <title>SHS Faculty</title>
 
     <link rel="stylesheet" href="../../Styles/styles.css">
-    <script src="../../Scripts/script.js"></script>
 </head>
 
 <body>
@@ -48,9 +47,6 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLongTitle">Add Subject</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true"></span>
-                                </button>
                             </div>
                             <div class="modal-body">
                                 <form id="addSubjectForm">
@@ -156,5 +152,6 @@
     </div>
     </div>
 </body>
+<script src="../../Scripts/script.js"></script>
 
 </html>

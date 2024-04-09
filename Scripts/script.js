@@ -5,34 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#sidebar").classList.toggle("collapsed");
     document.querySelector("#sidebar1").classList.toggle("collapsed");
   });
-
-  // dark/light mode changer
-  //   document.querySelector(".theme-toggle").addEventListener("click", () => {
-  //     toggleLocalStorage();
-  //     toggleRootClass();
-  //   });
-
-  //   function toggleRootClass() {
-  //     const current = document.documentElement.getAttribute("data-bs-theme");
-  //     const inverted = current == "dark" ? "light" : "dark";
-  //     document.documentElement.setAttribute("data-bs-theme", inverted);
-  //   }
-
-  //   function toggleLocalStorage() {
-  //     if (isLight()) {
-  //       localStorage.removeItem("light");
-  //     } else {
-  //       localStorage.setItem("light", "set");
-  //     }
-  //   }
-
-  //   function isLight() {
-  //     return localStorage.getItem("light");
-  //   }
-
-  //   if (isLight()) {
-  //     toggleRootClass();
-  //   }
 });
 
 // data tables dashboard init
@@ -55,78 +27,17 @@ $(document).ready(function () {
   });
 });
 
+//sidebar
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Highlight current page link
-  const currentPage = "<?php echo $current_page; ?>";
-  const currentLink = document.querySelector(
-    `.sidebar-link[href*='${currentPage}']`
-  );
-  if (currentLink) {
-    currentLink.classList.add("active");
-    // Expand the parent category if it's collapsed
-    const parentCollapse = currentLink
-      .closest(".sidebar-item")
-      .querySelector('[data-bs-toggle="collapse"]');
-    if (parentCollapse && !parentCollapse.getAttribute("aria-expanded")) {
-      parentCollapse.setAttribute("aria-expanded", "true");
-      const parentId = parentCollapse.getAttribute("data-bs-target");
-      localStorage.setItem(parentId, "expanded");
-    }
-  }
+  var activeLinks = document.querySelectorAll(".sidebar-link.active");
 
-  // Check local storage and expand/collapse dropdowns accordingly
-  const storedDropdowns = Object.keys(localStorage);
-  storedDropdowns.forEach((dropdown) => {
-    const element = document.querySelector(dropdown);
-    if (element) {
-      const state = localStorage.getItem(dropdown);
-      if (state === "expanded") {
-        element.classList.add("show");
-        // Expand the dropdown's parent category
-        const parentCollapse = element
-          .closest(".sidebar-item")
-          .querySelector('[data-bs-toggle="collapse"]');
-        if (parentCollapse) {
-          parentCollapse.setAttribute("aria-expanded", "true");
-        }
-      } else {
-        // Collapse dropdowns that are not expanded
-        element.classList.remove("show");
-      }
-    }
-  });
-
-  // Save the state of the dropdown in local storage when clicked
-  const toggleButtons = document.querySelectorAll(
-    '[data-bs-toggle="collapse"]'
-  );
-  toggleButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const expanded = this.getAttribute("aria-expanded");
-      const parent = this.getAttribute("data-bs-target");
-      if (expanded === "true") {
-        localStorage.setItem(parent, "expanded");
-      } else {
-        localStorage.removeItem(parent);
-      }
-    });
-  });
-
-  // Collapse all categories except the one containing the active link
-  const activeCategory = document
-    .querySelector(".sidebar-item.active")
-    .closest(".sidebar-item");
-  const categories = document.querySelectorAll(".sidebar-item");
-  categories.forEach((category) => {
-    if (category !== activeCategory) {
-      const collapseButton = category.querySelector(
-        '[data-bs-toggle="collapse"]'
-      );
-      if (
-        collapseButton &&
-        collapseButton.getAttribute("aria-expanded") === "true"
-      ) {
-        collapseButton.click();
+  activeLinks.forEach(function (link) {
+    var collapseTarget = link.getAttribute("data-bs-target");
+    if (collapseTarget) {
+      var collapseElement = document.querySelector(collapseTarget);
+      if (collapseElement) {
+        collapseElement.classList.add("show");
       }
     }
   });
@@ -171,8 +82,26 @@ document.addEventListener("DOMContentLoaded", function () {
   calendar.render();
 });
 
-
 //dashboard.php
 function changeSemester(semester) {
-    document.getElementById('semester-dropdown').innerText = semester;
+  document.getElementById("semester-dropdown").innerText = semester;
+}
+
+//strand.php
+function addSpecialization() {
+  var specializationContainer = document.getElementById(
+    "specializationsContainer"
+  );
+  var input = document.createElement("input");
+  input.type = "text";
+  input.className = "form-control mb-3";
+  input.placeholder = "Enter Specialization Description";
+  specializationContainer.appendChild(input);
+}
+
+function clearSpecializations() {
+  var specializationContainer = document.getElementById(
+    "specializationsContainer"
+  );
+  specializationContainer.innerHTML = ""; // Clear the contents of the container
 }
