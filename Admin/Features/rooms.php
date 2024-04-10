@@ -81,58 +81,18 @@
                         <table id="myTable" class="table table-hover" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Schoolyear ID</th>
-                                    <th>Schoolyear Duration</th>
-                                    <th># of Subjects</th>
-                                    <th># of Strands</th>
-                                    <th># of Faculty</th>
+                                    <th>Room Code</th>
+                                    <th>Room Name</th>
                                     <th>Options</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
+                                    <td>026D</td>
+                                    <td>ROOM NAME NI</td>
                                     <td>Delete | Edit</td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Schoolyear ID</th>
-                                    <th>Schoolyear Duration</th>
-                                    <th># of Subjects</th>
-                                    <th># of Strands</th>
-                                    <th># of Faculty</th>
-                                    <th>Options</th>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

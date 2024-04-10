@@ -102,12 +102,11 @@
                         <table id="myTable" class="table table-hover" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Room #</th>
+                                    <th>Time</th>
+                                    <th>Grade 11</th>
+                                    <th>Time</th>
+                                    <th>Grade 12</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -117,7 +116,6 @@
                                     <td>Edinburgh</td>
                                     <td>61</td>
                                     <td>2011-04-25</td>
-                                    <td>$320,800</td>
                                 </tr>
                                 <tr>
                                     <td>Garrett Winters</td>
@@ -125,7 +123,6 @@
                                     <td>Tokyo</td>
                                     <td>63</td>
                                     <td>2011-07-25</td>
-                                    <td>$170,750</td>
                                 </tr>
                                 <tr>
                                     <td>Ashton Cox</td>
@@ -133,19 +130,8 @@
                                     <td>San Francisco</td>
                                     <td>66</td>
                                     <td>2009-01-12</td>
-                                    <td>$86,000</td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

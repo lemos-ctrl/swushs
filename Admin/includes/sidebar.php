@@ -12,21 +12,21 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <li class="sidebar-header">
                 Admin Elements
             </li>
-            <li
-                class="sidebar-item d-flex align-items-center <?php if ($current_page == 'dashboard.php') echo 'active'; ?>">
-                <a href="./dashboard.php" class="sidebar-link">
+            <li class="sidebar-item">
+                <a href="./dashboard.php"
+                    class="sidebar-link <?php if ($current_page == 'dashboard.php') echo 'active'; ?>">
                     <i class="fa-solid fa-list pe-2"></i>
                     Dashboard
                 </a>
             </li>
             <li class="sidebar-item">
                 <a href="#" class="sidebar-link " data-bs-toggle="collapse" data-bs-target="#pages"
-                    aria-expanded="<?php if ($current_page == 'rooms.php' || $current_page == 'subject.php' || $current_page == 'strand.php' || $current_page == 'calendar.php') echo 'true'; else echo 'false'; ?>">
+                    aria-expanded="<?php if ($current_page == 'rooms.php' || $current_page == 'subject.php' || $current_page == 'strand.php' || $current_page == 'calendar.php' || $current_page == 'schoolYear.php') echo 'true'; else echo 'false'; ?>">
                     <i class="fa-solid fa-file-lines pe-2"></i>
                     Curriculum
                 </a>
                 <ul id="pages"
-                    class="sidebar-dropdown list-unstyled collapse <?php if ($current_page == 'rooms.php' || $current_page == 'subject.php' || $current_page == 'strand.php' || $current_page == 'calendar.php') echo 'show'; ?>">
+                    class="sidebar-dropdown list-unstyled collapse <?php if ($current_page == 'rooms.php' || $current_page == 'subject.php' || $current_page == 'strand.php' || $current_page == 'calendar.php' || $current_page == 'schoolYear.php') echo 'show'; ?>">
                     <li class="sidebar-item">
                         <a href="../Features/schoolYear.php"
                             class="sidebar-link sidebar-link-child <?php if ($current_page == 'schoolYear.php') echo 'active'; ?>">School
@@ -100,7 +100,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </ul>
         <ul class="sidebar-nav mt-auto">
             <li class="sidebar-item">
-                <a href="../../index.php" class="sidebar-link">
+                <a href="#" class="sidebar-link" data-bs-toggle="modal" data-bs-target="#logoutModal">
                     <i class="fa-solid fa-list pe-2"></i>
                     Logout
                 </a>
@@ -111,12 +111,22 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    var activeLinks = document.querySelectorAll('.sidebar-link.active');
+    var sidebarItems = document.querySelectorAll('.sidebar-item');
 
-    activeLinks.forEach(function(link) {
-        var parentCollapse = link.closest('.collapse');
-        if (parentCollapse) {
-            parentCollapse.classList.add('show');
+    sidebarItems.forEach(function(item) {
+        var collapseTrigger = item.querySelector('.sidebar-link[data-bs-toggle="collapse"]');
+        if (collapseTrigger) {
+            collapseTrigger.addEventListener('click', function() {
+                var target = document.querySelector(this.getAttribute('data-bs-target'));
+                if (!target.classList.contains('show')) {
+                    var openSections = document.querySelectorAll('.sidebar-dropdown.show');
+                    openSections.forEach(function(section) {
+                        if (section !== target) {
+                            section.classList.remove('show');
+                        }
+                    });
+                }
+            });
         }
     });
 });

@@ -13,6 +13,7 @@
 
 <body>
 
+
     <div class="wrapper">
         <?php include('../includes/sidebar.php'); ?>
         <div class="main">
@@ -99,52 +100,78 @@
                         </h5>
                     </div>
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table id="myTable" class="table table-hover" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Subject</th>
-                                        <th>Strand</th>
-                                        <th>Year Level</th>
-                                        <th>Units</th>
-                                        <th>Students</th>
-                                        <th>Class Size</th>
-                                        <th>Sections</th>
-                                        <th>Total Teaching Hours</th>
-                                        <th>Actual</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>Systsdfdsfsdfsdect</td>
-                                        <td>Edinburgh</td>
-                                        <td>6dfgdfd1</td>
-                                        <td>2011fdfg-04-25</td>
-                                        <td>$320,800</td>
-                                        <td>Edifgdfdnburgh</td>
-                                        <td>61dfgdfg</td>
-                                        <td>201df1-04-25</td>
-                                        <td>$32dfg0,800</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Subject</th>
-                                        <th>Strand</th>
-                                        <th>Year Level</th>
-                                        <th>Units</th>
-                                        <th>Students</th>
-                                        <th>Class Size</th>
-                                        <th>Sections</th>
-                                        <th>Total Teaching Hours</th>
-                                        <th>Actual</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
+                        <!-- <div class="table-responsive"> -->
+                        <table id="myTable" class="table table-hover table-bordered display nowrap" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" data-dt-order="disable">Code</th>
+                                    <th rowspan="2">Subject</th>
+                                    <th rowspan="2">Strand</th>
+                                    <th rowspan="2">Year Level</th>
+                                    <th colspan="3">Units</th>
+                                    <th colspan="4">Hours/Week</th>
+                                    <th>Students</th>
+                                    <th colspan="3">Class Size</th>
+                                    <th colspan="3">Sections</th>
+                                    <th colspan="4">Total Teaching Hours</th>
+                                    <th rowspan="2">Actual</th>
+                                </tr>
+                                <tr>
+                                    <!-- units -->
+                                    <td data-dt-order="disable">Lec</td>
+                                    <td data-dt-order="disable">Lab</td>
+                                    <td data-dt-order="disable">Total Units</td>
+                                    <!-- hours/week -->
+                                    <td data-dt-order="disable">Lec</td>
+                                    <td data-dt-order="disable">Lab</td>
+                                    <td data-dt-order="disable">RLE</td>
+                                    <td data-dt-order="disable">Total Hours</td>
+                                    <!-- students -->
+                                    <td data-dt-order="disable">Projected</td>
+                                    <!-- Class size -->
+                                    <td data-dt-order="disable">Lec</td>
+                                    <td data-dt-order="disable">Lab</td>
+                                    <td data-dt-order="disable">RLE</td>
+                                    <!-- sections -->
+                                    <td data-dt-order="disable">Lec</td>
+                                    <td data-dt-order="disable">Lab</td>
+                                    <td data-dt-order="disable">RLE</td>
+                                    <!-- total teaching hours -->
+                                    <td data-dt-order="disable">Lec</td>
+                                    <td data-dt-order="disable">Lab</td>
+                                    <td data-dt-order="disable">RLE</td>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ABM 002</td>
+                                    <td>Fundamentals of Accountancy, Business and Management 1 (SHS)</td>
+                                    <td>ABM</td>
+                                    <td>11</td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>6</td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>6</td>
+                                    <td>80</td>
+                                    <td>50</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- </div> -->
                     </div>
                 </div>
         </div>

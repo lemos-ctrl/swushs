@@ -95,57 +95,45 @@
                 <div class="card border-0">
                     <div class="card-header">
                         <h5 class="card-title  m-0">
-                            Subjects
+                            Faculty Load
                         </h5>
                     </div>
                     <div class="card-body">
                         <table id="myTable" class="table table-hover" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>No:</th>
+                                    <th>Faculty</th>
+                                    <th>Department</th>
+                                    <th>Title</th>
+                                    <th>Status (Reg/Prob/Cont)</th>
+                                    <th>FT / PT</th>
+                                    <th>Required Hours</th>
+                                    <th>Grade 11 Units <br>Class starts: June 22, 2024</th>
+                                    <th>Grade 12 Units <br>Class starts: Nov 22, 2024</th>
+                                    <th>Actual FTL Units</th>
+                                    <th></th>
+                                    <th>Overall Total</th>
+                                    <th>Overloads</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011-04-25</td>
-                                    <td>$320,800</td>
-                                </tr>
-                                <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011-07-25</td>
-                                    <td>$170,750</td>
-                                </tr>
-                                <tr>
-                                    <td>Ashton Cox</td>
-                                    <td>Junior Technical Author</td>
-                                    <td>San Francisco</td>
-                                    <td>66</td>
-                                    <td>2009-01-12</td>
-                                    <td>$86,000</td>
+                                    <td>1</td>
+                                    <td>Kurt Hydein Imperial</td>
+                                    <td>SHS</td>
+                                    <td>Faculty</td>
+                                    <td>Reg</td>
+                                    <td>FT</td>
+                                    <td>24.0</td>
+                                    <td>0.5</td>
+                                    <td>23.5</td>
+                                    <td>24.0</td>
+                                    <td></td>
+                                    <td>24.0</td>
+                                    <td>0</td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

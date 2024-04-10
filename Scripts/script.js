@@ -13,7 +13,7 @@ $(document).ready(function () {
     paging: false,
     responsive: true,
     stateSave: true,
-    // scrollX: "100vw",
+    scrollX: true,
     fixedHeader: true,
     columnDefs: [
       { className: "dt-body-left", targets: "_all" },
@@ -23,31 +23,18 @@ $(document).ready(function () {
       topEnd: "search",
       topStart: "info",
       bottomStart: null,
+    }, // Add the classes table-bordered and display-nowrap
+    initComplete: function () {
+      $(".table").addClass("table-bordered").css("width", "100%");
+      $(".dataTables_wrapper").addClass("display nowrap");
     },
   });
 });
 
-//sidebar
-
-document.addEventListener("DOMContentLoaded", function () {
-  var activeLinks = document.querySelectorAll(".sidebar-link.active");
-
-  activeLinks.forEach(function (link) {
-    var collapseTarget = link.getAttribute("data-bs-target");
-    if (collapseTarget) {
-      var collapseElement = document.querySelector(collapseTarget);
-      if (collapseElement) {
-        collapseElement.classList.add("show");
-      }
-    }
-  });
-});
-
-// modal
-
+// school year modal
 document.addEventListener("DOMContentLoaded", function () {
   var myModal = new bootstrap.Modal(
-    document.getElementById("confirmationModal")
+    document.getElementById("schoolYearSelectConfirmation")
   );
   var schoolYearSpan = document.getElementById("schoolYearSpan");
 

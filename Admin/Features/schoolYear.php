@@ -126,6 +126,7 @@
                                     <th># of Subjects</th>
                                     <th># of Strands</th>
                                     <th># of Faculty</th>
+                                    <th># of Rooms</th>
                                     <th>Options</th>
                                 </tr>
                             </thead>
@@ -136,33 +137,10 @@
                                     <td>45</td>
                                     <td>10</td>
                                     <td>89</td>
+                                    <td>89</td>
                                     <td class="text-center"><a class="fa-solid fa-trash"></a> | <a
                                             class="fa-solid fa-pen-to-square"></a>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
                                 </tr>
                             </tbody>
 

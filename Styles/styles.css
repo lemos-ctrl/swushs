@@ -243,16 +243,18 @@ a.sidebar-link.sidebar-link-child {
   transform: rotate(45deg);
 }
 
-/* CSS for active link */
-.sidebar-item.active .sidebar-link {
-  font-weight: bold;
+/* Set max-width for the DataTable container */
+.dataTables_wrapper {
+  max-width: 1800px; /* Adjust the value according to your preference */
 }
 
-.sidebar-item .sidebar-link .active {
-  font-weight: bold;
+/* Set max-width for the DataTable itself */
+.table.dataTable {
+  max-width: 1800px; /* Adjust the value according to your preference */
 }
 
-#sidebar .sidebar-item .active {
+#sidebar .sidebar-item .active,
+#sidebar .sidebar-link .active {
   background: rgba(224, 150, 150, 0.4);
   background: linear-gradient(
     90deg,

@@ -34,15 +34,15 @@
                         <div class="card flex-fill border-0">
                             <div class="card-body d-flex justify-content-center align-items-center">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModalCenter">Add Subjects</button>
+                                    data-bs-target="#addSubjectModal">Add Subjects</button>
+
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- Modal -->
-
-
+                <?php include('../modals/subjectModal.php'); ?>
+                <?php include('../modals/logoutModal.php'); ?>
                 <!-- ENDS HERE -->
                 <div class="card border-0">
                     <div class="card-header">
@@ -54,50 +54,24 @@
                         <table id="myTable" class="table table-hover" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Subject Code</th>
+                                    <th>Subject Description</th>
+                                    <th>Grade level</th>
+                                    <th>Strand</th>
+                                    <th>Credited Units</th>
+                                    <th>Options</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011-04-25</td>
-                                    <td>$320,800</td>
-                                </tr>
-                                <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011-07-25</td>
-                                    <td>$170,750</td>
-                                </tr>
-                                <tr>
-                                    <td>Ashton Cox</td>
-                                    <td>Junior Technical Author</td>
-                                    <td>San Francisco</td>
-                                    <td>66</td>
-                                    <td>2009-01-12</td>
-                                    <td>$86,000</td>
+                                    <td>ITE-325</td>
+                                    <td>Research Capstone</td>
+                                    <td>Grade 11</td>
+                                    <td>STEM - ICT</td>
+                                    <td>6</td>
+                                    <td>Edit | Delete</td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

@@ -96,13 +96,30 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="mb-3">
                                         <label for="strand" class="form-label">FT / PT</label>
                                         <select class="form-select" id="strand" name="strand">
                                             <option value="">FT / PT</option>
                                             <option value="Strand 1">FT</option>
                                             <option value="Strand 2">PT</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="strand" class="form-label">Preferred Subjects</label>
+                                        <select class="form-select" id="strand" name="strand">
+                                            <option value="">Select Subject</option>
+                                            <option value="Strand 1">APP 003</option>
+                                            <option value="Strand 2">ITE 325</option>
+                                            <option value="Strand 2">can teach any subjects</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="strand" class="form-label">Preferred Strand</label>
+                                        <select class="form-select" id="strand" name="strand">
+                                            <option value="">Select Strand</option>
+                                            <option value="Strand 1">APP 003</option>
+                                            <option value="Strand 2">ITE 325</option>
+                                            <option value="Strand 2">can teach any subjects</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
@@ -132,58 +149,28 @@
                         <table id="myTable" class="table table-hover" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Schoolyear ID</th>
-                                    <th>Schoolyear Duration</th>
-                                    <th># of Subjects</th>
-                                    <th># of Strands</th>
-                                    <th># of Faculty</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Faculty Role</th>
+                                    <th>FT / PT</th>
+                                    <th>Preferred Subjects</th>
+                                    <th>Preferred Strand</th>
+                                    <th>Required Hours</th>
                                     <th>Options</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
-                                    <td>Delete | Edit</td>
-                                </tr>
-                                <tr>
-                                    <td>2223</td>
-                                    <td>January 2022 - March 2023</td>
-                                    <td>45</td>
-                                    <td>10</td>
-                                    <td>89</td>
+                                    <td>Kurt Hydein</td>
+                                    <td>Imperial</td>
+                                    <td>Regular, Coordinator</td>
+                                    <td>FT</td>
+                                    <td>Physics</td>
+                                    <td>STEM - HEALTH</td>
+                                    <td>24</td>
                                     <td>Delete | Edit</td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Schoolyear ID</th>
-                                    <th>Schoolyear Duration</th>
-                                    <th># of Subjects</th>
-                                    <th># of Strands</th>
-                                    <th># of Faculty</th>
-                                    <th>Options</th>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 </div>
