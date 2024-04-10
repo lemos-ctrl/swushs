@@ -58,7 +58,7 @@
                     />
                   </div>
                   <div class="col">
-                    <input type="submit" name="submit" value="Login" href="./swushs/Admin/dashboard.php" />
+                    <input type="submit" name="submit" value="Login" href="./Admin/Pages/dashboard.php" />
                   </div>
                   <div class="p-3">
                     <a href="#"> Forgot password?</a>
