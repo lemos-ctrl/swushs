@@ -100,7 +100,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </ul>
         <ul class="sidebar-nav mt-auto">
             <li class="sidebar-item">
-                <a href="../../index.php" class="sidebar-link">
+                <a href="#" class="sidebar-link" data-bs-toggle="modal" data-bs-target="#logoutModal">
                     <i class="fa-solid fa-list pe-2"></i>
                     Logout
                 </a>

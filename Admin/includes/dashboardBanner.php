@@ -18,7 +18,7 @@
                                     <div class="ms-1 mt-2">
                                         <i class="fa-solid fa-users"></i>
                                         <p>Users</p>
-                                    </div>  
+                                    </div>
                                 </div>
                                 <div class="d-flex align-items-center user-card">
                                     <h1>20</h1>
@@ -39,7 +39,7 @@
                                     <div class="ms-1 mt-2">
                                         <i class="fa-solid fa-users"></i>
                                         <p>Users</p>
-                                    </div>  
+                                    </div>
                                 </div>
                                 <div class="d-flex align-items-center user-card1">
                                     <h1>20</h1>
@@ -60,7 +60,7 @@
                                     <div class="ms-1 mt-2">
                                         <i class="fa-solid fa-users"></i>
                                         <p>Users</p>
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -69,4 +69,3 @@
             </div>
         </div>
     </div>
-    
