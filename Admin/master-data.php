@@ -22,9 +22,61 @@ include_once '../includes/cdn.php';?>
                   </nav>
 
               <main class="content px-3 py-2 ">
-                <div class="container-fluid ">
-                          
-                </div>
+              <div class="card rounded shadow border-0">
+                                <div class="card-body p-5 bg-white rounded">
+                                    <h2 class="text-left d-flex justify-content-between" style="color: maroon;">
+                                        Master Data
+                                        <div>
+                                            <a href="#" class="btn btn-secondary">
+                                                <i class="material-icons">&#xE147;</i> <span>Add New User</span>
+                                            </a>
+                                
+                                        </div>
+                                    </h2>
+
+
+                                                					
+
+                                    <div class="table-responsive">
+                                        
+                                        <table id="example" style="width:100%" class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                <th>Name</th>
+                                                <th>Employee ID</th>
+                                                <th>Role</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><i class="fa-solid fa-user"></i> Tiger Nixon</td>
+                                                    <td>684564531</td>
+                                                    <td>Admin</td>
+                                                    <td>Active</td>
+                                                    <td><a href="#" class="view-link">View</a></td>
+                                                    
+                                                </tr>
+
+
+
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                        <div class="d-flex justify-content-end gap-2">
+                                            <a href="#" class="btn btn-secondary">
+                                                <i class="material-icons">&#xE147;</i> <span>Import Data</span>
+                                            </a>
+                                            <a href="#" class="btn btn-secondary">
+                                                <i class="material-icons">&#xE24D;</i> <span>Export Data</span>
+                                            </a>
+                                        </div>
+
+                                </div>
+                            </div>
             </main>
         </div>
     </div>

@@ -5,7 +5,7 @@ include_once '../includes/cdn.php';?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Attendance Page</title>
 </head>
   <body>      
     <div class="wrapper">
@@ -24,10 +24,7 @@ include_once '../includes/cdn.php';?>
                         <main class="content px-3 py-2 ">
                             <div class="card rounded shadow border-0">
                                 <div class="card-body p-5 bg-white rounded">
-                                    <div class="mb-4">
                                         <h2 class="text-left" style="color: maroon;">Attendance List for Today</h2>
-
-                                        </div>
                                     <div class="table-responsive">
                                         <table id="example" style="width:100%" class="table table-striped table-bordered">
                                             <thead>
@@ -131,6 +128,14 @@ include_once '../includes/cdn.php';?>
                                     </div>
                                 </div>
                             </div>
+
+
+
+
+
+                            <button type="button" class="btn btn-primary btn-lg">Generate Attendance Report <i class="fa fa-database" aria-hidden="true"></i></button>
+
+
                         </main>
             </div><!-- main -->
         </div><!-- wrapper -->
