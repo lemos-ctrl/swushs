@@ -99,7 +99,7 @@
                         </h5>
                     </div>
                     <div class="card-body">
-                        <table id="myTable" class="table table-hover" style="width:100%">
+                        <table id="myTable" class="table table-hover nowrap display" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>No:</th>

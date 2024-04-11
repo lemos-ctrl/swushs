@@ -53,13 +53,6 @@
                 <!-- modals -->
                 <?php include('../modals/schoolyearSwitchModal.php'); ?>
                 <?php include('../modals/logoutModal.php'); ?>
-                <div id="search-section">
-                    <!-- Search bar goes here -->
-                </div>
-
-                <div id="info-section">
-                    <!-- Info section goes here -->
-                </div>
 
                 <div class="card border-0">
                     <div class="card-header">
