@@ -46,9 +46,19 @@
                 <!-- ENDS HERE -->
                 <div class="card border-0">
                     <div class="card-header">
-                        <h5 class="card-title  m-0">
-                            Subjects
-                        </h5>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h5 class="card-title m-0">Subject</h5>
+                            </div>
+                            <div class="col-auto">
+                                <select name="semester-dropdown" id="semester-dropdown"
+                                    class="form-select form-select-sm">
+                                    <option value="Semester 1">Semester 1</option>
+                                    <option value="Semester 2">Semester 2</option>
+                                    <option value="Semester 2">Display all</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
                         <table id="myTable" class="table table-hover" style="width:100%">
@@ -58,7 +68,9 @@
                                     <th>Subject Description</th>
                                     <th>Grade level</th>
                                     <th>Strand</th>
+                                    <th>Lec / Lab</th>
                                     <th>Credited Units</th>
+                                    <th>Semester</th>
                                     <th>Options</th>
                                 </tr>
                             </thead>
@@ -68,7 +80,9 @@
                                     <td>Research Capstone</td>
                                     <td>Grade 11</td>
                                     <td>STEM - ICT</td>
+                                    <td>Lec</td>
                                     <td>6</td>
+                                    <td>1st semester</td>
                                     <td>Edit | Delete</td>
                                 </tr>
                             </tbody>

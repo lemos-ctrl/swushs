@@ -13,7 +13,7 @@ $(document).ready(function () {
     responsive: false,
     stateSave: true,
     scrollX: true,
-    fixedHeader: true,
+    fixedHeader: false,
     columnDefs: [
       { className: "dt-body-left", targets: "_all" },
       { className: "dt-head-left", targets: "_all" },
@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //calendar component
-
 document.addEventListener("DOMContentLoaded", function () {
   var calendarEl = document.getElementById("calendar");
 

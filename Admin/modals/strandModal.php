@@ -14,6 +14,10 @@
                         <label for="strandCode" class="form-label">Strand Code (STEM)</label>
                         <input type="text" class="form-control" id="strandCode" name="strandCode" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="strandName" class="form-label">Class Size</label>
+                        <input type="text" class="form-control" id="strandName" name="strandName" required>
+                    </div>
                     <div class="mb-1">
                         <h4>Strand Specializations</h4>
                     </div>

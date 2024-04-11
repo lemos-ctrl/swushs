@@ -95,9 +95,19 @@
                 <!-- ENDS HERE -->
                 <div class="card border-0">
                     <div class="card-header">
-                        <h5 class="card-title  m-0">
-                            Subjects
-                        </h5>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h5 class="card-title m-0">Subject Budget</h5>
+                            </div>
+                            <div class="col-auto">
+                                <select name="semester-dropdown" id="semester-dropdown"
+                                    class="form-select form-select-sm">
+                                    <option value="Semester 1">Semester 1</option>
+                                    <option value="Semester 2">Semester 2</option>
+                                    <option value="Semester 2">Display all</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
                         <!-- <div class="table-responsive"> -->

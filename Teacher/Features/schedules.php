@@ -17,6 +17,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 </head>
 
 <body>
+
     <div class="wrapper">
         <?php include '../../Teacher/includes/sidebar.php';?>
         <div class="main">
@@ -37,20 +38,19 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <div class="card border-0">
                     <div class="card-header">
                         <h5 class="card-title m-0">
-                            Jules Mark Abgao
+                            Curriculum
                         </h5>
                     </div>
                     <div class="card-body">
                         <table id="myTable" class="table table-hover" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Time</th>
-                                    <th>Monday</th>
-                                    <th>Tuesday</th>
-                                    <th>Wednesday</th>
-                                    <th>Thursday</th>
-                                    <th>Friday</th>
-                                    <th>Units</th>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
                                 </tr>
                             </thead>
                             <tbody>

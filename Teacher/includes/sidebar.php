@@ -13,21 +13,21 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 Faculty
             </li>
             <li class="sidebar-item">
-                <a href="../teacher.php"
+                <a href="../Features/teacher.php"
                     class="sidebar-link <?php if ($current_page == 'teacher.php') echo 'active'; ?>">
                     <i class="fa-solid fa-list pe-2"></i>
                     Dashboard
                 </a>
             </li>
             <li class="sidebar-item">
-                <a href="../teacher.php"
-                    class="sidebar-link <?php if ($current_page == 'schedule.php') echo 'active'; ?>">
+                <a href="../Features/schedules.php"
+                    class="sidebar-link <?php if ($current_page == 'schedules.php') echo 'active'; ?>">
                     <i class="fas fa-calendar-week"></i>
                     Schedules
                 </a>
             </li>
             <li class="sidebar-item">
-                <a href="../teacher.php"
+                <a href="../Features/profile.php"
                     class="sidebar-link <?php if ($current_page == 'profile.php') echo 'active'; ?>">
                     <i class="fas fa-user-alt"></i>
                     Profile
