@@ -6,7 +6,7 @@ include_once '../includes/cdn.php'; ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Attendance Page</title>
 </head>
 
 <body>
@@ -24,13 +24,23 @@ include_once '../includes/cdn.php'; ?>
             </nav>
 
             <main class="content px-3 py-2 ">
-                <div class="container-fluid ">
-
-                </div>
+                <h1>HAHA</h1>
             </main>
-        </div>
-    </div>
+
+
+        </div><!-- main -->
+    </div><!-- wrapper -->
+
+
+
     <script src="../Scripts/barchart.js"></script>
+    <script>
+        $(function() {
+            $(document).ready(function() {
+                $('#example').DataTable();
+            });
+        });
+    </script>
 </body>
 
 </html>

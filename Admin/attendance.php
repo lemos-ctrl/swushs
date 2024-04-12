@@ -32,7 +32,7 @@ include_once '../includes/cdn.php'; ?>
                                 <thead>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Employee ID</th>
+                                        <th class="dt-head-left">Employee ID</th>
                                         <th>Login Time</th>
                                         <th>Logout Time</th>
                                         <th>Profile</th>
@@ -40,121 +40,47 @@ include_once '../includes/cdn.php'; ?>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> Tsiger Nixon</td>
-                                        <td>684564531</td>
+                                        <td><i class="fa-solid fa-user"></i><Span> Tiger Nixon</Span></td>
+                                        <td class="dt-body-left">684564531</td>
                                         <td>7:00 am</td>
                                         <td>6:00 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> John Doe</td>
-                                        <td>123456789</td>
-                                        <td>8:15 am</td>
-                                        <td>5:45 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> Jane Smith</td>
-                                        <td>987654321</td>
-                                        <td>9:00 am</td>
-                                        <td>7:30 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> Alice Johnson</td>
-                                        <td>456789123</td>
-                                        <td>7:30 am</td>
-                                        <td>6:30 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> Bob Williams</td>
-                                        <td>135792468</td>
-                                        <td>8:00 am</td>
-                                        <td>5:00 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> Emily Davis</td>
-                                        <td>369258147</td>
-                                        <td>8:30 am</td>
-                                        <td>6:15 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> Michael Brown</td>
-                                        <td>582964731</td>
-                                        <td>7:45 am</td>
-                                        <td>6:45 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> Sarah Miller</td>
-                                        <td>814725936</td>
-                                        <td>9:15 am</td>
-                                        <td>7:00 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> David Taylor</td>
-                                        <td>632841975</td>
-                                        <td>8:20 am</td>
-                                        <td>6:10 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> Lisa Martinez</td>
-                                        <td>759318462</td>
-                                        <td>7:20 am</td>
-                                        <td>6:20 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> William Rodriguez</td>
-                                        <td>297186543</td>
-                                        <td>8:10 am</td>
-                                        <td>5:50 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><i class="fa-regular fa-id-card"></i> Olivia Garcia</td>
-                                        <td>931674258</td>
-                                        <td>9:30 am</td>
-                                        <td>7:45 pm</td>
                                         <td><a href="#" class="view-link">View</a></td>
                                     </tr>
 
 
                                 </tbody>
                             </table>
+
+                            <!-- Button trigger modal -->
+                            <a href="#" class="btn btn-secondary float-end mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fa-solid fa-gears"></i> <span>Generate Attendance Report</span>
+                            </a>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Generate Attendance Report</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ...
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
 
-                <!-- Button trigger modal -->
-                <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <i class="fa-solid fa-gears"></i> <span>Generate Attendance Report</span>
-                </a>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Generate Attendance Report</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
 
             </main>
