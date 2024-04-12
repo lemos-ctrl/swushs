@@ -44,7 +44,28 @@ include_once '../includes/cdn.php'; ?>
                                         <td class="dt-body-left">684564531</td>
                                         <td>7:00 am</td>
                                         <td>6:00 pm</td>
-                                        <td><a href="#" class="view-link">View</a></td>
+
+
+                                        <td><a href="#" class="view-link" data-bs-toggle="modal" data-bs-target="#profileModal">View</a></td>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Profile</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <?php
+                                                        include_once '../includes/profile.php'; ?>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </tr>
 
 

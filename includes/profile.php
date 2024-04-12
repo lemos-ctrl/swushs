@@ -81,7 +81,7 @@ include_once '../includes/cdn.php'; ?>
                                         <h6 class="mb-0">Address</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        Barangay Ginebra, Cebu City, Philippines
+                                        Urgello, Cebu City, Philippines
                                     </div>
                                 </div>
                                 <hr>
