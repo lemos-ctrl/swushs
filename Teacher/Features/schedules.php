@@ -34,6 +34,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <main class="content px-3 py-4">
                 <!-- Modal -->
                 <?php include('../../Admin/modals/logoutModal.php'); ?>
+
                 <!-- ENDS HERE -->
                 <div class="card border-0">
                     <div class="card-header">
@@ -58,7 +59,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                     <td>Tiger Nixon</td>
                                     <td>System Architect</td>
                                     <td>Edinburgh</td>
-                                    <td>61</td>
+                                    <td>61sc</td>
                                     <td>2011-04-25</td>
                                     <td>$320,800</td>
                                 </tr>

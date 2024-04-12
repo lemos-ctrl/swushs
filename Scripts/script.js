@@ -6,14 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// data tables dashboard init
 $(document).ready(function () {
-  $(".table").DataTable({
+  var dataTable = $(".table").DataTable({
     paging: false,
     responsive: false,
-    stateSave: true,
     scrollX: true,
-    fixedHeader: false,
+    autoWidth: true,
     columnDefs: [
       { className: "dt-body-left", targets: "_all" },
       { className: "dt-head-left", targets: "_all" },
@@ -22,11 +20,26 @@ $(document).ready(function () {
       topEnd: "search",
       topStart: "info",
       bottomStart: null,
-    }, // Add the classes table-bordered and display-nowrap
-    initComplete: function () {
-      $(".table").addClass("table-bordered display nowrap").css("width", "100%");
-      $(".dataTables_wrapper").addClass("display nowrap");
     },
+    initComplete: function () {
+      $(".table").addClass("table-bordered display nowrap");
+      dataTable.columns.adjust(); // Adjust the column widths after initialization
+    },
+  });
+
+  // Function to handle resizing of table head
+  function handleResize() {
+    var tableWrapperWidth = $(".table-wrapper").width();
+    $(".dt-scroll-headInner").css("width", tableWrapperWidth);
+  }
+
+  // Call the handleResize function initially
+  handleResize();
+
+  // Call the handleResize function whenever the window is resized
+  $(window).resize(function () {
+    handleResize();
+    dataTable.columns.adjust(); // Adjust the column widths on window resize
   });
 });
 
@@ -90,3 +103,14 @@ function clearSpecializations() {
   );
   specializationContainer.innerHTML = ""; // Clear the contents of the container
 }
+
+// $('#sidebar-toggle').on('click', function() {
+//   // Destroy the existing DataTable instance
+//   $('#myTable').DataTable().destroy();
+  
+//   // Reinitialize the DataTable
+//   $('#myTable').DataTable();
+
+//   // Optionally, you can adjust columns and redraw the table as well
+//   $('#myTable').DataTable().columns.adjust().draw();
+// });

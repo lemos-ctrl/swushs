@@ -99,7 +99,7 @@
                         </h5>
                     </div>
                     <div class="card-body">
-                        <table id="myTable" class="table table-hover nowrap display" style="width:100%">
+                        <table id="myTable" class="table table-hover" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>No:</th>
@@ -109,8 +109,8 @@
                                     <th>Status (Reg/Prob/Cont)</th>
                                     <th>FT / PT</th>
                                     <th>Required Hours</th>
-                                    <th>Grade 11 Units <br>Class starts: June 22, 2024</th>
-                                    <th>Grade 12 Units <br>Class starts: Nov 22, 2024</th>
+                                    <th>Grade 11 Units | <br> Class starts: June 22, 2024</th>
+                                    <th>Grade 12 Units | <br>Class starts: Nov 22, 2024</th>
                                     <th>Actual FTL Units</th>
                                     <th></th>
                                     <th>Overall Total</th>

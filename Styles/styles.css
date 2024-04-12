@@ -243,16 +243,6 @@ a.sidebar-link.sidebar-link-child {
   transform: rotate(45deg);
 }
 
-/* Set max-width for the DataTable container */
-.dataTables_wrapper {
-  max-width: 1800px; /* Adjust the value according to your preference */
-}
-
-/* Set max-width for the DataTable itself */
-.table.dataTable {
-  max-width: 1800px; /* Adjust the value according to your preference */
-}
-
 #sidebar .sidebar-item .active,
 #sidebar .sidebar-link .active {
   background: rgba(224, 150, 150, 0.4);
@@ -427,18 +417,29 @@ nav {
 }
 
 /* DATA TABLES CSS */
-/* Change pagination hover color */
-#myTable .page-item:hover {
-  background-color: #ff0000; /* Change this to your desired hover color */
-  color: #ffffff; /* Change this to your desired text color */
-}
-
 table td,
 table th {
   text-align: left !important;
 }
 
+/* .dt-scroll-headInner, .table{
+  width: auto !important;     
+} */
+
 /* full calendar styling */
 .fc-scroller {
   overflow: hidden;
+}
+
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 100%; /* Ensures the table takes up the full width */
+}
+
+.dt-scroll-headInner {
+  min-width: 100%; /* Ensures the table head takes up the full width */
 }
