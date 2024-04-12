@@ -26,15 +26,33 @@ include_once '../includes/cdn.php'; ?>
             <main class="content px-3 py-2 ">
                 <div class="card rounded shadow border-0">
                     <div class="card-body p-5 bg-white rounded">
-                        <h2 class="text-left d-flex justify-content-between" style="color: maroon;">
-                            Master Data
-                            <div>
-                                <a href="#" class="btn btn-secondary">
-                                    <i class="material-icons">&#xE147;</i> <span>Add New User</span>
+                        <div class="text-left d-flex justify-content-between">
+                            <h2 style="color: maroon;">Master Data</h2>
+                            <div style="color: inherit;"> <!-- Apply color: inherit to prevent inheriting the color -->
+                                <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#adduserModal">
+                                    <i class="fa-solid fa-user-plus"></i> <span>Add New User</span>
                                 </a>
-
+                                <!-- Modal for add user -->
+                                <div class="modal fade" id="adduserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Add</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Modal body content -->
+                                                ...
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </h2>
+</div>
 
 
 
@@ -69,12 +87,54 @@ include_once '../includes/cdn.php'; ?>
                         </div>
 
                         <div class="d-flex justify-content-end gap-2">
-                            <a href="#" class="btn btn-secondary">
-                                <i class="material-icons">&#xE147;</i> <span>Import Data</span>
+                            <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#importModal">
+                                <i class="fa-solid fa-file-import"></i> <span>Import Data</span>
                             </a>
-                            <a href="#" class="btn btn-secondary">
-                                <i class="material-icons">&#xE24D;</i> <span>Export Data</span>
+
+                            <!-- Modal for import data -->
+                            <!-- Modal -->
+                            <div class="modal fade" id="importModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Import Data</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ...
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exportModal">
+                                <i class="fa-solid fa-file-export"></i> <span>Export Data</span>
                             </a>
+
+                            <!-- Modal for Export Data -->
+                            <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Export Data</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ...
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
