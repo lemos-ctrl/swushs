@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+//data table initialize
 $(document).ready(function () {
   var dataTable = $(".table").DataTable({
     paging: false,
@@ -23,16 +25,16 @@ $(document).ready(function () {
     },
     initComplete: function () {
       $(".table").addClass("table-bordered display nowrap");
-      dataTable.columns.adjust(); // Adjust the column widths after initialization
     },
   });
+  // so that the data tables head and body will be adjusted
+  dataTable.columns.adjust();    
 
   // Function to handle resizing of table head
   function handleResize() {
     var tableWrapperWidth = $(".table-wrapper").width();
     $(".dt-scroll-headInner").css("width", tableWrapperWidth);
   }
-
   // Call the handleResize function initially
   handleResize();
 
@@ -103,14 +105,3 @@ function clearSpecializations() {
   );
   specializationContainer.innerHTML = ""; // Clear the contents of the container
 }
-
-// $('#sidebar-toggle').on('click', function() {
-//   // Destroy the existing DataTable instance
-//   $('#myTable').DataTable().destroy();
-  
-//   // Reinitialize the DataTable
-//   $('#myTable').DataTable();
-
-//   // Optionally, you can adjust columns and redraw the table as well
-//   $('#myTable').DataTable().columns.adjust().draw();
-// });
