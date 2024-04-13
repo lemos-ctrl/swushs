@@ -94,12 +94,22 @@
                 <!-- ENDS HERE -->
                 <div class="card border-0">
                     <div class="card-header">
-                        <h5 class="card-title  m-0">
-                            Faculty Load
-                        </h5>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h5 class="card-title m-0">Faculty Load</h5>
+                            </div>
+                            <div class="col-auto">
+                                <select name="semester-dropdown" id="semester-dropdown"
+                                    class="form-select form-select-sm">
+                                    <option value="Semester 1">Semester 1</option>
+                                    <option value="Semester 2">Semester 2</option>
+                                    <option value="Semester 2">Display all</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
-                        <table id="myTable" class="table table-hover" style="width:100%">
+                        <table id="myTable" class="table table-hover">
                             <thead>
                                 <tr>
                                     <th>No:</th>
@@ -109,10 +119,10 @@
                                     <th>Status (Reg/Prob/Cont)</th>
                                     <th>FT / PT</th>
                                     <th>Required Hours</th>
-                                    <th>Grade 11 Units <br>Class starts: June 22, 2024</th>
+                                    <th>Grade 11 Units <br> Class starts: June 22, 2024</th>
                                     <th>Grade 12 Units <br>Class starts: Nov 22, 2024</th>
                                     <th>Actual FTL Units</th>
-                                    <th></th>
+                                    <th>butngan lang bhie</th>
                                     <th>Overall Total</th>
                                     <th>Overloads</th>
                                 </tr>
@@ -129,7 +139,7 @@
                                     <td>0.5</td>
                                     <td>23.5</td>
                                     <td>24.0</td>
-                                    <td></td>
+                                    <td>bitngan bit</td>
                                     <td>24.0</td>
                                     <td>0</td>
                                 </tr>

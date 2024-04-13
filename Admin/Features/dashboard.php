@@ -53,13 +53,6 @@
                 <!-- modals -->
                 <?php include('../modals/schoolyearSwitchModal.php'); ?>
                 <?php include('../modals/logoutModal.php'); ?>
-                <div id="search-section">
-                    <!-- Search bar goes here -->
-                </div>
-
-                <div id="info-section">
-                    <!-- Info section goes here -->
-                </div>
 
                 <div class="card border-0">
                     <div class="card-header">
@@ -78,8 +71,8 @@
                     </div>
 
                     <div class="card-body">
-                        <!-- <h3 class="text-center">Grade 11</h3>
-                        <h4 class="text-center">STEM-Health</h4> -->
+                        <h3 class="text-center">Grade 11</h3>
+                        <h4 class="text-center">STEM-Health</h4>
                         <table id="myTable" class="table table-hover" style="width:100%">
                             <thead>
                                 <tr>
@@ -95,7 +88,7 @@
                             <tbody>
                                 <tr>
                                     <td>ITE-325</td>
-                                    <td>Research Capstone</td>
+                                    <td>Pagbasa at Pagsusuri ng Iba't Ibang Teksto Tungo sa Pananaliksik (SHS) </td>
                                     <td>6</td>
                                     <td>0</td>
                                     <td>6</td>

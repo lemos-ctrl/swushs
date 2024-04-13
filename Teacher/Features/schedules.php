@@ -1,5 +1,8 @@
 <?php 
 include_once '../../includes/cdn.php';?>
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,64 +19,22 @@ include_once '../../includes/cdn.php';?>
 <body>
 
     <div class="wrapper">
-        <?php include '../../Admin/includes/sidebar.php';?>
+        <?php include '../../Teacher/includes/sidebar.php';?>
         <div class="main">
             <nav class="navbar custom-toggler navbar-expand px-3 border-bottom">
                 <button class="btn" id="sidebar-toggle" type="button">
                     <span class="navbar-toggler-icon "></span>
                 </button>
                 <div class="navbar-collapse navbar p-0 d-flex justify-content-end align-items-center">
-                    <span>Welcome back <b>Kurt</b>!</span>
+                    <span>Welcome back <b>Teacher</b>!</span>
                     <a href="#" class="las la-user-circle ps-2"></a>
                 </div>
             </nav>
 
             <main class="content px-3 py-4">
-                <div class="container-fluid">
-                    <?php include '../../Admin/includes/dashboardBanner.php';?>
-                    <!-- SAME ROW OF DASHBOARD BANNER BUT LIKE I JUST PUT IT HERE KAY FOR EVERY PAGE LAHE LAHE -->
-                    <div class="col-12 col-md-2 d-flex">
-                        <div class="card flex-fill border-0 dashboard-dropdown">
-                            <!-- dropdown button -->
-                            <h6 class="pt-2 ps-2 ">Select School Year</h6> <!-- Moved this line here -->
-                            <div class="btn-group dropdown-center px-2">
-                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Select School Year
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#confirmationModal" data-school-year="2023">2023</a></li>
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#confirmationModal" data-school-year="2024">2024</a></li>
-                                    <!-- Add more school years as needed -->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
                 <!-- Modal -->
-                <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog"
-                    aria-labelledby="confirmationModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="confirmationModalLabel">Confirmation</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Are you sure you want to switch to the <span id="schoolYearSpan"></span> school year?
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <a href="#" id="confirmSwitchLink" class="btn btn-primary">Confirm</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php include('../../Admin/modals/logoutModal.php'); ?>
+
                 <!-- ENDS HERE -->
                 <div class="card border-0">
                     <div class="card-header">
@@ -98,7 +59,7 @@ include_once '../../includes/cdn.php';?>
                                     <td>Tiger Nixon</td>
                                     <td>System Architect</td>
                                     <td>Edinburgh</td>
-                                    <td>61</td>
+                                    <td>61sc</td>
                                     <td>2011-04-25</td>
                                     <td>$320,800</td>
                                 </tr>

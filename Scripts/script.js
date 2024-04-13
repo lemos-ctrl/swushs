@@ -6,14 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// data tables dashboard init
+//data table initialize
 $(document).ready(function () {
-  $(".table").DataTable({
+  var dataTable = $(".table").DataTable({
     paging: false,
     responsive: false,
     stateSave: true,
+    responsive: false,
     scrollX: true,
-    //fixedHeader: true,
+    autoWidth: true,
     columnDefs: [
       { className: "dt-body-left", targets: "_all" },
       { className: "dt-head-left", targets: "_all" },
@@ -22,13 +23,26 @@ $(document).ready(function () {
       topEnd: "search",
       topStart: "info",
       bottomStart: null,
-    }, // Add the classes table-bordered and display-nowrap
-    initComplete: function () {
-      $(".table")
-        .addClass("table-bordered display nowrap")
-        .css("width", "100%");
-      $(".dataTables_wrapper").addClass("display nowrap");
     },
+    initComplete: function () {
+      $(".table").addClass("table-bordered display nowrap");
+    },
+  });
+  // so that the data tables head and body will be adjusted
+  dataTable.columns.adjust();
+
+  // Function to handle resizing of table head
+  function handleResize() {
+    var tableWrapperWidth = $(".table-wrapper").width();
+    $(".dt-scroll-headInner").css("width", tableWrapperWidth);
+  }
+  // Call the handleResize function initially
+  handleResize();
+
+  // Call the handleResize function whenever the window is resized
+  $(window).resize(function () {
+    handleResize();
+    dataTable.columns.adjust(); // Adjust the column widths on window resize
   });
 });
 
@@ -49,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //calendar component
-
 document.addEventListener("DOMContentLoaded", function () {
   var calendarEl = document.getElementById("calendar");
 
