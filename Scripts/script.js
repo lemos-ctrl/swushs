@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function () {
   $(".table").DataTable({
     paging: false,
-    responsive: true,
+    responsive: false,
     stateSave: true,
     scrollX: true,
-    fixedHeader: true,
+    //fixedHeader: true,
     columnDefs: [
       { className: "dt-body-left", targets: "_all" },
       { className: "dt-head-left", targets: "_all" },
@@ -24,7 +24,9 @@ $(document).ready(function () {
       bottomStart: null,
     }, // Add the classes table-bordered and display-nowrap
     initComplete: function () {
-      $(".table").addClass("table-bordered").css("width", "100%");
+      $(".table")
+        .addClass("table-bordered display nowrap")
+        .css("width", "100%");
       $(".dataTables_wrapper").addClass("display nowrap");
     },
   });
