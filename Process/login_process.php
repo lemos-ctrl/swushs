@@ -1,25 +1,72 @@
 <?php
-    // Include the file containing the database connection code
-    include "db_connection.php";
+// Start the session
+session_start();
 
-    //get value from text field but escape user and pass to avoid sql injection attacks
-    $username = mysqli_real_escape_string($conn, $_POST["txtusername"]);
-    $password = mysqli_real_escape_string($conn, $_POST["txtpassword"]);
+// Include the file containing the database connection code
+include "db_connection.php";
 
-    // Perform a query to check if the username and password match in the database
-    $sql = "SELECT * FROM tbl_users WHERE username = '$username' AND password = '$password'";
-    $result = mysqli_query($conn, $sql) or die("Error in query: " . mysqli_error($con));
+// Get values from text fields but escape user and pass to avoid SQL injection attacks
+$username = $_POST["txtusername"];
+$password = $_POST["txtpassword"];
+
+// Prepare a SQL statement with placeholders
+$sql = "SELECT * FROM tbl_users WHERE username = ? AND password = ?";
+
+// Prepare the SQL statement
+$stmt = mysqli_prepare($conn, $sql);
+
+if ($stmt) {
+    // Bind parameters to the prepared statement
+    mysqli_stmt_bind_param($stmt, "ss", $username, $password);
+
+    // Execute the prepared statement
+    mysqli_stmt_execute($stmt);
+
+    // Get the result set from the prepared statement
+    $result = mysqli_stmt_get_result($stmt);
 
     // Check if there is a matching row in the database
     if (mysqli_num_rows($result) > 0) {
+        // Fetch the user row
+        $row = mysqli_fetch_assoc($result);
         
-        // Login successful
-        header("Location: ./Admin/Features/dashboard.php");
+        // Get the user role
+        $user_role = $row['role'];
+
+        // Store user role and username in session variables
+        $_SESSION['user_role'] = $user_role;
+        $_SESSION['username'] = $username;
+
+        // Redirect the user based on their role
+        switch ($user_role) {
+            case 'admin':
+                header("Location: ../Admin/Features/dashboard.php");
+                break;
+            case 'superAdmin':
+                header("Location: ../SuperAdmin/dashboard.php");
+                break;
+            case 'coordinator':
+                header("Location: ../Coordinator/dashboard.php");
+                break;
+            case 'teacher':
+                header("Location: ../Teacher/dashboard.php");
+                break;
+            default:
+                // Redirect back to the login page with an error message
+                header("Location: ../index.php?error=invalid_role");
+                break;
+        }
         exit();
     } else {
-
         // Redirect back to the login page with an error message
-        header("Location: ../index.phpp");
+        header("Location: ../index.php?error=invalid_credentials");
         exit();
     }
-?>
+} else {
+    // Error handling if the prepared statement fails
+    die("Error in query: " . mysqli_error($conn));
+}
+
+// Close the statement and connection
+// mysqli_stmt_close($stmt);
+// mysqli_close($conn);

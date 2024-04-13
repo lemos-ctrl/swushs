@@ -1,6 +1,5 @@
 <?php 
-include_once '../../includes/cdn.php';?>
-<?php
+include_once '../../includes/cdn.php';
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 

@@ -24,7 +24,7 @@
             <div class="row d-flex justify-content-center text-align-center login">
                 <div class="col-4">
                     <div class="login-frame">
-                        <form action="Process/login_process.php" method="post">
+                        <form action="Process/login_process.php" method="post" class="needs-validation" novalidate>
                             <div class="row flex-column text-center align-items-center">
                                 <div class="col-4">
                                     <img src="./Resources/swuphinmared.png" class="logoswu img-fluid" alt="swulogo" />
@@ -33,14 +33,24 @@
                                     <h3>Login to your account</h3>
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="txtusername" id="name" placeholder="Username" required />
+                                    <input type="text" name="txtusername" id="name" class="form-control"
+                                        placeholder="Username" required />
                                 </div>
                                 <div class="col">
-                                    <input type="password" name="txtpassword" id="pass" placeholder="Password"
-                                        required />
+                                    <input type="password" name="txtpassword" id="pass" class="form-control <"
+                                        placeholder="Password" required />
+                                    <input type="hidden"
+                                        class="form-control <?php if(isset($_GET['error']) && $_GET['error'] == 'invalid_credentials') echo 'is-invalid'; ?>"
+                                        placeholder="Username" required />
+                                    <!-- Display error message if it exists -->
+                                    <?php
+                                        if (isset($_GET['error']) && $_GET['error'] == 'invalid_credentials') {
+                                            echo "<div class='invalid-feedback'>Login failed. Please check your username and password and try again.</div>";
+                                        }
+                                    ?>
                                 </div>
                                 <div class="col">
-                                    <input type="submit" name="submit" value="Login" />
+                                    <input type="submit" name="submit" class="btn btn-primary">Login</input>
                                 </div>
                                 <div class="p-3">
                                     <a href="#"> Forgot password?</a>
@@ -55,6 +65,23 @@
             </span>
         </div>
     </section>
+
+    <script>
+    (() => {
+        'use strict';
+
+        document.querySelectorAll('.needs-validation').forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+    </script>
+
 </body>
 
 </html>
