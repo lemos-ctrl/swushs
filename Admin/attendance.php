@@ -72,12 +72,12 @@ include_once '../includes/cdn.php'; ?>
                                 </tbody>
                             </table>
 
-                            <!-- Button trigger modal -->
+                            <!-- Button trigger modal
                             <a href="#" class="btn btn-secondary float-end mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <i class="fa-solid fa-gears"></i> <span>Generate Attendance Report</span>
-                            </a>
+                            </a> -->
 
-                            <!-- Modal -->
+                            <!-- Modal
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
@@ -86,7 +86,11 @@ include_once '../includes/cdn.php'; ?>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            ...
+                                            <label for="role">Export As</label>
+                                            <select id="role" class="form-select" aria-label="Role">
+                                                <option value="1">Excel File</option>
+                                                <option value="2">PDF</option>
+                                            </select>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -95,15 +99,198 @@ include_once '../includes/cdn.php'; ?>
                                     </div>
                                 </div>
                             </div>
+                        </div>-->
 
+                            <h2 class="text-left" style="color: maroon;">Attendance Report - Weekly</h2>
+                            <div class="table-responsive">
+                                <table id="example2" style="width:100%" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Specifics</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Week Start Date</td>
+                                            <td>April 1, 2024</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Week End Date</td>
+                                            <td>April 7, 2024</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Workdays</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Employees</td>
+                                            <td>36</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Average Attendance Rate (%)</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Absences</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Late Arrivals</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Overtime Hours</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <!-- Add more rows for additional categories -->
+                                    </tbody>
+                                </table>
+
+                                <!-- Button trigger modal
+                                <a href="#" class="btn btn-secondary float-end mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <i class="fa-solid fa-gears"></i> <span>Generate Attendance Report</span>
+                                </a> -->
+
+                                <!-- Modal
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Generate Attendance Report</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <label for="role">Export As</label>
+                                                <select id="role" class="form-select" aria-label="Role">
+                                                    <option value="1">Excel File</option>
+                                                    <option value="2">PDF</option>
+                                                </select>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+
+                                <h2 class="text-left" style="color: maroon;">Attendance Report - Monthly</h2>
+                                <div class="table-responsive">
+                                    <table id="example3" style="width:100%" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Category</th>
+                                                <th>Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Total Workdays</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Employees</td>
+                                                <td>36</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Average Attendance Rate (%)</td>
+                                                <td>90</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Absences</td>
+                                                <td>200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Late Arrivals</td>
+                                                <td>100</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Overtime Hours</td>
+                                                <td>500</td>
+                                            </tr>
+                                            <!-- Add more rows for additional categories -->
+                                        </tbody>
+                                    </table>
+
+                                    <!-- Button trigger modal -->
+                                    <a href="#" class="btn btn-secondary float-end mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <i class="fa-solid fa-gears"></i> <span>Generate Attendance Report</span>
+                                    </a>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Generate Attendance Report</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    <label for="exportType">Export As</label>
+                                                    <select id="exportType" class="form-select" aria-label="Export Type">
+                                                        <option value="excel">Excel File</option>
+                                                        <option value="pdf">PDF</option>
+                                                    </select>
+                                                    <label for="dataType" class="mt-2">Data to Generate</label>
+                                                    <select id="dataType" class="form-select" aria-label="Data Type">
+                                                        <option value="daily">Daily Attendance</option>
+                                                        <option value="weekly">Weekly Attendance</option>
+                                                        <option value="monthly">Monthly Attendance</option>
+                                                        <option value="custom">Custom</option>
+                                                    </select>
+
+                                                    <div id="datePickerWrapper" style="display: none;">
+                                                        <label for="daterange" class="mt-2">Select Date Range</label>
+                                                        <input type="text" id="daterange" name="daterange" class="form-control" />
+                                                    </div>
+
+                                                    <script>
+                                                        $(document).ready(function() {
+                                                            // Function to show/hide date picker based on selected option
+                                                            $('#dataType').change(function() {
+                                                                var selectedOption = $(this).val();
+                                                                if (selectedOption === 'custom') {
+                                                                    $('#datePickerWrapper').show();
+                                                                } else {
+                                                                    $('#datePickerWrapper').hide();
+                                                                }
+                                                            });
+
+                                                            // Initialize date range picker
+                                                            $('input[name="daterange"]').daterangepicker({
+                                                                opens: 'left',
+                                                                startDate: moment().startOf('year'), // Set start date to beginning of current year
+                                                                endDate: moment(), // Set end date to current date
+                                                                locale: {
+                                                                    format: 'YYYY-MM-DD'
+                                                                }
+                                                            }, function(start, end, label) {
+                                                                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+                                                            });
+                                                        });
+                                                    </script>
+                                                </div>
+
+
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
             </main>
         </div><!-- main -->
     </div><!-- wrapper -->
@@ -115,6 +302,20 @@ include_once '../includes/cdn.php'; ?>
         $(function() {
             $(document).ready(function() {
                 $('#example').DataTable();
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            $(document).ready(function() {
+                $('#example2').DataTble(); //add "a" on DataTble to make it work again :)
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            $(document).ready(function() {
+                $('#example3').DataTble(); //add "a" on DataTble to make it work again :)
             });
         });
     </script>
