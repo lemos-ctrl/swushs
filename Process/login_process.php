@@ -46,7 +46,7 @@ if ($stmt) {
                 header("Location: ../SuperAdmin/Features/dashboard.php");
                 break;
             case 'coordinator':
-                header("Location: ../Admin/Features/schoolYear.php");
+                header("Location: ../Coordinator/dashboard.php");
                 break;
             case 'teacher':
                 header("Location: ../Teacher/Features/teacher.php");
