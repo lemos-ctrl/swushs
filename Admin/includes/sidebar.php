@@ -14,12 +14,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </li>
             <li class="sidebar-item">
                 <a href="./dashboard.php"
-                    class="sidebar-link <?php if ($current_page == 'dashboard.php') echo 'active'; ?>">
+                    class="sidebar-link <?php if ($current_page == 'dashboard.php' && !$isCoordinator) echo 'active'; ?>">
                     <i class="fa-solid fa-list pe-2"></i>
                     Dashboard
                 </a>
             </li>
-            <li class="sidebar-item">
+            <li class="sidebar-item <?php if ($isCoordinator) echo 'd-none'; ?>">
                 <a href="#" class="sidebar-link " data-bs-toggle="collapse" data-bs-target="#pages"
                     aria-expanded="<?php if ($current_page == 'rooms.php' || $current_page == 'subject.php' || $current_page == 'strand.php' || $current_page == 'calendar.php' || $current_page == 'schoolYear.php') echo 'true'; else echo 'false'; ?>">
                     <i class="fa-solid fa-file-lines pe-2"></i>
@@ -64,7 +64,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     </li>
                 </ul>
             </li>
-            <li class="sidebar-item">
+            <li class="sidebar-item <?php if ($isCoordinator) echo 'd-none'; ?>">
                 <a href="#" class="sidebar-link " data-bs-toggle="collapse" data-bs-target="#auth"
                     aria-expanded="<?php if ($current_page == 'subjectBudget.php' || $current_page == 'loadScheduling.php' || $current_page == 'facultyLoading.php' || $current_page == 'roomAssignment.php') echo 'true'; else echo 'false'; ?>">
                     <i class="fa-solid fa-sliders pe-2"></i>
@@ -108,7 +108,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </ul>
     </div>
 </aside>
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     var sidebarItems = document.querySelectorAll('.sidebar-item');
