@@ -2,22 +2,23 @@
 include_once '../../includes/cdn.php';
 $current_page = basename($_SERVER['PHP_SELF']);
 
-// start session
+// Start session
 session_start();
 
-// check if user is logged in
-    if (!isset($_SESSION["username"])) {  
-       // Redirect back to the login page with an error message
-       header("Location: ../../index.php");
-       exit();
-    }
+// Check if user is logged in
+if (!isset($_SESSION["username"])) {  
+    // Redirect back to the login page with an error message
+    header("Location: ../../index.php");
+    exit();
+}
 
-// check if user has access to this page
-    if ($_SESSION["user_role"] != "superAdmin") {
-       // Redirect back to the login page with an error message
-       header("Location: /schedulingsystem/swushs/process/authorization_error.php");
-       exit();
-    }
+// Check if user has access to this page
+if ($_SESSION["user_role"] != "superAdmin") {
+    // Redirect back to the login page with an error message
+    header("Location: /schedulingsystem/swushs/process/authorization_error.php");
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,18 +86,10 @@ session_start();
         background-color: #45a049
     }
 
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer
+    .alert {
+        position: absolute;
+        display: block;
+        right: 10
     }
     </style>
 </head>
@@ -113,10 +106,17 @@ session_start();
                         Add Admin
                     </li>
                     <li class="sidebar-item">
-                        <a href="../Features/teacher.php"
+                        <a href="../Features/dashboard.php"
                             class="sidebar-link <?php if ($current_page == 'dashboard.php') echo 'active'; ?>">
                             <i class="fa-solid fa-list pe-2"></i>
                             Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="../Features/admin_manager.php"
+                            class="sidebar-link <?php if ($current_page == 'admin_manager.php') echo 'active'; ?>">
+                            <i class="fa-solid fa-user-pen pe-2"></i>
+                            Manage Admins
                         </a>
                     </li>
                     <li class="sidebar-header">
@@ -145,46 +145,68 @@ session_start();
                 </div>
             </nav>
 
-            <main class="content px-3 py-4"><?php include('../../Admin/modals/logoutModal.php'); ?>
+
+            <main class="content px-3 py-4">
+                <?php include('../../Admin/modals/logoutModal.php'); 
+                    // Display alerts based on URL parameter
+                    if(isset($_GET['alert'])) {
+                        $alert = $_GET['alert'];
+                        if($alert === 'success') {
+                            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong>Success!</strong> Admin added successfully.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>';
+                        } elseif($alert === 'failure') {
+                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong>Error!</strong> Error occurred while adding admin.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>';
+                        } elseif($alert === 'duplicate') {
+                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong>Error!</strong> Username already exists. Choose another one.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>';
+                        }
+                    }
+                    ?>
 
                 <div class="form-container">
-                    <h2>Contact Form</h2>
-
-
-                    <form id="userForm">
-                        <div class="input-row">
-                            <div>
-                                <label for="username">Username</label>
-                                <input type="text" id="username" name="username" required>
+                    <h3>Add Admin Form</h2>
+                        <form id="userForm" method="post" action="../../Process/add_admin.php">
+                            <div class="input-row">
+                                <div>
+                                    <label for="username">First Name</label>
+                                    <input type="text" id="username" name="firstname" required>
+                                </div>
+                                <div>
+                                    <label for="contact">Last Name</label>
+                                    <input type="text" name="lastname" required>
+                                </div>
                             </div>
-                            <div>
-                                <label for="contact">Contact #</label>
-                                <input type="tel" id="contact" name="contact" placeholder="Format: 123-456-7890"
-                                    required>
+                            <div class="input-row">
+                                <div>
+                                    <label for="username">Username</label>
+                                    <input type="text" name="username" placeholder="e.g. arbiter2567" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="input-row">
-                            <div>
-                                <label for="fullname">Fullname</label>
-                                <input type="text" id="fullname" name="fullname" required>
+                            <div class="input-row">
+                                <div>
+                                    <label for="username">Contact Number</label>
+                                    <input type="number" name="contactNumber" maxlength="11"
+                                        placeholder="e.g. 09683171436" required>
+                                </div>
                             </div>
-                            <div>
-                                <label for="status">Status</label>
-                                <select id="status" name="status">
-                                    <option value="single">Single</option>
-                                    <option value="married">Married</option>
-                                </select>
+                            <div class="input-row">
+                                <div class="text-end">
+                                    <input type="submit" value="Submit">
+                                </div>
                             </div>
-                        </div>
-                        <div class="input-row">
-                            <div>
-                                <input type="submit" value="Submit">
-                            </div>
-                        </div>
-                    </form>
+                        </form>
                 </div>
             </main>
         </div>
 </body>
+
+</script>
 
 </html>

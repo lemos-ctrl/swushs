@@ -95,7 +95,9 @@ header("Location: /schedulingsystem/swushs/process/authorization_error.php");
                                     <td>STEM</td>
                                     <td>Health</td>
                                     <td>50</th>
-                                    <td>Edit | Delete</td>
+                                    <td class="text-center"><a class="fa-solid fa-trash"></a> | <a
+                                            class="fa-solid fa-pen-to-square"></a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

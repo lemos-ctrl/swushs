@@ -1,7 +1,24 @@
 <?php 
-include_once '../../includes/cdn.php';?>
-<?php
+include_once '../../includes/cdn.php';
+
 $current_page = basename($_SERVER['PHP_SELF']);
+
+// start session
+session_start();
+
+// check if user is logged in
+    if (!isset($_SESSION["username"])) {  
+       // Redirect back to the login page with an error message
+       header("Location: ../../index.php");
+       exit();
+    }
+
+// check if user has access to this page
+    if ($_SESSION["user_role"] != "teacher") {
+       // Redirect back to the login page with an error message
+header("Location: /schedulingsystem/swushs/process/authorization_error.php");
+       exit();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +27,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Teacher Dashboard</title>
 
     <link rel="stylesheet" href="../../Styles/styles.css">
     <script src="../../Scripts/script.js"></script>

@@ -1,23 +1,22 @@
 <?php
-// Start the session
 session_start();
 
 // Include the file containing the database connection code
 include "db_connection.php";
 
-// Get values from text fields but escape user and pass to avoid SQL injection attacks
+// Get the username from the form
 $username = $_POST["txtusername"];
 $password = $_POST["txtpassword"];
 
-// Prepare a SQL statement with placeholders
-$sql = "SELECT * FROM tbl_users WHERE username = ? AND password = ?";
+// Prepare a SQL statement to retrieve the user's information by username
+$sql = "SELECT * FROM tbl_users WHERE username = ?";
 
 // Prepare the SQL statement
 $stmt = mysqli_prepare($conn, $sql);
 
 if ($stmt) {
     // Bind parameters to the prepared statement
-    mysqli_stmt_bind_param($stmt, "ss", $username, $password);
+    mysqli_stmt_bind_param($stmt, "s", $username);
 
     // Execute the prepared statement
     mysqli_stmt_execute($stmt);
@@ -30,35 +29,43 @@ if ($stmt) {
         // Fetch the user row
         $row = mysqli_fetch_assoc($result);
         
-        // Get the user role
-        $user_role = $row['role'];
+        // Verify the hashed password
+        if (password_verify($password, $row['password'])) {
+            // Password is correct
+            // Get the user role
+            $user_role = $row['role'];
 
-        // Store user role and username in session variables
-        $_SESSION['user_role'] = $user_role;
-        $_SESSION['username'] = $username;
+            // Store user role and username in session variables
+            $_SESSION['user_role'] = $user_role;
+            $_SESSION['username'] = $username;
 
-        // Redirect the user based on their role
-        switch ($user_role) {
-            case 'admin':
-                header("Location: ../Admin/Features/dashboard.php");
-                break;
-            case 'superAdmin':
-                header("Location: ../SuperAdmin/Features/dashboard.php");
-                break;
-            case 'coordinator':
-                header("Location: ../Coordinator/dashboard.php");
-                break;
-            case 'teacher':
-                header("Location: ../Teacher/Features/teacher.php");
-                break;
-            default:
-                // Redirect back to the login page with an error message
-                header("Location: ../index.php?error=invalid_role");
-                break;
+            // Redirect the user based on their role
+            switch ($user_role) {
+                case 'admin':
+                    header("Location: ../Admin/Features/dashboard.php");
+                    break;
+                case 'superAdmin':
+                    header("Location: ../SuperAdmin/Features/dashboard.php");
+                    break;
+                case 'coordinator':
+                    header("Location: ../Coordinator/dashboard.php");
+                    break;
+                case 'teacher':
+                    header("Location: ../Teacher/Features/teacher.php");
+                    break;
+                default:
+                    // Redirect back to the login page with an error message
+                    header("Location: ../index.php?error=invalid_role");
+                    break;
+            }
+            exit();
+        } else {
+            // Password is incorrect
+            header("Location: ../index.php?error=invalid_credentials");
+            exit();
         }
-        exit();
     } else {
-        // Redirect back to the login page with an error message
+        // No matching username found
         header("Location: ../index.php?error=invalid_credentials");
         exit();
     }
@@ -70,3 +77,4 @@ if ($stmt) {
 // Close the statement and connection
 // mysqli_stmt_close($stmt);
 // mysqli_close($conn);
+?>

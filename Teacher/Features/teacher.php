@@ -1,6 +1,24 @@
 <?php 
 include_once '../../includes/cdn.php';
+
 $current_page = basename($_SERVER['PHP_SELF']);
+
+// start session
+session_start();
+
+// check if user is logged in
+    if (!isset($_SESSION["username"])) {  
+       // Redirect back to the login page with an error message
+       header("Location: ../../index.php");
+       exit();
+    }
+
+// check if user has access to this page
+    if ($_SESSION["user_role"] != "teacher") {
+       // Redirect back to the login page with an error message
+header("Location: /schedulingsystem/swushs/process/authorization_error.php");
+       exit();
+    }
 ?>
 
 <!DOCTYPE html>
