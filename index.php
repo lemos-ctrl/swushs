@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="./Styles/styles.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -37,12 +40,17 @@
                                         placeholder="Username" required />
                                 </div>
                                 <div class="col">
-                                    <input type="password" name="txtpassword" id="pass" class="form-control <"
-                                        placeholder="Password" required />
+                                    <div class="input-group">
+                                        <input type="password" name="txtpassword" id="pass" class="form-control"
+                                            placeholder="Password" required />
+                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                            <i class="fas fa-eye-slash"></i>
+                                        </button>
+                                    </div>
+                                    <!-- if i remove this, the form control wont work. hence, this. -->
                                     <input type="hidden"
                                         class="form-control <?php if(isset($_GET['error']) && $_GET['error'] == 'invalid_credentials') echo 'is-invalid'; ?>"
                                         placeholder="Username" required />
-                                    <!-- Display error message if it exists -->
                                     <?php
                                         if (isset($_GET['error']) && $_GET['error'] == 'invalid_credentials') {
                                             echo "<div class='invalid-feedback'>Login failed. Please check your username and password and try again.</div>";
@@ -50,7 +58,7 @@
                                     ?>
                                 </div>
                                 <div class="col">
-                                    <input type="submit" name="submit" class="btn btn-primary">Login</input>
+                                    <input type="submit" name="submit" class="btn btn-primary" value="Login">
                                 </div>
                                 <div class="p-3">
                                     <a href="#"> Forgot password?</a>
@@ -67,17 +75,22 @@
     </section>
 
     <script>
+    //toggle password
     (() => {
-        'use strict';
+        "use strict";
 
-        document.querySelectorAll('.needs-validation').forEach(form => {
-            form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
+        // Password visibility toggle
+        const togglePassword = document.getElementById("togglePassword");
+        const passwordInput = document.getElementById("pass");
+
+        togglePassword.addEventListener("click", function() {
+            const type =
+                passwordInput.getAttribute("type") === "password" ? "text" : "password";
+            passwordInput.setAttribute("type", type);
+            togglePassword.innerHTML =
+                type === "password" ?
+                '<i class="fas fa-eye-slash"></i>' :
+                '<i class="fas fa-eye"></i>';
         });
     })();
     </script>

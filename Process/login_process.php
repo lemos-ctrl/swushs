@@ -43,13 +43,13 @@ if ($stmt) {
                 header("Location: ../Admin/Features/dashboard.php");
                 break;
             case 'superAdmin':
-                header("Location: ../SuperAdmin/dashboard.php");
+                header("Location: ../SuperAdmin/Features/dashboard.php");
                 break;
             case 'coordinator':
                 header("Location: ../Coordinator/dashboard.php");
                 break;
             case 'teacher':
-                header("Location: ../Teacher/dashboard.php");
+                header("Location: ../Teacher/Features/teacher.php");
                 break;
             default:
                 // Redirect back to the login page with an error message

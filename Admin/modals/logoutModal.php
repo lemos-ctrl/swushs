@@ -11,7 +11,10 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <a href="../../index.php" class="btn btn-primary">Logout</a>
+                <form id="logoutForm" method="post" action="\SchedulingSystem\swushs\Process\logout_process.php">
+                    <input type="hidden" name="logout" value="true">
+                    <button type="submit" class="btn btn-primary">Logout</button>
+                </form>
             </div>
         </div>
     </div>

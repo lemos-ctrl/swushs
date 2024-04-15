@@ -1,4 +1,21 @@
 <?php require_once('../../includes/cdn.php');
+
+// start session
+session_start();
+
+// check if user is logged in
+    if (!isset($_SESSION["username"])) {  
+       // Redirect back to the login page with an error message
+       header("Location: ../../index.php");
+       exit();
+    }
+
+// check if user has access to this page
+    if ($_SESSION["user_role"] != "admin") {
+       // Redirect back to the login page with an error message
+header("Location: /schedulingsystem/swushs/process/authorization_error.php");
+       exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

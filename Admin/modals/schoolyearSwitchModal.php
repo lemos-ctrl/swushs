@@ -7,11 +7,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Are you sure you want to switch to the <span id="schoolYearSpan"></span> school
+                Are you sure you want set <span id="schoolYearSpan"></span> as the active school
                 year?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Preview</button>
                 <a href="#" id="confirmSwitchLink" class="btn btn-primary">Confirm</a>
             </div>
         </div>

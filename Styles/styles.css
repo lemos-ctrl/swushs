@@ -63,6 +63,17 @@
   margin: 10px 0;
   border: 1px solid #808080; /* Border color */
 }
+.login-frame #togglePassword {
+  margin: 10px 0;
+  border: 1px solid #808080;
+  border-radius: 0 4px 4px 0;
+}
+
+.login-frame #togglePassword {
+  margin: 10px 0;
+  border-width: 1px 1px 1px 0; /* top, right, bottom, left */
+  border-style: solid;
+}
 
 .login-frame input:focus {
   outline: 1px solid #000000; /* Border color */
@@ -441,4 +452,29 @@ table th {
 
 .dt-scroll-headInner {
   min-width: 100%; /* Ensures the table head takes up the full width */
+}
+
+/* ERROR HANDLING */
+
+.error_handling main {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(22, 20, 21, 0.47),
+      rgba(22, 20, 21, 0.4) 5%
+    ),
+    url("/schedulingsystem/swushs/Resources/swubg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  filter: sepia(20%) saturate(150%);
+}
+
+.error_handling .col-5 {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.error_handling .container {
+  padding-top: 30vh;
 }

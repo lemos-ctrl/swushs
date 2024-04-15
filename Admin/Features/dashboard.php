@@ -1,4 +1,21 @@
 <?php require_once('../../includes/cdn.php');
+
+// start session
+session_start();
+
+// check if user is logged in
+    if (!isset($_SESSION["username"])) {  
+       // Redirect back to the login page with an error message
+       header("Location: ../../index.php");
+       exit();
+    }
+
+// check if user has access to this page
+    if ($_SESSION["user_role"] != "admin") {
+       // Redirect back to the login page with an error message
+header("Location: /schedulingsystem/swushs/process/authorization_error.php");
+       exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,11 +49,11 @@
                     <div class="col-12 col-md-2 d-flex">
                         <div class="card flex-fill border-0 dashboard-dropdown">
                             <!-- dropdown button -->
-                            <h6 class="pt-2 ps-2 ">Select School Year</h6>
+                            <h6 class="pt-2 ps-2 ">Set Active School Year</h6>
                             <div class="btn-group dropdown-center px-2">
                                 <button type="button" class="btn btn-primary btn-sm dropdown-toggle"
                                     data-bs-toggle="dropdown" id="schoolYearDropdown" aria-expanded="false">
-                                    Select School Year
+                                    Set Active School Year
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="schoolYearSelectConfirmationLabel">
                                     <li><a class="dropdown-item" href="#" data-bs-toggle="modal"

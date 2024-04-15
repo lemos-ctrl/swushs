@@ -1,4 +1,21 @@
 <?php require_once('../../includes/cdn.php');
+
+// start session
+session_start();
+
+// check if user is logged in
+    if (!isset($_SESSION["username"])) {  
+       // Redirect back to the login page with an error message
+       header("Location: ../../index.php");
+       exit();
+    }
+
+// check if user has access to this page
+    if ($_SESSION["user_role"] != "admin") {
+       // Redirect back to the login page with an error message
+header("Location: /schedulingsystem/swushs/process/authorization_error.php");
+       exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,63 +50,15 @@
                     <div class="col-12 col-md-2 d-flex">
                         <div class="card flex-fill border-0">
                             <div class="card-body d-flex justify-content-center align-items-center">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                <button type="button" class="btn btn-primary" disabled data-bs-toggle="modal"
                                     data-bs-target="#exampleModalCenter">Add Subjects</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Add Subject</h5>
-                            </div>
-                            <div class="modal-body">
-                                <form id="addSubjectForm">
-                                    <div class="mb-3">
-                                        <label for="subjectName" class="form-label">Subject Name</label>
-                                        <input type="text" class="form-control" id="subjectName" name="subjectName"
-                                            required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="subjectCode" class="form-label">Subject Code</label>
-                                        <input type="text" class="form-control" id="subjectCode" name="subjectCode"
-                                            required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="subjectDescription" class="form-label">Subject Description</label>
-                                        <input type="text" class="form-control" id="subjectDescription"
-                                            name="subjectDescription">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="strand" class="form-label">Strand</label>
-                                        <select class="form-select" id="strand" name="strand">
-                                            <option value="">Select Strand</option>
-                                            <option value="Strand 1">Strand 1</option>
-                                            <option value="Strand 2">Strand 2</option>
-                                            <option value="Strand 3">Strand 3</option>
-                                            <!-- Add more options as needed -->
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="creditedUnits" class="form-label">Credited Units</label>
-                                        <input type="text" class="form-control" id="creditedUnits" name="creditedUnits">
-                                    </div>
-                                    <!-- Add more fields as needed -->
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary" onclick="addSubject()">Add
-                                    Subject</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- modals -->
+                <?php include('../modals/logoutModal.php'); ?>
 
                 <!-- ENDS HERE -->
                 <div class="card border-0">
