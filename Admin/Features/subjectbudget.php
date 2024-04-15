@@ -10,11 +10,12 @@ session_start();
     }
 
 // check if user has access to this page
-    if ($_SESSION["user_role"] != "admin") {
-       // Redirect back to the login page with an error message
-header("Location: /schedulingsystem/swushs/process/authorization_error.php");
-       exit();
+    if ($_SESSION["user_role"] != "admin" && $_SESSION["user_role"] != "coordinator") {
+        // Redirect back to the login page with an error message
+        header("Location: /schedulingsystem/swushs/process/authorization_error.php");
+        exit();
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
