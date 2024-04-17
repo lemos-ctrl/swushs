@@ -1,16 +1,16 @@
 <?php
-// start session
+// Start session
 session_start();
 
 // Include the file containing the database connection code
-include "db_connection.php";
+include "../../Process/db_connection.php";
 
-// Get values from text fields but escape user and pass to avoid SQL injection attacks
-$firstname = $_POST["firstname"];
-$lastname = $_POST["lastname"];
-$username = $_POST["username"];
+// Get values from text fields and sanitize to avoid SQL injection attacks
+$firstname = filter_var($_POST["firstname"], FILTER_SANITIZE_STRING);
+$lastname = filter_var($_POST["lastname"], FILTER_SANITIZE_STRING);
+$username = filter_var($_POST["username"], FILTER_SANITIZE_STRING);
 $password = isset($_POST["password"]) ? $_POST["password"] : "swuphinmashsadmin"; // Default password if not provided
-$contactnumber = $_POST["contactNumber"];
+$contactnumber = filter_var($_POST["contactNumber"], FILTER_SANITIZE_STRING);
 
 // Check if username already exists
 $stmt_check = $conn->prepare("SELECT username FROM tbl_users WHERE username = ?");
@@ -21,7 +21,7 @@ $stmt_check->store_result();
 if ($stmt_check->num_rows > 0) {
     // Username already exists, alert failure
     $_SESSION["error_message"] = "Username already exists.";
-    header("Location: ../SuperAdmin/Features/dashboard.php?alert=duplicate");
+    header("Location: ../Features/dashboard.php?alert=duplicate");
     exit();
 }
 
@@ -31,19 +31,22 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 // Set default role to "admin"
 $role = "admin";
 
+// Set default status to 1
+$status = 1;
+
 // Prepare and bind the SQL statement
-$stmt = $conn->prepare("INSERT INTO tbl_users (first_name, last_name, username, password, contact_number, role) VALUES (?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssss", $firstname, $lastname, $username, $hashed_password, $contactnumber, $role);
+$stmt = $conn->prepare("INSERT INTO tbl_users (first_name, last_name, username, password, contact_number, role, status) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssssssi", $firstname, $lastname, $username, $hashed_password, $contactnumber, $role, $status);
 
 // Execute the statement
 if ($stmt->execute()) {
     // Admin added successfully
-    header("Location: ../SuperAdmin/Features/dashboard.php?alert=success");
+    header("Location: ../Features/dashboard.php?alert=success");
     exit();
 } else {
     // Error occurred
     $_SESSION["error_message"] = "Error: " . $stmt->error;
-    header("Location: ../SuperAdmin/Features/dashboard.php?alert=failure");
+    header("Location: ../Features/dashboard.php?alert=failure");
     exit();
 }
 

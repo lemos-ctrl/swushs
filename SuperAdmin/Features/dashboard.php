@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once '../../includes/cdn.php';
 $current_page = basename($_SERVER['PHP_SELF']);
 
@@ -6,7 +6,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 session_start();
 
 // Check if user is logged in
-if (!isset($_SESSION["username"])) {  
+if (!isset($_SESSION["username"])) {
     // Redirect back to the login page with an error message
     header("Location: ../../index.php");
     exit();
@@ -31,66 +31,66 @@ if ($_SESSION["user_role"] != "superAdmin") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Information Form</title>
     <style>
-    .form-container {
-        width: 40%;
-        margin: 20px auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif
-    }
+        .form-container {
+            width: 40%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif
+        }
 
-    form label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold
-    }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold
+        }
 
-    form .input-row {
-        display: flex;
-        margin-bottom: 15px
-    }
+        form .input-row {
+            display: flex;
+            margin-bottom: 15px
+        }
 
-    form .input-row>div {
-        flex: 1;
-        margin-right: 5px
-    }
+        form .input-row>div {
+            flex: 1;
+            margin-right: 5px
+        }
 
-    form .input-row>div:last-child {
-        margin-right: 0
-    }
+        form .input-row>div:last-child {
+            margin-right: 0
+        }
 
-    form .input-row input,
-    form .input-row select {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        font-size: 16px
-    }
+        form .input-row input,
+        form .input-row select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px
+        }
 
-    form input[type="submit"] {
-        width: auto;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px
-    }
+        form input[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px
+        }
 
-    form input[type="submit"]:hover {
-        background-color: #45a049
-    }
+        form input[type="submit"]:hover {
+            background-color: #45a049
+        }
 
-    .alert {
-        position: absolute;
-        display: block;
-        right: 10
-    }
+        .alert {
+            position: absolute;
+            display: block;
+            right: 10
+        }
     </style>
 </head>
 
@@ -107,14 +107,16 @@ if ($_SESSION["user_role"] != "superAdmin") {
                     </li>
                     <li class="sidebar-item">
                         <a href="../Features/dashboard.php"
-                            class="sidebar-link <?php if ($current_page == 'dashboard.php') echo 'active'; ?>">
+                            class="sidebar-link <?php if ($current_page == 'dashboard.php')
+                                echo 'active'; ?>">
                             <i class="fa-solid fa-list pe-2"></i>
                             Dashboard
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a href="../Features/admin_manager.php"
-                            class="sidebar-link <?php if ($current_page == 'admin_manager.php') echo 'active'; ?>">
+                            class="sidebar-link <?php if ($current_page == 'admin_manager.php')
+                                echo 'active'; ?>">
                             <i class="fa-solid fa-user-pen pe-2"></i>
                             Manage Admins
                         </a>
@@ -147,32 +149,32 @@ if ($_SESSION["user_role"] != "superAdmin") {
 
 
             <main class="content px-3 py-4">
-                <?php include('../../Admin/modals/logoutModal.php'); 
-                    // Display alerts based on URL parameter
-                    if(isset($_GET['alert'])) {
-                        $alert = $_GET['alert'];
-                        if($alert === 'success') {
-                            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                <?php include ('../../Admin/modals/logoutModal.php');
+                // Display alerts based on URL parameter
+                if (isset($_GET['alert'])) {
+                    $alert = $_GET['alert'];
+                    if ($alert === 'success') {
+                        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                     <strong>Success!</strong> Admin added successfully.
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>';
-                        } elseif($alert === 'failure') {
-                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    } elseif ($alert === 'failure') {
+                        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     <strong>Error!</strong> Error occurred while adding admin.
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>';
-                        } elseif($alert === 'duplicate') {
-                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    } elseif ($alert === 'duplicate') {
+                        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     <strong>Error!</strong> Username already exists. Choose another one.
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>';
-                        }
                     }
-                    ?>
+                }
+                ?>
 
                 <div class="form-container">
                     <h3>Add Admin Form</h2>
-                        <form id="userForm" method="post" action="../../Process/add_admin.php">
+                        <form id="userForm" method="post" action="../Process/add_admin.php">
                             <div class="input-row">
                                 <div>
                                     <label for="username">First Name</label>

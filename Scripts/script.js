@@ -106,3 +106,4 @@ function clearSpecializations() {
   );
   specializationContainer.innerHTML = ""; // Clear the contents of the container
 }
+
