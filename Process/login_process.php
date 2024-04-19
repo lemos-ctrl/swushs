@@ -38,6 +38,7 @@ if ($stmt) {
             // Store user role and username in session variables
             $_SESSION['user_role'] = $user_role;
             $_SESSION['username'] = $username;
+            $_SESSION['id'] = $id;
 
             // Redirect the user based on their role
             switch ($user_role) {

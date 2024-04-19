@@ -46,42 +46,43 @@ $(document).ready(function () {
   });
 });
 
+// BOTH OF THESE COMMENTED OUT CODE THROWS AN ERROR , FIND A SOLUTION OF TURNAROUND FOR THAT
 // school year modal
-document.addEventListener("DOMContentLoaded", function () {
-  var myModal = new bootstrap.Modal(
-    document.getElementById("schoolYearSelectConfirmation")
-  );
-  var schoolYearSpan = document.getElementById("schoolYearSpan");
+// document.addEventListener("DOMContentLoaded", function () {
+//   var myModal = new bootstrap.Modal(
+//     document.getElementById("schoolYearSelectConfirmation")
+//   );
+//   var schoolYearSpan = document.getElementById("schoolYearSpan");
 
-  document.querySelectorAll(".dropdown-item").forEach((item) => {
-    item.addEventListener("click", (event) => {
-      var schoolYear = event.target.getAttribute("data-school-year");
-      schoolYearSpan.textContent = schoolYear;
-      myModal.show();
-    });
-  });
-});
+//   document.querySelectorAll(".dropdown-item").forEach((item) => {
+//     item.addEventListener("click", (event) => {
+//       var schoolYear = event.target.getAttribute("data-school-year");
+//       schoolYearSpan.textContent = schoolYear;
+//       myModal.show();
+//     });
+//   });
+// });
 
 //calendar component
-document.addEventListener("DOMContentLoaded", function () {
-  var calendarEl = document.getElementById("calendar");
+// document.addEventListener("DOMContentLoaded", function () {
+//   var calendarEl = document.getElementById("calendar");
 
-  var calendar = new FullCalendar.Calendar(calendarEl, {
-    timeZone: "UTC",
-    headerToolbar: {
-      left: "prev,next today",
-      center: "title",
-      right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
-    },
-    weekNumbers: true,
-    dayMaxEvents: true, // allow "more" link when too many events,
-    eventDidMount: function (info) {
-      info.el.style.color = "#000"; // Change event text color to black
-    },
-  });
+//   var calendar = new FullCalendar.Calendar(calendarEl, {
+//     timeZone: "UTC",
+//     headerToolbar: {
+//       left: "prev,next today",
+//       center: "title",
+//       right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+//     },
+//     weekNumbers: true,
+//     dayMaxEvents: true, // allow "more" link when too many events,
+//     eventDidMount: function (info) {
+//       info.el.style.color = "#000"; // Change event text color to black
+//     },
+//   });
 
-  calendar.render();
-});
+//   calendar.render();
+// });
 
 //dashboard.php
 function changeSemester(semester) {

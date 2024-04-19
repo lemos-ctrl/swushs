@@ -47,14 +47,7 @@ header("Location: /schedulingsystem/swushs/process/authorization_error.php");
                 <div class="container-fluid">
                     <?php include '../../Admin/includes/dashboardBanner.php';?>
                     <!-- SAME ROW OF DASHBOARD BANNER BUT LIKE I JUST PUT IT HERE KAY FOR EVERY PAGE LAHE LAHE -->
-                    <div class="col-12 col-md-2 d-flex">
-                        <div class="card flex-fill border-0">
-                            <div class="card-body d-flex justify-content-center align-items-center">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModalCenter">Add Subjects</button>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
 
                 <!-- modals -->

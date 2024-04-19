@@ -1,20 +1,20 @@
-<?php require_once('../../includes/cdn.php');
+<?php require_once ('../../includes/cdn.php');
 // start session
 session_start();
 
 // check if user is logged in
-    if (!isset($_SESSION["username"])) {  
-       // Redirect back to the login page with an error message
-       header("Location: ../../index.php");
-       exit();
-    }
+if (!isset($_SESSION["username"])) {
+    // Redirect back to the login page with an error message
+    header("Location: ../../index.php");
+    exit();
+}
 
 // check if user has access to this page
-    if ($_SESSION["user_role"] != "admin") {
-       // Redirect back to the login page with an error message
-header("Location: /schedulingsystem/swushs/process/authorization_error.php");
-       exit();
-    }
+if ($_SESSION["user_role"] != "admin") {
+    // Redirect back to the login page with an error message
+    header("Location: /schedulingsystem/swushs/process/authorization_error.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +31,7 @@ header("Location: /schedulingsystem/swushs/process/authorization_error.php");
 
 
     <div class="wrapper">
-        <?php include('../includes/sidebar.php'); ?>
+        <?php include ('../includes/sidebar.php'); ?>
         <div class="main">
             <nav class="navbar custom-toggler navbar-expand px-3 border-bottom">
                 <button class="btn" id="sidebar-toggle" type="button">
@@ -45,20 +45,12 @@ header("Location: /schedulingsystem/swushs/process/authorization_error.php");
 
             <main class="content px-3 py-4">
                 <div class="container-fluid">
-                    <?php include '../../Admin/includes/dashboardBanner.php';?>
+                    <?php include '../../Admin/includes/dashboardBanner.php'; ?>
                     <!-- SAME ROW OF DASHBOARD BANNER BUT LIKE I JUST PUT IT HERE KAY FOR EVERY PAGE LAHE LAHE -->
-                    <div class="col-12 col-md-2 d-flex">
-                        <div class="card flex-fill border-0">
-                            <div class="card-body d-flex justify-content-center align-items-center">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModalCenter">Add Subjects</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Modal -->
-                <?php include('../modals/logoutModal.php'); ?>
+                <?php include ('../modals/logoutModal.php'); ?>
 
                 <!-- ENDS HERE -->
                 <div class="card border-0">

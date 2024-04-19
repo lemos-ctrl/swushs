@@ -11,6 +11,17 @@
   --font-family2: "Inter", sans-serif;
 }
 
+/* remove the arrow key on the side of the input box with the type of number */
+/* Hide the up and down arrows for number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
 *,
 ::after,
 ::before {
@@ -223,6 +234,10 @@ a.sidebar-link {
   position: relative;
   display: block !important;
   font-size: 0.775rem;
+}
+
+a.sidebar-link:hover {
+  color: rgb(168, 163, 163);
 }
 
 a.sidebar-link.sidebar-link-child {

@@ -136,6 +136,8 @@ ini_set('display_errors', 1);
                             </div>
                             <div class="modal-body">
                                 <form id="editAdminForm" method="post" action="../Process/edit_admin.php">
+                                    <!-- Add a hidden input field to store the admin ID -->
+                                    <input type="hidden" id="adminId" name="adminId">
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <label for="firstname" class="form-label">First Name</label>
@@ -151,24 +153,25 @@ ini_set('display_errors', 1);
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <label for="username" class="form-label">Username</label>
-                                            <input type="text" class="form-control" id="username" name="username"
+                                            <input type="text" class="form-control" id="editusername" name="username"
                                                 placeholder="e.g. arbiter2567" required>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <label for="contactNumber" class="form-label">Contact Number</label>
-                                            <input type="number" class="form-control" id="contactNumber"
+                                            <input type="number" class="form-control" id="editcontactNumber"
                                                 name="contactNumber" maxlength="11" placeholder="e.g. 09683171436"
                                                 required>
                                         </div>
                                     </div>
                                 </form>
-
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <button type="submit" form="editAdminForm" class="btn btn-primary">Save Changes</button>
+                                <!-- Remove the 'submit' attribute from the button and add an onclick event to trigger form submission -->
+                                <button type="button" class="btn btn-primary" onclick="saveChangesBtn()"
+                                    id="saveChangesBtn">Save Changes</button>
                             </div>
                         </div>
                     </div>
@@ -223,72 +226,64 @@ ini_set('display_errors', 1);
         </div>
 </body>
 <script>
-    $(document).ready(function () {
-        $('.delete-btn').click(function () {
-            var username = $(this).data('username');
-            $('#confirmDeleteModal').modal('show');
-            $('#confirmDelete').click(function () {
-                $.ajax({
-                    url: '../Process/delete_admin.php',
-                    type: 'post',
-                    data: {
-                        username: username
-                    }, // Send username instead of id
-                    success: function (response) {
-                        window.location
-                            .reload(); // Reload the page after successful deletion
-                    }
-                });
+$(document).ready(function() {
+    $('.delete-btn').click(function() {
+        var username = $(this).data('username');
+        $('#confirmDeleteModal').modal('show');
+        $('#confirmDelete').click(function() {
+            $.ajax({
+                url: '../Process/delete_admin.php',
+                type: 'post',
+                data: {
+                    username: username
+                }, // Send username instead of id
+                success: function(response) {
+                    window.location
+                        .reload(); // Reload the page after successful deletion
+                }
             });
         });
     });
 
-    // Function to populate edit form fields with admin data
-    function populateEditForm(userID) {
-        // Fetch admin data from the backend using AJAX
+    // Function to handle edit button click
+    $('.edit-btn').click(function() {
+        var adminId = $(this).data('userid');
+        // Fetch admin details via AJAX and populate the modal fields
+        $.ajax({
+            url: '../Process/fetch_admin.php',
+            type: 'post',
+            data: {
+                adminId: adminId
+            },
+            success: function(response) {
+                var admin = JSON.parse(response);
+                $('#adminId').val(admin.id);
+                $('#editfirstname').val(admin.first_name);
+                $('#editlastname').val(admin.last_name);
+                $('#editusername').val(admin.username);
+                $('#editcontactNumber').val(admin.contact_number);
+                $('#editAdminModal').modal('show');
+            }
+        });
+    });
+
+    // Function to handle save changes button click
+    $('#saveChangesBtn').click(function() {
+        // Serialize form data
+        var formData = $('#editAdminForm').serialize();
+        // Submit form data via AJAX
         $.ajax({
             url: '../Process/edit_admin.php',
             type: 'post',
-            dataType: 'json',
-            data: {
-                userID: userID
-            },
-            success: function (data) {
-                if (data.error) {
-                    // Display error message
-                    console.error(data.error);
-                    // Show error message on the UI
-                    $('#error-message').text(data.error);
-                } else {
-                    // Populate the form fields with the retrieved admin data
-                    $('#editfirstname').val(data.first_name);
-                    $('#editlastname').val(data.last_name);
-                    $('#username').val(data.username);
-                    $('#contactNumber').val(data.contact_number);
-                    // Clear any previous error messages
-                    $('#error-message').text('');
-                }
-            },
-            error: function (xhr, status, error) {
-                // Handle AJAX errors
-                console.error('AJAX Error:', error);
-                // Show error message on the UI
-                $('#error-message').text('AJAX Error: ' + error);
+            data: formData,
+            success: function(response) {
+                // Reload the page after successful update
+                window.location.reload();
             }
         });
-    }
-
-
-
-    // Event listener for edit button click
-    $('.edit-btn').click(function () {
-        // Get the user ID of the admin to be edited
-        var userID = $(this).data('userid');
-        $('#editAdminModal').modal('show');
-
-        // Populate the edit form with admin data
-        populateEditForm(userID);
     });
+
+});
 </script>
 
 </html>
