@@ -493,3 +493,10 @@ table th {
 .error_handling .container {
   padding-top: 30vh;
 }
+
+.alert {
+  position: absolute;
+  display: block;
+  right: 10;
+  z-index: 99;
+}
