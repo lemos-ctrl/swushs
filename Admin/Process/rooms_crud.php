@@ -38,7 +38,13 @@ function editRoom($roomId, $roomName, $roomCode)
     $stmt = $conn->prepare("UPDATE tbl_rooms SET room_name = ?, room_code = ? WHERE id = ?");
     $stmt->bind_param('ssi', $roomName, $roomCode, $roomId);
 
-    return $stmt->execute(); // Return true if update is successful, false otherwise
+    if ($stmt->execute()) {
+        // If update is successful
+        return json_encode(array("success" => true));
+    } else {
+        // If update fails
+        return json_encode(array("success" => false));
+    }
 }
 
 // Function to delete an existing room

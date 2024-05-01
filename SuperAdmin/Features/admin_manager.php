@@ -106,7 +106,7 @@ ini_set('display_errors', 1);
                 <!-- Modal -->
                 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="confirmDeleteModalLabel">Confirm Deletion</h5>
@@ -127,7 +127,7 @@ ini_set('display_errors', 1);
                 <!-- Modal -->
                 <div class="modal fade" id="editAdminModal" tabindex="-1" aria-labelledby="editAdminModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="editAdminModalLabel">Edit Admin</h5>
@@ -226,64 +226,64 @@ ini_set('display_errors', 1);
         </div>
 </body>
 <script>
-$(document).ready(function() {
-    $('.delete-btn').click(function() {
-        var username = $(this).data('username');
-        $('#confirmDeleteModal').modal('show');
-        $('#confirmDelete').click(function() {
+    $(document).ready(function () {
+        $('.delete-btn').click(function () {
+            var username = $(this).data('username');
+            $('#confirmDeleteModal').modal('show');
+            $('#confirmDelete').click(function () {
+                $.ajax({
+                    url: '../Process/delete_admin.php',
+                    type: 'post',
+                    data: {
+                        username: username
+                    }, // Send username instead of id
+                    success: function (response) {
+                        window.location
+                            .reload(); // Reload the page after successful deletion
+                    }
+                });
+            });
+        });
+
+        // Function to handle edit button click
+        $('.edit-btn').click(function () {
+            var adminId = $(this).data('userid');
+            // Fetch admin details via AJAX and populate the modal fields
             $.ajax({
-                url: '../Process/delete_admin.php',
+                url: '../Process/fetch_admin.php',
                 type: 'post',
                 data: {
-                    username: username
-                }, // Send username instead of id
-                success: function(response) {
-                    window.location
-                        .reload(); // Reload the page after successful deletion
+                    adminId: adminId
+                },
+                success: function (response) {
+                    var admin = JSON.parse(response);
+                    $('#adminId').val(admin.id);
+                    $('#editfirstname').val(admin.first_name);
+                    $('#editlastname').val(admin.last_name);
+                    $('#editusername').val(admin.username);
+                    $('#editcontactNumber').val(admin.contact_number);
+                    $('#editAdminModal').modal('show');
                 }
             });
         });
-    });
 
-    // Function to handle edit button click
-    $('.edit-btn').click(function() {
-        var adminId = $(this).data('userid');
-        // Fetch admin details via AJAX and populate the modal fields
-        $.ajax({
-            url: '../Process/fetch_admin.php',
-            type: 'post',
-            data: {
-                adminId: adminId
-            },
-            success: function(response) {
-                var admin = JSON.parse(response);
-                $('#adminId').val(admin.id);
-                $('#editfirstname').val(admin.first_name);
-                $('#editlastname').val(admin.last_name);
-                $('#editusername').val(admin.username);
-                $('#editcontactNumber').val(admin.contact_number);
-                $('#editAdminModal').modal('show');
-            }
+        // Function to handle save changes button click
+        $('#saveChangesBtn').click(function () {
+            // Serialize form data
+            var formData = $('#editAdminForm').serialize();
+            // Submit form data via AJAX
+            $.ajax({
+                url: '../Process/edit_admin.php',
+                type: 'post',
+                data: formData,
+                success: function (response) {
+                    // Reload the page after successful update
+                    window.location.reload();
+                }
+            });
         });
-    });
 
-    // Function to handle save changes button click
-    $('#saveChangesBtn').click(function() {
-        // Serialize form data
-        var formData = $('#editAdminForm').serialize();
-        // Submit form data via AJAX
-        $.ajax({
-            url: '../Process/edit_admin.php',
-            type: 'post',
-            data: formData,
-            success: function(response) {
-                // Reload the page after successful update
-                window.location.reload();
-            }
-        });
     });
-
-});
 </script>
 
 </html>

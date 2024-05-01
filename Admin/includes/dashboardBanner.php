@@ -18,7 +18,7 @@
                                     <div class="ms-1 mt-2">
                                         <i class="fa-solid fa-users"></i>
                                         <p>Users</p>
-                                    </div>  
+                                    </div>
                                 </div>
                                 <div class="d-flex align-items-center user-card">
                                     <h1>20</h1>
@@ -37,15 +37,15 @@
                                 <div class="d-flex align-items-center pe-2 user-card1">
                                     <h1>20</h1>
                                     <div class="ms-1 mt-2">
-                                        <i class="fa-solid fa-users"></i>
-                                        <p>Users</p>
-                                    </div>  
+                                        <i class="fa-solid fa-tarp"></i>
+                                        <p>Strands</p>
+                                    </div>
                                 </div>
                                 <div class="d-flex align-items-center user-card1">
                                     <h1>20</h1>
                                     <div class="ms-1 mt-2">
-                                        <i class="fa-solid fa-chalkboard-user"></i>
-                                        <span>Teachers</span>
+                                        <i class="fa-solid fa-book"></i>
+                                        <span>Subjects</span>
                                     </div>
                                 </div>
                             </div>
@@ -58,9 +58,9 @@
                                 <div class="d-flex align-items-center pe-2 user-card2">
                                     <h1>20</h1>
                                     <div class="ms-1 mt-2">
-                                        <i class="fa-solid fa-users"></i>
-                                        <p>Users</p>
-                                    </div>  
+                                        <i class="fa-solid fa-house"></i>
+                                        <p>Rooms</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -69,4 +69,3 @@
             </div>
         </div>
     </div>
-    
